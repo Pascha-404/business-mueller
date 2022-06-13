@@ -1,14 +1,14 @@
 import { Fragment } from 'react';
+import { Outlet } from 'react-router-dom';
 
 import Navbar from '../Navbar/Navbar';
-import HeroSection from '../HeroSection';
 
 function App() {
 	return (
 		<Fragment>
 			<header><Navbar /></header>
 			<main>
-				<HeroSection />
+				<Outlet />
 			</main>
 		</Fragment>
 	);
