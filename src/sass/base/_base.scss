@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+
+body {
+	color: $text-light-color;
+	background: $bg-dark-color;
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+a {
+    text-decoration: none;
+}
