@@ -2,7 +2,8 @@
 
 .navbar {
 	width: 100%;
-
+	position: absolute;
+	left: 0;
 	@include flexbox;
 	@include justify-content(space-around);
 

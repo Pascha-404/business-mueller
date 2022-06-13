@@ -27,7 +27,7 @@ function Navbar() {
 					<NavLink
 						to='/'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}>
-						Insipationen
+						Inspirationen
 					</NavLink>
 				</li>
 				<li>
