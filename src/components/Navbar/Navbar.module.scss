@@ -12,6 +12,12 @@
 		@include align-items(center);
 		@include justify-content(space-between);
 	}
+	a {
+		color: $text-navbar-color;
+		&:visited {
+			color: $text-navbar-color;
+		}
+	}
 	a.active {
 		color: $text-highlight-color;
 		font-weight: 700;
