@@ -1,41 +1,46 @@
 @use './fonts' as *;
+@use '../abstracts/functions' as *;
 
 body {
-    font-family: $main-font;
-    font-weight: 400;
+	font-family: $main-font;
+	font-weight: 400;
 }
 
-h1, .h1 {
-    font-family: $highlight-font;
-    font-weight: 400;
-    font-size: 3.75rem;
-    line-height: 3.7425rem;
+h1,
+.h1 {
+	font-family: $highlight-font;
+	font-weight: 400;
+	font-size: pxToRem(60px);
+	line-height: 3.7425rem;
 }
 
-h2, .h2 {
-    font-family: $main-font;
-    font-weight: 400;
-    font-size: 2.375rem;
-    line-height: 3.5rem;
+h2,
+.h2 {
+	font-family: $main-font;
+	font-weight: 400;
+	font-size: pxToRem(38px);
+	line-height: 3.5rem;
 }
 
-h3, .h3 {
-    font-family: $main-font;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2.046rem;
+h3,
+.h3 {
+	font-family: $main-font;
+	font-weight: 700;
+	font-size: pxToRem(24px);
+	line-height: 2.046rem;
 }
 
-p, .p {
-    font-family: $main-font;
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.843rem;
+p,
+.p {
+	font-family: $main-font;
+	font-weight: 400;
+	font-size: pxToRem(20px);
+	line-height: 1.843rem;
 }
 
 // Links in Navbar
 nav ul li {
-    font-family: $main-font;
-    font-weight: 400;
-    font-size: 1.4375rem;
+	font-family: $main-font;
+	font-weight: 400;
+	font-size: pxToRem(23px);
 }

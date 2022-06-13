@@ -1,12 +1,12 @@
 @use '../abstracts/' as *;
 
 html body {
-    position: relative;
+	position: relative;
 	color: $text-light-color;
 	background: $bg-dark-color;
 	min-height: 100vh;
 	min-width: 100vw;
-	padding-top: 2.53rem;
+	padding-top: pxToRem(40.47px);
 }
 
 a {
