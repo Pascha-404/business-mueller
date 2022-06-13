@@ -1,0 +1,21 @@
+@use '../../sass/main.scss' as *;
+
+.button {
+	display: inline-block;
+	padding: 8px 34px;
+    font-size: pxToRem(18px);
+    font-weight: 700;
+    color: $text-lightBtn-color;
+    border: none;
+	@include roundBorder;
+}
+
+.buttonShaped {
+	display: inline-block;
+	padding: 8px 19px;
+	font-size: pxToRem(14px);
+	color: $text-darkBtn-color;
+	border: 1px solid $text-greygreen-color;
+
+	@include roundBorder;
+}
