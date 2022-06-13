@@ -32,3 +32,10 @@ p, .p {
     font-size: 1.25rem;
     line-height: 1.843rem;
 }
+
+// Links in Navbar
+nav ul li {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 1.4375rem;
+}
