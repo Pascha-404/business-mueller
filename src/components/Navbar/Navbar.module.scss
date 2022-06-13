@@ -1,0 +1,19 @@
+@use '../../sass/main.scss' as *;
+
+.navbar {
+	width: 100%;
+
+	@include flexbox;
+	@include justify-content(space-around);
+
+	ul {
+		width: 60%;
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(space-between);
+	}
+	a.active {
+		color: $text-highlight-color;
+		font-weight: 700;
+	}
+}
