@@ -1,0 +1,26 @@
+@use '../../sass/main.scss' as *;
+
+.heroSection {
+	width: 100vw;
+	height: 100vh;
+
+	@include flexbox;
+	@include justify-content(space-around);
+	@include align-items(center);
+}
+
+.heroLeft {
+	width: 40%;
+}
+
+.heroRight {
+	width: 50%;
+	img {
+		max-width: 640px;
+		@include roundBorder;
+	}
+}
+
+.highlight {
+	color: $text-highlight-color;
+}
