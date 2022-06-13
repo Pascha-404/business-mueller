@@ -1,12 +1,16 @@
 @use '../abstracts/' as *;
 
-body {
+html body {
 	color: $text-light-color;
 	background: $bg-dark-color;
 	min-height: 100vh;
 	min-width: 100vw;
+	padding-top: 2.53rem;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
+	&:visited {
+		color: $text-light-color;
+	}
 }
