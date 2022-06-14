@@ -27,3 +27,9 @@ body section {
 a {
 	text-decoration: none;
 }
+
+img {
+	max-width: 640px;
+    max-height: 573px;
+	@include roundBorder;
+}
