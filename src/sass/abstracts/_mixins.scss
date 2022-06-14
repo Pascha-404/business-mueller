@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './functions' as *;
 
 /* Mixins for Flexbox */
 
@@ -92,13 +93,21 @@
 	border-radius: 10px;
 }
 
-/* Mixins for images */
+/* Mixins for placement */
 
-// Background Image
-@mixin background($imgname, $position: 0 0, $repeat: no-repeat) {
-	background: {
-		image: url(#{$imagedir}#{$imgname});
-		position: $position;
-		repeat: $repeat;
+// underlays a element with another.
+// applys position relative to container.
+// adds child element through class as underlayed element.
+@mixin underlay($underlayClass, $height) {
+	position: relative;
+	.#{$underlayClass} {
+		position: absolute;
+		z-index: -1;
+		height: pxToRem($height);
+		left: pxToRem(72px);
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
 	}
 }
