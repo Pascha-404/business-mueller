@@ -11,14 +11,32 @@
 
 .heroLeft {
 	width: 40%;
+
+	.btnWrap {
+		margin-top: pxToRem(249px);
+
+		div {
+			margin-right: pxToRem(10px);
+		}
+	}
+
+	h1 {
+		margin-top: pxToRem(37px);
+		margin-bottom: pxToRem(12px);
+	}
+
+	button {
+		margin-top: pxToRem(37px);
+		margin-bottom: pxToRem(180px);
+	}
 }
 
 .heroRight {
 	width: 50%;
-	img {
-		max-width: 640px;
-		@include roundBorder;
-	}
+}
+
+.imgWrapper {
+	@include underlay(underlayedImg, 483px);
 }
 
 .highlight {
