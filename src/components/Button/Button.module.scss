@@ -3,10 +3,11 @@
 .button {
 	display: inline-block;
 	padding: 8px 34px;
-    font-size: pxToRem(18px);
-    font-weight: 700;
-    color: $text-lightBtn-color;
-    border: none;
+	font-size: pxToRem(18px);
+	font-weight: 700;
+	color: $text-lightBtn-color;
+	border: none;
+	cursor: pointer;
 	@include roundBorder;
 }
 
