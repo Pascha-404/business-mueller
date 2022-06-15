@@ -47,7 +47,12 @@ function HeroSection() {
 						<div className={styles.logoContainer}>
 							<img src={phoneLogo} alt='Phone' />
 						</div>
-						<p>Rufen Sie uns an: 030 5163 7522</p>
+						<p>
+							Rufen Sie uns an:{' '}
+							<a href='tel:+493051637522' className={styles.phoneNumber}>
+								030 5163 7522
+							</a>
+						</p>
 					</div>
 				</div>
 			</div>

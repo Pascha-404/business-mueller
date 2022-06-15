@@ -59,6 +59,12 @@
 			@include align-items(center);
 			margin-bottom: pxToRem(12px);
 
+			.phoneNumber {
+				margin-left: 0.3rem;
+				color: $text-light-color;
+				border-bottom: 2px solid $text-light-color;
+			}
+
 			.logoContainer {
 				color: $text-greygreen-color;
 				width: 50px;
