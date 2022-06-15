@@ -11,7 +11,17 @@
 
 .heroLeft {
 	width: 40%;
+	height: 100%;
 
+	.highlight {
+		color: $text-highlight-color;
+	}
+
+	.heroLocation {
+		max-width: pxToRem(397px);
+	}
+
+	// Spacing for left side
 	.btnWrap {
 		margin-top: pxToRem(249px);
 
@@ -33,12 +43,37 @@
 
 .heroRight {
 	width: 50%;
-}
+	height: 100%;
+	@include flexbox(column);
+	@include justify-content(center);
 
-.imgWrapper {
-	@include underlay(underlayedImg, 483px);
-}
+	.imgWrapper {
+		margin-top: 8rem;
+		@include underlay(underlayedImg, 483px);
+	}
 
-.highlight {
-	color: $text-highlight-color;
+	.heroDetails {
+		margin-top: pxToRem(152px);
+		.detailsItem {
+			@include flexbox;
+			@include align-items(center);
+			margin-bottom: pxToRem(12px);
+
+			.logoContainer {
+				color: $text-greygreen-color;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: $text-light-color;
+				margin-right: pxToRem(20px);
+				@include flexbox;
+				@include justify-content(center);
+				@include align-items(center);
+
+				img {
+					width: 21px;
+				}
+			}
+		}
+	}
 }
