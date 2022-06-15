@@ -100,6 +100,7 @@
 // adds child element through class as underlayed element.
 @mixin underlay($underlayClass, $height) {
 	position: relative;
+    z-index: 1;
 	.#{$underlayClass} {
 		position: absolute;
 		z-index: -1;
