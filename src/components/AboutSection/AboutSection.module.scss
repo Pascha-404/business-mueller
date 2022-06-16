@@ -1,0 +1,47 @@
+@use '../../sass/main.scss' as *;
+
+.aboutSection {
+	width: 100vw;
+	height: 100vh;
+	background-color: $bg-light-color;
+	color: $text-dark-color;
+	h2 {
+		color: $text-darkgreen-color;
+		.highlight {
+			color: $text-highlight-color;
+		}
+	}
+
+	@include flexbox(column);
+
+	.firstRow {
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(space-around);
+
+		.firstRowLeft {
+			width: 40%;
+			.imgWrapper {
+				margin-top: -3rem;
+				@include underlay(underlayedImg, 619px);
+				.underlayedImg {
+					max-height: 619px;
+					max-width: 370px;
+				}
+			}
+		}
+		.firstRowRight {
+			width: 50%;
+			@include flexbox(column);
+			@include justify-content(space-between);
+
+			p {
+				margin-top: pxToRem(34px);
+				max-width: pxToRem(630px);
+			}
+			button {
+				margin-top: pxToRem(51px);
+			}
+		}
+	}
+}
