@@ -1,0 +1,18 @@
+@use '../../sass/main.scss' as *;
+
+.aboutTile {
+	max-width: 300px;
+	max-height: 310px;
+	width: pxToRem(300px);
+	height: pxToRem(310px);
+	background-color: $bg-components-light-color;
+    padding: 3rem;
+    @include roundBorder;
+    @include flexbox(column);
+    @include align-items(center);
+    @include justify-content(space-between);
+
+    img{max-width: 50px;}
+    p{text-align: center;}
+
+}
