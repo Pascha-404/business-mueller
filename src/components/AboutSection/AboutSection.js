@@ -2,7 +2,7 @@ import React from 'react';
 import aboutImg from '../../assets/img-about.png';
 import textureImg from '../../assets/texture-2.png';
 
-import Button from '../Button'
+import Button from '../Button';
 
 import styles from './AboutSection.module.scss';
 
@@ -11,15 +11,15 @@ function AboutSection() {
 		<section className={styles.aboutSection}>
 			<div className={styles.firstRow}>
 				<div className={styles.firstRowLeft}>
-                    <div className={styles.imgWrapper}>
-                        <img src={aboutImg} alt='Waschtisch und Fliesen in Marmor' />
-                        <img
-                            src={textureImg}
-                            alt='Weiße Steintextur'
-                            className={styles.underlayedImg}
-                        />
-                    </div>
-                </div>
+					<div className={styles.imgWrapper}>
+						<img src={aboutImg} alt='Waschtisch und Fliesen in Marmor' />
+						<img
+							src={textureImg}
+							alt='Weiße Steintextur'
+							className={styles.underlayedImg}
+						/>
+					</div>
+				</div>
 				<div className={styles.firstRowRight}>
 					<h2>
 						Planlos geht der <span className={styles.highlight}>Plan los!</span>
@@ -37,10 +37,10 @@ function AboutSection() {
 						und Rüchsprachen zur Verfügung. Schreiben oder Rufen Sie uns an. Wir freuen
 						uns auf Ihre Projektideen.
 					</p>
-					<Button text='Unsere Inspirationen'/>
+					<Button text='Unsere Inspirationen' />
 				</div>
 			</div>
-			<div></div>
+			<div className={styles.secondRow}></div>
 		</section>
 	);
 }
