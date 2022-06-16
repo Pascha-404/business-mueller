@@ -15,8 +15,8 @@ html body {
 	color: $text-light-color;
 	background: $bg-dark-color;
 	overflow-x: hidden;
-	min-height: 100vh;
-	min-width: 100vw;
+	height: 100vh;
+	width: 100vw;
 	padding-top: pxToRem(40.47px);
 }
 
@@ -30,6 +30,10 @@ a {
 
 img {
 	max-width: 640px;
-    max-height: 573px;
+	max-height: 573px;
 	@include roundBorder;
+}
+
+button {
+	max-width: 250px;
 }
