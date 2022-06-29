@@ -15,6 +15,7 @@ import Button from '../Button';
 
 import styles from './AboutSection.module.scss';
 
+// Data array for the tiles in about section.
 const tiles = [
 	{
 		icon: iconTile,
@@ -54,6 +55,8 @@ const tiles = [
 	},
 ];
 
+// Component for displaying the aboutSection.
+// Adds AboutTile component based on tiles data array.
 function AboutSection() {
 	return (
 		<section className={styles.aboutSection}>
@@ -89,8 +92,9 @@ function AboutSection() {
 				</div>
 			</div>
 			<div className={styles.secondRow}>
-				{tiles.map(tile => (
+				{tiles.map((tile, idx) => (
 					<AboutTile
+						key={`tile-${idx}`}
 						icon={tile.icon}
 						iconAlt={tile.iconAlt}
 						title={tile.title}
