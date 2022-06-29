@@ -43,6 +43,10 @@ p,
 	line-height: 1.843rem;
 }
 
+p.pTiles {
+	font-size: pxToRem(18px);
+}
+
 // Links in Navbar
 nav ul li {
 	font-family: $main-font;
