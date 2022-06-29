@@ -1,14 +1,15 @@
 import React from 'react';
 import styles from './AboutTile.module.scss';
 
-import logo from '../../assets/icon-phone.png'
-
-function AboutTile() {
+function AboutTile({ icon, iconAlt, title, text }) {
 	return (
 		<div className={styles.aboutTile}>
-			<img src={logo} alt='' />
-			<h3>Title</h3>
-			<p>Lorem. Voluptates. Maxime? Repellat.</p>
+			<div className={styles.imgWrap}>
+				<div className={styles.imgBlur} />
+				<img src={icon} alt={iconAlt} />
+			</div>
+			<h3>{title}</h3>
+			<p>{text}</p>
 		</div>
 	);
 }
