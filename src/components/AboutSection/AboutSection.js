@@ -1,10 +1,58 @@
 import React from 'react';
-import aboutImg from '../../assets/img-about.png';
-import textureImg from '../../assets/texture-2.png';
+import {
+	imgAbout,
+	textureTwo,
+	iconTile,
+	iconQuestionMark,
+	iconClipboard,
+	iconHouse,
+	iconDiamond,
+	iconLightbulb,
+} from '../../assets';
 
+import AboutTile from '../AboutTile';
 import Button from '../Button';
 
 import styles from './AboutSection.module.scss';
+
+const tiles = [
+	{
+		icon: iconTile,
+		iconAlt: 'Vier kleine Fliesen',
+		title: 'Fliesen',
+		text: 'Hochwertige Natursteinverarbeitung im Dickbettverfahren.',
+	},
+	{
+		icon: iconQuestionMark,
+		iconAlt: 'Fragezeichen',
+		title: 'Vorort Beratung',
+		text: 'Wir stellen Ihre Wünsche gemeinsam zusammen.',
+	},
+	{
+		icon: iconClipboard,
+		iconAlt: 'Klemmbrett',
+		title: 'Badgestaltung',
+		text: 'Planung mittels moderner 3D Software.',
+	},
+	{
+		icon: iconHouse,
+		iconAlt: 'Haus Symbol',
+		title: 'Innenausbau',
+		text: 'Ausstattung von Küchen bis zu Treppenhäusern.',
+	},
+	{
+		icon: iconDiamond,
+		iconAlt: 'Diamant',
+		title: 'Millimeterarbeit',
+		text: 'Passgenaue Anfertigung auch für schwierige Stellen',
+	},
+	{
+		icon: iconLightbulb,
+		iconAlt: 'Glühbirne',
+		title: 'Innovativ',
+		text: 'Neueste Technologien, scharfe Mosaike. Wir erfüllen jeden Wunsch.',
+	},
+];
 
 function AboutSection() {
 	return (
@@ -12,9 +60,9 @@ function AboutSection() {
 			<div className={styles.firstRow}>
 				<div className={styles.firstRowLeft}>
 					<div className={styles.imgWrapper}>
-						<img src={aboutImg} alt='Waschtisch und Fliesen in Marmor' />
+						<img src={imgAbout} alt='Waschtisch und Fliesen in Marmor' />
 						<img
-							src={textureImg}
+							src={textureTwo}
 							alt='Weiße Steintextur'
 							className={styles.underlayedImg}
 						/>
@@ -40,7 +88,16 @@ function AboutSection() {
 					<Button text='Unsere Inspirationen' />
 				</div>
 			</div>
-			<div className={styles.secondRow}></div>
+			<div className={styles.secondRow}>
+				{tiles.map(tile => (
+					<AboutTile
+						icon={tile.icon}
+						iconAlt={tile.iconAlt}
+						title={tile.title}
+						text={tile.text}
+					/>
+				))}
+			</div>
 		</section>
 	);
 }
