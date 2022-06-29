@@ -1,5 +1,11 @@
 import iconCompass from './icon-compass.svg';
 import iconPhone from './icon-phone.png';
+import iconTiles from './icon-tiles.png';
+import iconQuestionMark from './icon-questionMark.png';
+import iconClipboard from './icon-clipboard.png';
+import iconHouse from './icon-house.png';
+import iconDiamond from './icon-diamond.png';
+import iconLightbulb from './icon-lightbulb.png';
 import imgAbout from './img-about.png';
 import imgHero from './img-hero.png';
 import inspoOne from './inspo-1.png';
@@ -12,6 +18,12 @@ import textureTwo from './texture-2.png';
 export {
 	iconCompass,
 	iconPhone,
+	iconTiles,
+	iconQuestionMark,
+	iconClipboard,
+	iconHouse,
+	iconDiamond,
+	iconLightbulb,
 	imgAbout,
 	imgHero,
 	inspoOne,
