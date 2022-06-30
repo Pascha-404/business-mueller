@@ -1,3 +1,17 @@
-.inspoSection{
-    
+@use '../../sass/main.scss' as *;
+
+.inspoSection {
+	width: 100%;
+	padding-top: pxToRem(70px);
+	padding-bottom: pxToRem(101px);
+
+	h2 {
+		margin-bottom: pxToRem(12px);
+		.highlight {
+			color: $text-highlight-color;
+		}
+	}
+	p {
+		margin-bottom: pxToRem(69px);
+	}
 }
