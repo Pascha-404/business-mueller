@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ImageCarousel from '../ImageCarousel';
+
 import styles from './InspoSection.module.scss';
 
 function InspoSection() {
@@ -12,6 +14,7 @@ function InspoSection() {
 				Wir sind bereit für jedes Projekt, und wenn Sie wissen nicht, was zu bauen, wir
 				...
 			</p>
+			<ImageCarousel />
 		</section>
 	);
 }
