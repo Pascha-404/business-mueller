@@ -1,17 +1,29 @@
+import { imgAbout, inspoOne, inspoThree } from "../../assets";
+
 const images = [
 	{
 		id: 1,
-		src: '../../assets/inspo-1.png',
+		src: inspoOne,
 		alt: 'Waschtisch mit Holzakzenten',
 	},
 	{
 		id: 2,
-		src: '../../assets/img-about.png',
+		src: imgAbout,
 		alt: 'Waschtisch und Fliesen in Marmor',
 	},
 	{
 		id: 3,
-		src: '../../assets/inspo-3.png',
+		src: inspoThree,
+		alt: 'Bad mit Fliesen in Holzoptik',
+	},
+	{
+		id: 4,
+		src: inspoThree,
+		alt: 'Bad mit Fliesen in Holzoptik',
+	},
+	{
+		id: 5,
+		src: inspoThree,
 		alt: 'Bad mit Fliesen in Holzoptik',
 	},
 ];
