@@ -1,1 +1,10 @@
-.imageCarousel{}
+@use '../../sass/main.scss' as *;
+
+.imageCarousel{
+    width: 100% ;
+    
+    img{
+        margin: 0 auto;
+    }
+}
+

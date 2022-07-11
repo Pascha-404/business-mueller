@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-import styles from './ImageCarousel.module.scss'
 
-function ImageCarousel() {
-  return (
-    <div className={styles.imageCarousel}>ImageCarousel</div>
-  )
+import styles from './ImageCarousel.module.scss';
+
+
+
+function ImageCarousel({ images }) {
+	return (
+		<div className={styles.imageCarousel}>
+			
+		</div>
+	);
 }
 
-export default ImageCarousel
+export default ImageCarousel;
