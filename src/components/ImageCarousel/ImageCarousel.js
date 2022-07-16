@@ -1,15 +1,31 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, A11y, Pagination } from 'swiper';
 
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 
-import styles from './ImageCarousel.module.scss';
-
-
+import './ImageCarousel.scss';
 
 function ImageCarousel({ images }) {
 	return (
-		<div className={styles.imageCarousel}>
-			
-		</div>
+		<Swiper
+			modules={[Navigation, A11y, Pagination]}
+			spaceBetween={-20}
+			slidesPerView={3}
+			navigation
+			loop
+			pagination={{clickable: true}}
+			centeredSlides
+			speed={300}
+			className='imageCarousel'>
+			{images.map(image => (
+				<SwiperSlide key={`slide-${image.id}`}>
+					<img src={image.src} alt={image.alt} />
+				</SwiperSlide>
+			))}
+		</Swiper>
 	);
 }
 
