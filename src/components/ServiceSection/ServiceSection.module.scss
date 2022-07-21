@@ -1,0 +1,31 @@
+@use '../../sass/main.scss' as *;
+
+.serviceSection {
+	width: 100vw;
+	height: 100vh;
+	background-color: $bg-light-color;
+	padding-top: pxToRem(89px);
+
+	.upperHalf {
+		width: 100%;
+		height: 50%;
+		h2 {
+			color: $text-dark-color;
+		}
+	}
+
+	.downerHalf {
+		width: 100%;
+		height: 30%;
+		position: relative;
+		.bgImage {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+			background: bottom/cover no-repeat url('../../assets/service-bg.png');
+			opacity: 20%;
+		}
+	}
+}
