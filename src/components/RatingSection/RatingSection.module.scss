@@ -1,10 +1,13 @@
 @use '../../sass/main.scss' as *;
 
-.ratingSection{
-    width: 100vw;
-    height: 100vh;
+.ratingSection {
+	width: 100vw;
+	height: 100vh;
 
-    .highlight{
-        color: $text-highlight-color;
-    }
+	h2 {
+		margin-bottom: pxToRem(48px);
+		.highlight {
+			color: $text-highlight-color;
+		}
+	}
 }
