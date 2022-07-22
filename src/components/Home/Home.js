@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import HeroSection from '../HeroSection';
 import AboutSection from '../AboutSection';
 import InspoSection from '../InspoSection';
+import RatingSection from '../RatingSection';
 
 // Gathers all Sections to display Homeview in <main> element
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
 			<HeroSection />
 			<AboutSection />
 			<InspoSection />
+			<RatingSection />
 		</Fragment>
 	);
 }
