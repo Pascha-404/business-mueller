@@ -1,1 +1,21 @@
-.customerRating{}
+@use '../../sass/main.scss' as *;
+
+.customerRating{
+    height: pxToRem(418px);
+    max-width: 589px;
+    max-height: 418px;
+    padding: pxToRem(35px);
+    border: 2px solid $border-dark-color;
+    background: $bg-customerRating-color;
+    @include flexbox(column);
+    @include justify-content(space-between);
+    @include roundBorder;
+
+    .customerName{
+        text-transform: capitalize;
+    }
+    
+    .customerInfo{
+
+    }
+}
