@@ -27,6 +27,21 @@ h2,
 	font-size: pxToRem(24px);
 }
 
+// bigger p font in ratingSection review
+.customerRating .review {
+	font-size: pxToRem(22px);
+}
+
+// smaller p font for customer details in ratingSection
+.customerRating .customerDetails {
+	p {
+		font-size: pxToRem(18px);
+	}
+	.customerInfo{
+		font-weight: 300;
+	}
+}
+
 h3,
 .h3 {
 	font-family: $main-font;
