@@ -7,6 +7,8 @@
     padding: pxToRem(35px);
     border: 2px solid $border-dark-color;
     background: $bg-customerRating-color;
+    margin-bottom: pxToRem(40px);
+    margin-right: pxToRem(36px);
     @include flexbox(column);
     @include justify-content(space-between);
     @include roundBorder;
@@ -15,7 +17,4 @@
         text-transform: capitalize;
     }
     
-    .customerInfo{
-
-    }
 }
