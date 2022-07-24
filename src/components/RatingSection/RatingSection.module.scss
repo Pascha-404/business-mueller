@@ -2,12 +2,19 @@
 
 .ratingSection {
 	width: 100vw;
-	height: 100vh;
-
+	padding-bottom: pxToRem(80px);
 	h2 {
 		margin-bottom: pxToRem(48px);
 		.highlight {
 			color: $text-highlight-color;
 		}
+	}
+
+	.ratingsWrap{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 	}
 }
