@@ -1,4 +1,7 @@
 import React from 'react';
+import CustomerRating from '../CustomerRating/CustomerRating';
+
+import ratings from './ratings';
 
 import styles from './RatingSection.module.scss';
 
@@ -8,6 +11,16 @@ function RatingSection() {
 			<h2>
 				Was sagen <span className={styles.highlight}>unsere Kunden</span>
 			</h2>
+			<div className={styles.ratingsWrap}>
+				{ratings.map((rating, idx) => (
+					<CustomerRating
+						key={`customerRating-${idx}`}
+						review={rating.review}
+						customerName={rating.customerName}
+						customerInfo={rating.customerInfo}
+					/>
+				))}
+			</div>
 		</section>
 	);
 }
