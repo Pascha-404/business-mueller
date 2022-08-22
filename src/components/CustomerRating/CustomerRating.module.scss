@@ -1,20 +1,23 @@
 @use '../../sass/main.scss' as *;
 
-.customerRating{
-    height: pxToRem(418px);
-    max-width: 589px;
-    max-height: 418px;
-    padding: pxToRem(35px);
-    border: 2px solid $border-dark-color;
-    background: $bg-customerRating-color;
-    margin-bottom: pxToRem(40px);
-    margin-right: pxToRem(36px);
-    @include flexbox(column);
-    @include justify-content(space-between);
-    @include roundBorder;
+.customerRating {
+	height: pxToRem(418px);
+	max-width: 589px;
+	max-height: 418px;
+	padding: pxToRem(35px);
+	border: 2px solid $border-dark-color;
+	background: $bg-customerRating-color;
+	margin-bottom: pxToRem(40px);
+	margin-right: pxToRem(36px);
+	@include flexbox(column);
+	@include justify-content(space-between);
+	@include roundBorder;
 
-    .customerName{
-        text-transform: capitalize;
-    }
-    
+	.review {
+		line-height: 32px;
+	}
+
+	.customerName {
+		text-transform: capitalize;
+	}
 }
