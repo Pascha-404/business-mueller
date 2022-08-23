@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import HeroSection from '../HeroSection';
 import AboutSection from '../AboutSection';
 import InspoSection from '../InspoSection';
