@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import contactReducer from '../reducers/contact.reducer';
 
 const ContactContext = createContext();
 const ContactDispatch = createContext();
@@ -20,7 +21,7 @@ function useContactDispatch() {
 }
 
 function ContactProvider({ children }) {
-    const [state, dispatch] = useReducer()
+	const [state, dispatch] = useReducer(contactReducer, {formIsActive: false});
 	return (
 		<ContactContext.Provider value={state}>
 			<ContactDispatch.Provider value={dispatch}>{children}</ContactDispatch.Provider>
@@ -28,4 +29,4 @@ function ContactProvider({ children }) {
 	);
 }
 
-export {useContact, useContactDispatch, ContactProvider};
+export { useContact, useContactDispatch, ContactProvider };
