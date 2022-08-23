@@ -21,7 +21,7 @@ function useContactDispatch() {
 }
 
 function ContactProvider({ children }) {
-	const [state, dispatch] = useReducer(contactReducer, {formIsActive: false});
+	const [state, dispatch] = useReducer(contactReducer, { formIsActive: false });
 	return (
 		<ContactContext.Provider value={state}>
 			<ContactDispatch.Provider value={dispatch}>{children}</ContactDispatch.Provider>
