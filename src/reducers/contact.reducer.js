@@ -1,10 +1,10 @@
 const reducer = (state, action) => {
 	switch (action.type) {
 		case 'TOGGLE_FORM':
-			return { formIsActive: !state.formIsActive, ...state };
+			return { ...state, formIsActive: !state.formIsActive };
 		default:
 			return state;
 	}
 };
 
-export default reducer
+export default reducer;
