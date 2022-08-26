@@ -1,0 +1,18 @@
+@use '../../sass/main.scss' as *;
+
+.formWrapper {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	@include flexbox(column);
+	@include align-items(center);
+	@include justify-content(center);
+    
+	.contactForm {
+		max-width: 500px;
+	}
+}
