@@ -1,16 +1,18 @@
-import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
+import { ContactProvider } from '../../contexts/contact.context';
 
 import Navbar from '../Navbar/Navbar';
 
 function App() {
 	return (
-		<Fragment>
-			<header><Navbar /></header>
+		<ContactProvider>
+			<header>
+				<Navbar />
+			</header>
 			<main>
 				<Outlet />
 			</main>
-		</Fragment>
+		</ContactProvider>
 	);
 }
 
