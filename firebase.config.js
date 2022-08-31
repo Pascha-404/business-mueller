@@ -22,3 +22,20 @@ const analytics = getAnalytics(app);
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 
+// Function to write Data into collection of Database
+const addMailToCollection = async data => {
+	try {
+		const docRef = await addDoc(collection(db, 'mails'), {
+			name: data.name,
+			email: data.email,
+			message: data.message,
+			phoneCall: data.phoneCall,
+			phoneNumber: data.phoneNumber,
+        });
+        console.log(docRef)
+	} catch (e) {
+		console.error('Error adding document', e);
+	}
+};
+
+export { addMailToCollection };
