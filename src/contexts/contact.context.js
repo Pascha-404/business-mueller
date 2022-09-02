@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import { addMailToCollection } from '../firebase.config';
 import contactReducer from '../reducers/contact.reducer';
 
 const ContactContext = createContext();
@@ -30,6 +31,14 @@ function ContactProvider({ children }) {
 		phoneNumber: '',
 		submit: false,
 	});
+
+	useEffect(() => {
+		console.log('FIRE!')
+		if (state.submit) {
+			addMailToCollection(state);
+			dispatch({ type: 'RESET_STATE' });
+		}
+	}, [state.submit]);
 
 	return (
 		<ContactContext.Provider value={state}>
