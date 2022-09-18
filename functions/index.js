@@ -9,8 +9,8 @@ const transporter = nodemailer.createTransport({
 	port: 465,
 	secure: true,
 	auth: {
-		user: process.env.REACT_APP_MAIL_USER,
-		pass: process.env.REACT_APP_MAIL_PASSWORD,
+		user: process.env.MAIL_USER,
+		pass: process.env.MAIL_PASSWORD,
 	},
 });
 
@@ -18,14 +18,14 @@ exports.sendEmail = functions.firestore
 	.document('mails/{mailId}')
 	.onCreate((snap, context) => {
 		const mailOptions = {
-			from: process.env.REACT_APP_MAIL_USER,
-			to: process.env.REACT_APP_MAIL_RECIEVER,
+			from: process.env.MAIL_USER,
+			to: process.env.MAIL_RECIEVER,
 			replyTo: snap.data().mail,
 			subject: `Anfrage von ${snap.data().name}`,
 			html: `<h1>Kontaktformular eingegangen</h1>
                     <br>
                     <p>Name: ${snap.data().name}</p>
-                    <p>Email: ${snap.data().mail}</p>
+                    <p>Email: ${snap.data().email}</p>
                     <p>Telefonnummer: ${snap.data().phoneNumber}</p>
                     <p>Nachricht: ${snap.data().message}</p>`,
 		};
