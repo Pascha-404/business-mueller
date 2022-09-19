@@ -7,12 +7,13 @@ import { iconContact } from '../../assets';
 
 function ContactButton() {
 	const contactDispatch = useContactDispatch();
+
+	const handleToggle = e => {
+		contactDispatch({ type: 'TOGGLE_FORM' });
+	};
+
 	return (
-		<button
-			className={styles.contactButton}
-			onClick={() => {
-				contactDispatch({ type: 'TOGGLE_FORM' });
-			}}>
+		<button className={styles.contactButton} onClick={handleToggle}>
 			<img src={iconContact} alt='Contact Icon' />
 		</button>
 	);
