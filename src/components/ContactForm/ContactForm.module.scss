@@ -1,18 +1,24 @@
 @use '../../sass/main.scss' as *;
 
-.formWrapper {
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 9;
+.contactForm {
+	color: $text-dark-color;
 	@include flexbox(column);
-	@include align-items(center);
+	@include align-items();
 	@include justify-content(center);
 
-	.contactForm {
-		max-width: 500px;
+	input, textarea{
+		max-width: 562px;
+		border-radius: 10px;
+		border: none;
+	}
+
+	input{
+		height: 50px;
+		font-size: 24px;
+	}
+	label{
+		margin-top: 6px;
+		margin-bottom: pxToRem(30px);
+		margin-left: 10px;
 	}
 }
