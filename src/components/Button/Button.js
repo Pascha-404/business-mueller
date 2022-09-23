@@ -5,9 +5,15 @@ import styles from './Button.module.scss';
 // Renders a Button or Button shaped element.
 // accepts type = button (default) | shaped.
 // buttons and button shaped components have different styling (dark and light)
-function Button({ type = 'button',  text }) {
-	if (type === 'button') {
+function Button({ type = 'button', text, submit = false }) {
+	if (type === 'button' && submit === false) {
 		return <button className={styles.button}>{text}</button>;
+	} else if (type === 'button' && submit === true) {
+		return (
+			<button className={styles.button} type='submit'>
+				{text}
+			</button>
+		);
 	} else if (type === 'shaped') {
 		return <div className={styles.buttonShaped}>{text}</div>;
 	} else {
