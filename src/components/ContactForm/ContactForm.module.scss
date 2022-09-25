@@ -1,6 +1,7 @@
 @use '../../sass/main.scss' as *;
 
 .contactForm {
+	width: 100%;
 	color: $text-dark-color;
 	@include flexbox(column);
 	@include align-items();

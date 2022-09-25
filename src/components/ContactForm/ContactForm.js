@@ -25,7 +25,7 @@ function ContactForm() {
 	return (
 		<form onSubmit={handleSubmit} className={styles.contactForm}>
 			<input type='text' id='name' value={name} onChange={handleChange('name')} />
-			<label htmlFor='name'>Name</label>
+			<label htmlFor='name'>Vorname und Name</label>
 			<input type='email' id='email' value={email} onChange={handleChange('email')} />
 			<label htmlFor='email'>E-Mail Adresse</label>
 			<textarea
