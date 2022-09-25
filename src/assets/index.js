@@ -15,6 +15,7 @@ import bgService from './service-bg.png';
 import textureOne from './texture-1.png';
 import textureTwo from './texture-2.png';
 import iconContact from './icon-email.png';
+import imgContact from './img-contact.png';
 
 export {
 	iconCompass,
@@ -34,4 +35,5 @@ export {
 	textureOne,
 	textureTwo,
 	iconContact,
+	imgContact
 };
