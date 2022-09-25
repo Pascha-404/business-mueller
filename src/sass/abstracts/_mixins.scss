@@ -98,14 +98,14 @@
 // underlays a element with another.
 // applys position relative to container.
 // adds child element through class as underlayed element.
-@mixin underlay($underlayClass, $height) {
+@mixin underlay($underlayClass, $height, $direction: left) {
 	position: relative;
 	z-index: 1;
 	.#{$underlayClass} {
 		position: absolute;
 		z-index: -1;
 		height: pxToRem($height);
-		left: pxToRem(72px);
+		#{$direction}: pxToRem(72px);
 		top: 50%;
 		-webkit-transform: translateY(-50%);
 		-ms-transform: translateY(-50%);
