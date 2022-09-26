@@ -105,10 +105,16 @@
 		position: absolute;
 		z-index: -1;
 		height: pxToRem($height);
-		#{$direction}: pxToRem(72px);
 		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
+		@if $direction == left {
+			left: pxToRem(72px);
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		} @else if $direction == right {
+			-webkit-transform: translateY(-50%) translateX(pxToRem(-72px));
+			-ms-transform: translateY(-50%) translateX(pxToRem(-72px));
+			transform: translateY(-50%) translateX(pxToRem(-72px));
+		}
 	}
 }
