@@ -2,6 +2,7 @@
 
 .contactForm {
 	width: 100%;
+	max-width: 590px;
 	color: $text-dark-color;
 	@include flexbox(column);
 	@include align-items();
@@ -21,5 +22,10 @@
 		margin-top: 6px;
 		margin-bottom: pxToRem(30px);
 		margin-left: 10px;
+	}
+
+	.btnWrapper{
+		width: 100%;
+		text-align: center;
 	}
 }

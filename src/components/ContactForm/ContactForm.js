@@ -52,7 +52,9 @@ function ContactForm() {
 				onChange={handleChange('phoneNumber')}
 			/>
 			<label htmlFor='phoneNumber'>Telefonnummer</label>
-			<Button type='button' text="Los geht's!" submit />
+			<div className={styles.btnWrapper}>
+				<Button type='button' text="Los geht's!" submit />
+			</div>
 		</form>
 	);
 }
