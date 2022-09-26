@@ -8,24 +8,38 @@
 	@include align-items();
 	@include justify-content(center);
 
-	input, textarea{
+	input,
+	textarea {
 		max-width: 562px;
 		border-radius: 10px;
 		border: none;
 	}
 
-	input{
+	input {
 		height: 50px;
-		font-size: 24px;
 	}
-	label{
+	label {
 		margin-top: 6px;
 		margin-bottom: pxToRem(30px);
 		margin-left: 10px;
 	}
 
-	.btnWrapper{
+	.checkboxWrapper {
+		input,
+		label {
+			cursor: pointer;
+		}
+		input {
+			width: 18px;
+			height: 18px;
+			margin-top: 6px;
+			margin-bottom: pxToRem(30px);
+		}
+	}
+
+	.btnWrapper {
 		width: 100%;
 		text-align: center;
+		margin-top: 20px;
 	}
 }
