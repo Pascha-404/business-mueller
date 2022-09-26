@@ -10,13 +10,20 @@ $bg-customerRating-color: radial-gradient(rgba(29, 29, 29, 0.4) 0%, rgba(55, 69,
 
 // Text Colors
 $text-navbar-color: rgba(223, 237, 253, 1);
-$text-lightBtn-color: rgba(52, 63, 62, 1);
-$text-darkBtn-color: rgba(223, 237, 253, 1);
 $text-highlight-color: rgba(188, 140, 101, 1);
 $text-light-color: rgba(255, 255, 255, 1);
 $text-dark-color: rgba(52, 63, 62, 0.85);
 $text-darkgreen-color: rgba(54, 63, 62, 1);
 $text-greygreen-color: rgba(82, 90, 91, 1);
+
+// Button Colors
+$text-lightBtn-color: rgba(52, 63, 62, 1);
+$text-darkBtn-color: rgba(223, 237, 253, 1);
+$text-darkBtn-bright-color: #ffffff;
+$bg-lightBtn-color:  rgba(255, 255, 255, 1);
+$bg-darkBtn-color: linear-gradient(185.94deg, #35403F 19.08%, rgba(53, 64, 63, 0.78) 245.56%);
+
+
 
 // Icon Colors
 $icon-blur-color: rgba(188, 140, 101, 0.3);
