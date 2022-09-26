@@ -1,18 +1,62 @@
+@use '../../sass/main.scss' as *;
+
 .contactButton {
+	width: 50px;
+	height: 50px;
+	padding: 10px 12px;
 	position: fixed;
 	right: 2rem;
 	bottom: 2rem;
-	max-width: 100px;
-	background-color: inherit;
+	max-width: 260px;
+	background: $bg-darkBtn-color;
 	border: none;
 	z-index: 10;
-	transform: scale(-1, 1);
 	cursor: pointer;
 	border-radius: 50%;
-	img {
+	// transition: all 300ms linear;
+	animation: grow 1000ms linear;
+	animation-play-state: paused;
+
+	a {
 		width: 100%;
+		height: 100%;
+		@include flexbox();
+		@include justify-content(center);
+		@include align-items(center);
+
+		img {
+			width: pxToRem(30.33px);
+			height: pxToRem(26.59px);
+		}
 	}
-	:active {
+
+	&:active {
 		transform: scale(0.8);
+	}
+	&:hover {
+		::before {
+			content: 'Schreiben Sie uns!';
+			margin-right: 18px;
+		}
+		width: 100%;
+		border-radius: 10px;
+		animation-play-state: running;
+		// transition: all 300ms linear;
+		// animation: grow 10s infinite;
+	}
+}
+
+@keyframes grow {
+	0% {
+		border-radius: 50%;
+		width: 50px;
+	}
+	50% {
+		border-radius: 10px;
+		width: 50px;
+	}
+	100% {
+		width: 100%;
+		border-radius: 10px;
 	}
 }

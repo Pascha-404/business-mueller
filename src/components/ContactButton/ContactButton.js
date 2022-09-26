@@ -1,21 +1,17 @@
 import React from 'react';
 import styles from './ContactButton.module.scss';
 
-import { useContactDispatch } from '../../contexts/contact.context';
 
 import { iconContact } from '../../assets';
 
 function ContactButton() {
-	const contactDispatch = useContactDispatch();
-
-	const handleToggle = e => {
-		contactDispatch({ type: 'TOGGLE_FORM' });
-	};
 
 	return (
-		<button className={styles.contactButton} onClick={handleToggle}>
-			<img src={iconContact} alt='Contact Icon' />
-		</button>
+		<div className={styles.contactButton}>
+			<a>
+				<img src={iconContact} alt='Contact Icon' />
+			</a>
+		</div>
 	);
 }
 
