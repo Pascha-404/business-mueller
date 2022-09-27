@@ -7,7 +7,7 @@ import styles from './RatingSection.module.scss';
 
 function RatingSection() {
 	return (
-		<section className={styles.ratingSection}>
+		<section className={styles.ratingSection} id='ratingSection'>
 			<h2>
 				Was sagen <span className={styles.highlight}>unsere Kunden</span>
 			</h2>

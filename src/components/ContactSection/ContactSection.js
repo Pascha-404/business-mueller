@@ -7,7 +7,7 @@ import styles from './ContactSection.module.scss';
 
 function ContactSection() {
 	return (
-		<section className={styles.contactSection}>
+		<section className={styles.contactSection} id='contactSection'>
 			<div className={styles.imgWrapper}>
                 <img src={textureTwo} alt='Weiße Steintextur' className={styles.underlayedImg} />
                 <img src={imgContact} alt="Weißes Badezimmer mit schwarz-goldenen Akzenten" />

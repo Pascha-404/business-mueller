@@ -7,7 +7,7 @@ import styles from './InspoSection.module.scss';
 
 function InspoSection() {
 	return (
-		<section className={styles.inspoSection}>
+		<section className={styles.inspoSection} id='inspoSection'>
 			<h2>
 				Unsere <span className={styles.highlight}>Inspirationen</span> für Sie
 			</h2>

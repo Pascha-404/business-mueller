@@ -11,7 +11,7 @@ import styles from './HeroSection.module.scss';
 
 function HeroSection() {
 	return (
-		<section className={styles.heroSection}>
+		<section className={styles.heroSection} id='heroSection'>
 			<div className={styles.heroLeft}>
 				<div className={styles.btnWrap}>
 					<Button type='shaped' text='Badezimmer' />
