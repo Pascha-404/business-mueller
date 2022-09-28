@@ -5,19 +5,30 @@
 	padding: 8px 34px;
 	font-size: pxToRem(18px);
 	font-weight: 700;
-	color: $text-lightBtn-color;
 	border: none;
 	cursor: pointer;
-	background-color: $text-light-color;
 	@include roundBorder;
 }
-
 .buttonShaped {
 	display: inline-block;
 	padding: 8px 19px;
 	font-size: pxToRem(14px);
 	color: $text-darkBtn-color;
 	border: 1px solid $text-greygreen-color;
-
+	
 	@include roundBorder;
+}
+
+.light {
+	color: $text-lightBtn-color;
+	background-color: $bg-lightBtn-color;
+}
+
+.dark {
+	color: $text-darkBtn-bright-color;
+	background: $bg-darkBtn-color;
+}
+
+.bigBtn{
+	padding: 7px 55px;
 }

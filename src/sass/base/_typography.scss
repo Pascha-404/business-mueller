@@ -73,3 +73,11 @@ nav ul li {
 button {
 	font-family: $main-font;
 }
+
+button.bigBtn {
+	font-size: pxToRem(24px);
+}
+
+input{
+	font-size: pxToRem(24px);
+}

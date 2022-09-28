@@ -1,0 +1,40 @@
+@use '../../sass/main.scss' as *;
+
+.contactSection {
+	width: 100vw;
+	height: 100vh;
+	color: $text-dark-color;
+	background-color: $bg-light-color;
+
+	@include flexbox();
+	@include align-items(center);
+	@include justify-content(space-around);
+
+	.imgWrapper {
+		width: 100%;
+        text-align: center;
+		@include underlay(underlayedImg, 765px, right);
+		img {
+			max-width: 480px;
+			max-height: 717px;
+		}
+		.underlayedImg {
+			max-height: 765px;
+			max-width: 457px;
+		}
+	}
+
+	.contactFormWrapper {
+		width: 100%;
+
+		h2 {
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 50px;
+		}
+		.highlight {
+			color: $text-highlight-color;
+		}
+	}
+}

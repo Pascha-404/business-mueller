@@ -59,7 +59,7 @@ const tiles = [
 // Adds AboutTile component based on tiles data array.
 function AboutSection() {
 	return (
-		<section className={styles.aboutSection}>
+		<section className={styles.aboutSection} id='aboutSection'>
 			<div className={styles.firstRow}>
 				<div className={styles.firstRowLeft}>
 					<div className={styles.imgWrapper}>

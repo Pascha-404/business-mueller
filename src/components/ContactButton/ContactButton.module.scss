@@ -1,0 +1,42 @@
+@use '../../sass/main.scss' as *;
+
+.contactButton {
+	width: 50px;
+	height: 50px;
+	padding: 10px 12px;
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	max-width: 260px;
+	background: $bg-darkBtn-color;
+	border: none;
+	z-index: 10;
+	cursor: pointer;
+	border-radius: 50%;
+
+	a {
+		width: 100%;
+		height: 100%;
+		@include flexbox();
+		@include justify-content(center);
+		@include align-items(center);
+
+		img {
+			width: pxToRem(30.33px);
+			height: pxToRem(26.59px);
+		}
+	}
+
+	&:active {
+		transform: scale(0.8);
+	}
+	&:hover {
+		::before {
+			content: 'Schreiben Sie uns!';
+			margin-right: 18px;
+			color: $text-light-color;
+		}
+		width: 100%;
+		border-radius: 10px;
+	}
+}
