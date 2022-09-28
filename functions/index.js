@@ -20,7 +20,7 @@ exports.sendEmail = functions.firestore
 		const mailOptions = {
 			from: process.env.MAIL_USER,
 			to: process.env.MAIL_RECIEVER,
-			replyTo: snap.data().mail,
+			replyTo: snap.data().email,
 			subject: `Anfrage von ${snap.data().name}`,
 			html: `<h1>Kontaktformular eingegangen</h1>
                     <br>
