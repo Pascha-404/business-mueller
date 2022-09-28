@@ -57,7 +57,7 @@ function ContactForm() {
 					type='checkbox'
 					name='phoneCall'
 					id='phoneCall'
-					value={phoneCall}
+					checked={phoneCall}
 					onChange={togglePhonecall}
 				/>
 				<label htmlFor='phoneCall'>Wünschen Sie einen Rückruf?</label>
