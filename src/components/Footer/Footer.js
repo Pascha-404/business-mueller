@@ -5,8 +5,8 @@ import styles from './Footer.module.scss';
 function Footer() {
 	return (
 		<footer className={styles.footer} id='footer'>
-			<div>
-				<div>
+			<div className={styles.contactDetails}>
+				<div className={styles.address}>
 					<h4>Müller Fliesenfachbetrieb</h4>
 					<div>
 						<h5>Jörg Müller</h5>
@@ -20,16 +20,18 @@ function Footer() {
 					<h5>
 						<a href='tel:+493051637522'>030 5163 7522</a>
 					</h5>
-					<h5>
+					<h5 className={styles.mail}>
 						<a href='mailto:mail@fliesenleger-mueller.de'>mail@fliesenleger-mueller.de</a>
 					</h5>
 				</div>
 			</div>
-			<div>
-				<a href='#footer'></a>Datenschutz
-			</div>
-			<div>
-				<a href='#footer'></a>Impressum
+			<div className={styles.links}>
+				<div>
+					<a href='#footer'>Datenschutz</a>
+				</div>
+				<div>
+					<a href='#footer'>Impressum</a>
+				</div>
 			</div>
 		</footer>
 	);
