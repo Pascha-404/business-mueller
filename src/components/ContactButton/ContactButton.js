@@ -8,7 +8,7 @@ function ContactButton() {
 
 	return (
 		<div className={styles.contactButton}>
-			<a>
+			<a href='#contactSection'>
 				<img src={iconContact} alt='Contact Icon' />
 			</a>
 		</div>

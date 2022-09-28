@@ -13,9 +13,6 @@
 	z-index: 10;
 	cursor: pointer;
 	border-radius: 50%;
-	// transition: all 300ms linear;
-	animation: grow 1000ms linear;
-	animation-play-state: paused;
 
 	a {
 		width: 100%;
@@ -37,25 +34,8 @@
 		::before {
 			content: 'Schreiben Sie uns!';
 			margin-right: 18px;
+			color: $text-light-color;
 		}
-		width: 100%;
-		border-radius: 10px;
-		animation-play-state: running;
-		// transition: all 300ms linear;
-		// animation: grow 10s infinite;
-	}
-}
-
-@keyframes grow {
-	0% {
-		border-radius: 50%;
-		width: 50px;
-	}
-	50% {
-		border-radius: 10px;
-		width: 50px;
-	}
-	100% {
 		width: 100%;
 		border-radius: 10px;
 	}
