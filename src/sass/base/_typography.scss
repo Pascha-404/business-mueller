@@ -86,10 +86,17 @@ button {
 	font-family: $main-font;
 }
 
+
 button.bigBtn {
 	font-size: pxToRem(24px);
 }
 
 input{
 	font-size: pxToRem(24px);
+}
+
+.serviceHighlight{
+	font-weight: 900;
+	font-size: pxToRem(30px);
+
 }

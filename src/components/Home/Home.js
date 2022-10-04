@@ -4,8 +4,8 @@ import AboutSection from '../AboutSection';
 import InspoSection from '../InspoSection';
 import RatingSection from '../RatingSection';
 import ContactButton from '../ContactButton/ContactButton';
-
 import ContactSection from '../ContactSection/ContactSection';
+import ServiceSection from '../ServiceSection';
 
 // Gathers all Sections to display Homeview in <main> element
 function Home() {
@@ -15,6 +15,7 @@ function Home() {
 			<HeroSection />
 			<AboutSection />
 			<InspoSection />
+			<ServiceSection />
 			<RatingSection />
 			<ContactSection />
 		</Fragment>
