@@ -51,6 +51,18 @@ h3,
 	line-height: 2.046rem;
 }
 
+h4, .h4{
+	font-family: $main-font;
+	font-weight: 400;
+	font-size: pxToRem(23px);
+}
+
+h5, .h5{
+	font-family: $main-font;
+	font-weight: 400;
+	font-size: pxToRem(20px);
+}
+
 p,
 .p {
 	font-family: $main-font;

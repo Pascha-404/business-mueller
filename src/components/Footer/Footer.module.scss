@@ -1,0 +1,42 @@
+@use '../../sass/main.scss' as *;
+
+.footer {
+	width: 100vw;
+	height: 30vh;
+	padding-top: pxToRem(60px);
+	padding-bottom: pxToRem(47px);
+	padding-right: pxToRem(159px);
+	padding-left: pxToRem(136px);
+
+	@include flexbox();
+	@include justify-content(space-between);
+
+	h4 {
+		color: $text-navbar-color;
+		margin-bottom: pxToRem(26px);
+	}
+
+	.contactDetails {
+		width: 60%;
+		@include flexbox();
+		@include align-items();
+		@include justify-content(space-between);
+
+		h5 {
+			margin-bottom: 10px;
+		}
+		.address {
+			margin-right: pxToRem(100px);
+		}
+		.mail {
+			border-bottom: 1px solid white;
+		}
+	}
+
+	.links {
+		width: 20%;
+		align-self: flex-end;
+		@include flexbox(row);
+		@include justify-content(space-between);
+	}
+}
