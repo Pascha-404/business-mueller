@@ -2,14 +2,14 @@
 
 .footer {
 	width: 100vw;
-	height: pxToRem(340px);
+	height: 30vh;
 	padding-top: pxToRem(60px);
 	padding-bottom: pxToRem(47px);
 	padding-right: pxToRem(159px);
-	padding-left: pxToRem(103px);
+	padding-left: pxToRem(136px);
 
 	@include flexbox();
-	@include justify-content(space-around);
+	@include justify-content(space-between);
 
 	h4 {
 		color: $text-navbar-color;
@@ -17,6 +17,7 @@
 	}
 
 	.contactDetails {
+		width: 60%;
 		@include flexbox();
 		@include align-items();
 		@include justify-content(space-between);
@@ -33,7 +34,7 @@
 	}
 
 	.links {
-		width: 15rem;
+		width: 20%;
 		align-self: flex-end;
 		@include flexbox(row);
 		@include justify-content(space-between);
