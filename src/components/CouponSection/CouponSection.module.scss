@@ -1,0 +1,32 @@
+@use '../../sass/main.scss' as *;
+
+.couponSection {
+	width: 100vw;
+	height: 40vh;
+	background-color: $bg-light-color;
+	color: $text-dark-color;
+	position: relative;
+	@include flexbox(column);
+	@include justify-content(center);
+
+	.bgImage {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100vw;
+		background: bottom/cover no-repeat url('../../assets/service-bg.png');
+		opacity: 20%;
+		z-index: 0;
+	}
+	h2,
+	p,
+	button,
+	a {
+		z-index: 1;
+	}
+	p {
+		margin-top: pxToRem(25px);
+		margin-bottom: pxToRem(40px);
+	}
+}
