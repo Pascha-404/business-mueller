@@ -37,4 +37,8 @@ img {
 
 button {
 	max-width: 250px;
+	
+	&:active{
+		transform: scale(0.8);
+	}
 }
