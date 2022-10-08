@@ -1,23 +1,35 @@
 @use '../../sass/main.scss' as *;
 
 .customerRating {
-	height: pxToRem(418px);
+	height: pxToRem(537px);
 	max-width: 589px;
-	max-height: 418px;
+	max-height: 537px;
 	padding: pxToRem(35px);
 	border: 2px solid $border-dark-color;
 	background: $bg-customerRating-color;
 	margin-bottom: pxToRem(40px);
 	margin-right: pxToRem(36px);
 	@include flexbox(column);
-	@include justify-content(space-between);
 	@include roundBorder;
+
+	.ratingWrapper {
+		margin-top: pxToRem(10px);
+		margin-bottom: pxToRem(30px);
+		img {
+			max-width: 22px;
+			max-height: 22px;
+			margin-right: 6px;
+		}
+	}
 
 	.review {
 		line-height: 32px;
 	}
 
-	.customerName {
-		text-transform: capitalize;
+	.customerDetails {
+		margin-top: auto;
+		.customerName {
+			text-transform: capitalize;
+		}
 	}
 }
