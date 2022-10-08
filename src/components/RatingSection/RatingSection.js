@@ -15,6 +15,8 @@ function RatingSection() {
 				{ratings.map((rating, idx) => (
 					<CustomerRating
 						key={`customerRating-${idx}`}
+						titel={rating.titel}
+						rating={rating.rating}
 						review={rating.review}
 						customerName={rating.customerName}
 						customerInfo={rating.customerInfo}
