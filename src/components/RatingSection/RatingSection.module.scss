@@ -11,11 +11,13 @@
 		}
 	}
 
-	.ratingsWrap{
-		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
+	.ratingsWrap {
+		width: 90%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		justify-content: center;
 		align-items: center;
+		row-gap: pxToRem(47px);
+		column-gap: pxToRem(36px);
 	}
 }
