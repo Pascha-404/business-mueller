@@ -23,6 +23,14 @@ const ratings = [
 		customerName: 'Alfred Pinkel',
 		customerInfo: 'Ingeneur aus Berlin Tempelhof',
 	},
+	{
+		titel: 'Altersgerechte Sanierung',
+		rating: 5,
+		review:
+			'Wir wollten das Bad meiner Eltern altersgerecht sanieren lassen und hier wurde uns geholfen. Hohes WC, ebenerdige Dusche und Haltegriffe an den richtigen Stellen. Die Materialien sind hochwertig und wurden mit größter Sorgfalt verbaut. Für unser nächstes Projekt kommen wir wieder!',
+		customerName: 'Kerstin Schmidt',
+		customerInfo: 'Einzelhandelskauffrau',
+	},
 ];
 
 export default ratings;
