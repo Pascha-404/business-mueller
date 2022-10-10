@@ -1,15 +1,25 @@
 import React from 'react';
 
+import { starIcon } from '../../assets';
+
 import styles from './CustomerRating.module.scss';
 
-function CustomerRating({ review, customerName, customerInfo }) {
+function CustomerRating({ titel, rating, review, customerName, customerInfo }) {
 	return (
 		<article className={styles.customerRating}>
+			<div>
+				<h3>{titel}</h3>
+				<div className={styles.ratingWrapper}>
+					{[...Array(rating)].map((e, i) => (
+						<img src={starIcon} key={i} alt="Stern" />
+					))}
+				</div>
+			</div>
 			<p className={styles.review}>{review}</p>
 			<div className={styles.customerDetails}>
-                <p className={styles.customerName}>{customerName}</p>
-                <p className={styles.customerInfo}>{customerInfo}</p>
-            </div>
+				<p className={styles.customerName}>{customerName}</p>
+				<p className={styles.customerInfo}>{customerInfo}</p>
+			</div>
 		</article>
 	);
 }
