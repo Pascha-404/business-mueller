@@ -16,7 +16,9 @@ import textureOne from './texture-1.png';
 import textureTwo from './texture-2.png';
 import iconContact from './icon-email.png';
 import imgContact from './img-contact.png';
-import starIcon from './icon-star.png';
+import iconStar from './icon-star.png';
+import iconSuccess from './icon-success.png';
+import iconError from './icon-error.png';
 
 export {
 	iconCompass,
@@ -37,5 +39,7 @@ export {
 	textureTwo,
 	iconContact,
 	imgContact,
-	starIcon
+	iconStar,
+	iconSuccess,
+	iconError,
 };
