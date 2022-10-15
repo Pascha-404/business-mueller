@@ -3,6 +3,7 @@ import ContactForm from '../ContactForm/ContactForm';
 
 import { useContact } from '../../contexts/contact.context';
 import { textureTwo, imgContact } from '../../assets';
+import Button from '../Button';
 
 import { iconError, iconSuccess } from '../../assets';
 
@@ -42,14 +43,11 @@ function ContactSection() {
 				</div>
 			)}
 			{formState === 'error' && (
-				<div className={styles.feedback}>
+				<div className={`${styles.feedback} ${styles.error}`}>
 					<img src={iconError} alt='Kreuz Symbol' />
-					<p className={styles.h1}>Fertig!</p>
-					<p>
-						Ihre Nachricht wurde erfolgreich abgeschickt. Sie erhalten eine Kopie an die
-						angegebene Email Adresse. Dankeschön, wir melden uns schnellst möglich bei
-						Ihnen.
-					</p>
+					<p className={styles.h1}>Sorry!</p>
+					<p>Irgendwas ist schief gelaufen. Senden Sie das Formular bitte noch einmal:</p>
+					<Button text='Zurück' bigBtn theme='dark' backToForm />
 				</div>
 			)}
 		</section>
