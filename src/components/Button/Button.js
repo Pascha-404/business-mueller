@@ -1,4 +1,5 @@
 import React from 'react';
+import { useContactDispatch } from '../../contexts/contact.context';
 
 import styles from './Button.module.scss';
 
@@ -11,13 +12,31 @@ function Button({
 	submit = false,
 	theme = 'light',
 	bigBtn = false,
+	backToForm = false,
 }) {
 	// Constants define the passed style classes for theme and size of real button elements.
 	const btnTheme =
 		theme === 'light' ? styles.light : theme === 'dark' ? styles.dark : null;
 	const bigButton = bigBtn === true ? styles.bigBtn : '';
 
+	const contactDispatch = useContactDispatch();
+
+	// Function to change contact context back to formState: form and submit: false
+	// In case that form failed to send
+	const handleBackToForm = () => {
+		contactDispatch({ type: 'BACK_TO_FORM' });
+	};
+
 	if (type === 'button' && submit === false) {
+		if (backToForm) {
+			return (
+				<button
+					className={`${styles.button} ${btnTheme} ${bigButton}`}
+					onClick={handleBackToForm}>
+					{text}
+				</button>
+			);
+		}
 		return (
 			<button className={`${styles.button} ${btnTheme} ${bigButton}`}>{text}</button>
 		);
