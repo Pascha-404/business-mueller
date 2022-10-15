@@ -2,17 +2,18 @@
 
 .contactSection {
 	width: 100vw;
-	height: 100vh;
+	height: 75vh;
 	color: $text-dark-color;
 	background-color: $bg-light-color;
 
 	@include flexbox();
 	@include align-items(center);
-	@include justify-content(space-around);
+	@include justify-content(center);
 
 	.imgWrapper {
-		width: 100%;
-        text-align: center;
+		width: 50%;
+		max-width: 550px;
+		text-align: center;
 		@include underlay(underlayedImg, 765px, right);
 		img {
 			max-width: 480px;
@@ -25,16 +26,45 @@
 	}
 
 	.contactFormWrapper {
-		width: 100%;
+		width: 50%;
+		@include flexbox(column);
+		@include align-items(center);
+		@include justify-content(center);
 
 		h2 {
 			margin-bottom: 20px;
+			max-width: pxToRem(572px);
 		}
 		p {
 			margin-bottom: 50px;
+			max-width: pxToRem(590px);
 		}
 		.highlight {
 			color: $text-highlight-color;
+		}
+	}
+
+	.feedback {
+		width: 50%;
+		text-align: center;
+		@include flexbox(column);
+		@include align-items(center);
+		@include justify-content(center);
+
+		img {
+			max-width: 50px;
+			max-height: 50px;
+			margin-bottom: pxToRem(25px);
+		}
+		p {
+			max-width: 590px;
+			margin-bottom: pxToRem(100px);
+		}
+		.h1 {
+			margin-bottom: pxToRem(50px);
+		}
+		&.error {
+			color: $text-orange-color;
 		}
 	}
 }
