@@ -23,7 +23,7 @@ function useContactDispatch() {
 
 function ContactProvider({ children }) {
 	const [state, dispatch] = useReducer(contactReducer, {
-		formIsActive: false,
+		formState: 'form',
 		name: '',
 		email: '',
 		message: '',
@@ -33,7 +33,6 @@ function ContactProvider({ children }) {
 	});
 
 	useEffect(() => {
-		console.log('FIRE!')
 		if (state.submit) {
 			addMailToCollection(state);
 			dispatch({ type: 'RESET_STATE' });
