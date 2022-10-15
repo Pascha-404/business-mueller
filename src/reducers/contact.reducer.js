@@ -1,7 +1,7 @@
 const reducer = (state, action) => {
 	switch (action.type) {
-		case 'TOGGLE_FORM':
-			return { ...state, formIsActive: !state.formIsActive };
+		case 'BACK_TO_FORM':
+			return { ...state, formState: 'form', submit: false };
 		case 'TOGGLE_PHONECALL':
 			return { ...state, phoneCall: !state.phoneCall };
 		case 'TOGGLE_SUBMIT':
