@@ -10,7 +10,7 @@ const reducer = (state, action) => {
 			return { ...state, [action.key]: action.value };
 		case 'RESET_STATE':
 			return {
-				formIsActive: false,
+				formState: 'form',
 				name: '',
 				email: '',
 				message: '',
