@@ -37,9 +37,12 @@ const addMailToCollection = async data => {
 			phoneCall: data.phoneCall,
 			phoneNumber: data.phoneNumber,
 		});
-		console.log(docRef);
+		if (docRef.id) {
+			return 'success'
+		} return 'error'
 	} catch (e) {
 		console.error('Error adding document', e);
+		return 'error'
 	}
 };
 
