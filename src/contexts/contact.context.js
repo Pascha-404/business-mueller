@@ -33,9 +33,21 @@ function ContactProvider({ children }) {
 	});
 
 	useEffect(() => {
+		async function addToDb() {
+			try {
+				const sendData = await addMailToCollection(state);
+				if (sendData === 'success') {
+					dispatch({ type: 'HANDLE_CHANGE', key: 'formState', value: 'success' });
+				} else if (sendData === 'error') {
+					dispatch({ type: 'HANDLE_CHANGE', key: 'formState', value: 'error' });
+				}
+			} catch (e) {
+				dispatch({ type: 'HANDLE_CHANGE', key: 'formState', value: 'error' });
+			}
+		}
+
 		if (state.submit) {
-			addMailToCollection(state);
-			dispatch({ type: 'RESET_STATE' });
+			addToDb();
 		}
 	}, [state.submit]);
 
