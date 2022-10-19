@@ -37,12 +37,12 @@ function ContactProvider({ children }) {
 			try {
 				const sendData = await addMailToCollection(state);
 				if (sendData === 'success') {
-					dispatch({ type: 'HANDLE_CHANGE', key: 'formState', value: 'success' });
+					dispatch({ type: 'SHOW_SUCCESS' });
 				} else if (sendData === 'error') {
-					dispatch({ type: 'HANDLE_CHANGE', key: 'formState', value: 'error' });
+					dispatch({ type: 'SHOW_ERROR' });
 				}
 			} catch (e) {
-				dispatch({ type: 'HANDLE_CHANGE', key: 'formState', value: 'error' });
+				dispatch({ type: 'SHOW_ERROR' });
 			}
 		}
 
