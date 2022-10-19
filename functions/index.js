@@ -17,6 +17,11 @@ const transporter = nodemailer.createTransport({
 exports.sendEmail = functions.firestore
 	.document('mails/{mailId}')
 	.onCreate((snap, context) => {
+		const callBack = snap.data().phoneCall
+			? `<p>Telefonnummer: ${
+					snap.data().phoneNumber
+			  }</p><p>Der Kunde wünscht einen Rückruf</p>`
+			: '<p>Der Kunde wünscht die Kontaktaufnahme via Email</p>';
 		const mailOptions = {
 			from: process.env.MAIL_USER,
 			to: process.env.MAIL_RECIEVER,
@@ -26,7 +31,7 @@ exports.sendEmail = functions.firestore
                     <br>
                     <p>Name: ${snap.data().name}</p>
                     <p>Email: ${snap.data().email}</p>
-                    <p>Telefonnummer: ${snap.data().phoneNumber}</p>
+                    ${callBack}
                     <p>Nachricht: ${snap.data().message}</p>`,
 		};
 
@@ -38,4 +43,3 @@ exports.sendEmail = functions.firestore
 			console.log('Mail Sent!');
 		});
 	});
-
