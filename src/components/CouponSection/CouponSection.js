@@ -6,7 +6,7 @@ import styles from './CouponSection.module.scss';
 
 function CouponSection() {
 	return (
-		<section className={styles.couponSection}>
+		<section className={styles.couponSection} id='couponSection'>
 			<div className={styles.bgImage} />
 			<h2 className='h1'>Wir freuen uns darauf Sie kennenzulernen!</h2>
 			<p>
