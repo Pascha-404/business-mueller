@@ -1,22 +1,35 @@
 import React from 'react';
-import ContactForm from '../ContactForm/ContactForm';
+import { InView } from 'react-intersection-observer';
+import { textureTwo, imgContact } from '../../assets';
+import { iconError, iconSuccess } from '../../assets';
 
 import { useContact } from '../../contexts/contact.context';
-import { textureTwo, imgContact } from '../../assets';
-import Button from '../Button';
+import { useBtnTheme } from '../../contexts/btnTheme.context';
 
-import { iconError, iconSuccess } from '../../assets';
+import Button from '../Button';
+import ContactForm from '../ContactForm/ContactForm';
 
 import styles from './ContactSection.module.scss';
 
 function ContactSection() {
 	const { formState } = useContact();
+	const { isLight, setIsLight } = useBtnTheme();
+
+	function handleOberserverChange(inView, entry) {
+		setIsLight(!isLight);
+	}
 	return (
-		<section className={styles.contactSection} id='contactSection'>
+		<InView
+			as='section'
+			className={styles.contactSection}
+			id='contactSection'
+			rootMargin={'-100% 0px 0px 0px'}
+			onChange={handleOberserverChange}>
 			<div className={styles.imgWrapper}>
 				<img src={textureTwo} alt='Weiße Steintextur' className={styles.underlayedImg} />
 				<img src={imgContact} alt='Weißes Badezimmer mit schwarz-goldenen Akzenten' />
 			</div>
+
 			{formState === 'form' && (
 				<div className={styles.contactFormWrapper}>
 					<h2>
@@ -31,6 +44,7 @@ function ContactSection() {
 					<ContactForm />
 				</div>
 			)}
+
 			{formState === 'success' && (
 				<div className={styles.feedback}>
 					<img src={iconSuccess} alt='Haken Symbol' />
@@ -42,6 +56,7 @@ function ContactSection() {
 					</p>
 				</div>
 			)}
+
 			{formState === 'error' && (
 				<div className={`${styles.feedback} ${styles.error}`}>
 					<img src={iconError} alt='Kreuz Symbol' />
@@ -50,7 +65,7 @@ function ContactSection() {
 					<Button text='Zurück' bigBtn theme='dark' backToForm />
 				</div>
 			)}
-		</section>
+		</InView>
 	);
 }
 

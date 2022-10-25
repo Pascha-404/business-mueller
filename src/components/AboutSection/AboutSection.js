@@ -1,4 +1,5 @@
 import React from 'react';
+import { InView } from 'react-intersection-observer';
 import {
 	imgAbout,
 	textureTwo,
@@ -9,6 +10,8 @@ import {
 	iconDiamond,
 	iconLightbulb,
 } from '../../assets';
+
+import { useBtnTheme } from '../../contexts/btnTheme.context';
 
 import AboutTile from '../AboutTile';
 import Button from '../Button';
@@ -58,8 +61,19 @@ const tiles = [
 // Component for displaying the aboutSection.
 // Adds AboutTile component based on tiles data array.
 function AboutSection() {
+	const { isLight, setIsLight } = useBtnTheme();
+
+	function handleOberserverChange(inView, entry) {
+		setIsLight(!isLight);
+	}
+
 	return (
-		<section className={styles.aboutSection} id='aboutSection'>
+		<InView
+			as='section'
+			className={styles.aboutSection}
+			id='aboutSection'
+			rootMargin={'-100% 0px 0px 0px'}
+			onChange={handleOberserverChange}>
 			<div className={styles.firstRow}>
 				<div className={styles.firstRowLeft}>
 					<div className={styles.imgWrapper}>
@@ -102,7 +116,7 @@ function AboutSection() {
 					/>
 				))}
 			</div>
-		</section>
+		</InView>
 	);
 }
 
