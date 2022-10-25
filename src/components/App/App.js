@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { BtnThemeProvider } from '../../contexts/btnTheme.context';
 import { ContactProvider } from '../../contexts/contact.context';
 import Footer from '../Footer/Footer';
 
@@ -11,7 +12,9 @@ function App() {
 				<Navbar />
 			</header>
 			<main>
-				<Outlet />
+				<BtnThemeProvider>
+					<Outlet />
+				</BtnThemeProvider>
 			</main>
 			<Footer />
 		</ContactProvider>
