@@ -49,6 +49,7 @@ function ContactProvider({ children }) {
 		if (state.submit) {
 			addToDb();
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [state.submit]);
 
 	return (
