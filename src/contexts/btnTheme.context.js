@@ -20,6 +20,8 @@ function BtnThemeProvider({ children }) {
 		contactVisible: false,
 	});
 
+	// Filters sectionsInView for true values, if there is a true value found
+	// isLight changes to true and the ContactButton theme changes
 	useEffect(() => {
 		const filteredSections = Object.entries(sectionsInView).filter(
 			([key, value]) => value === true
