@@ -13,11 +13,17 @@ import styles from './ContactSection.module.scss';
 
 function ContactSection() {
 	const { formState } = useContact();
-	const { isLight, setIsLight } = useBtnTheme();
+	const { sectionsInView, setSectionsInView } = useBtnTheme();
 
 	function handleOberserverChange(inView, entry) {
-		setIsLight(!isLight);
+		if (sectionsInView.contactVisible !== inView) {
+			setSectionsInView({
+				...sectionsInView,
+				contactVisible: !sectionsInView.contactVisible,
+			});
+		}
 	}
+
 	return (
 		<InView
 			as='section'

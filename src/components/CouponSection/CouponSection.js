@@ -8,10 +8,15 @@ import Button from '../Button';
 import styles from './CouponSection.module.scss';
 
 function CouponSection() {
-	const { isLight, setIsLight } = useBtnTheme();
+	const { sectionsInView, setSectionsInView } = useBtnTheme();
 
 	function handleOberserverChange(inView, entry) {
-		setIsLight(!isLight);
+		if (sectionsInView.couponVisible !== inView) {
+			setSectionsInView({
+				...sectionsInView,
+				couponVisible: !sectionsInView.couponVisible,
+			});
+		}
 	}
 
 	return (

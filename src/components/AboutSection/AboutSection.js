@@ -61,10 +61,15 @@ const tiles = [
 // Component for displaying the aboutSection.
 // Adds AboutTile component based on tiles data array.
 function AboutSection() {
-	const { isLight, setIsLight } = useBtnTheme();
+	const { sectionsInView, setSectionsInView } = useBtnTheme();
 
 	function handleOberserverChange(inView, entry) {
-		setIsLight(!isLight);
+		if (sectionsInView.aboutVisible !== inView) {
+			setSectionsInView({
+				...sectionsInView,
+				aboutVisible: !sectionsInView.aboutVisible,
+			});
+		}
 	}
 
 	return (
