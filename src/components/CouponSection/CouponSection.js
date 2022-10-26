@@ -10,6 +10,8 @@ import styles from './CouponSection.module.scss';
 function CouponSection() {
 	const { sectionsInView, setSectionsInView } = useBtnTheme();
 
+	// Function triggers if component is in view
+	// If value is not equal to context value of section, changes it
 	function handleOberserverChange(inView, entry) {
 		if (sectionsInView.couponVisible !== inView) {
 			setSectionsInView({

@@ -15,6 +15,8 @@ function ContactSection() {
 	const { formState } = useContact();
 	const { sectionsInView, setSectionsInView } = useBtnTheme();
 
+	// Function triggers if component is in view
+	// If value is not equal to context value of section, changes it
 	function handleOberserverChange(inView, entry) {
 		if (sectionsInView.contactVisible !== inView) {
 			setSectionsInView({
