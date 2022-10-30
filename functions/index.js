@@ -4,6 +4,7 @@ const nodemailer = require('nodemailer');
 
 admin.initializeApp();
 
+// Transporter which includes all informations to send triggered emails
 const transporter = nodemailer.createTransport({
 	host: 'smtp.strato.de',
 	port: 465,
@@ -14,6 +15,8 @@ const transporter = nodemailer.createTransport({
 	},
 });
 
+// Function that triggers when ContactForm data is added in database.
+// Sends a email with all data to the business e-mail account.
 exports.sendEmail = functions.firestore
 	.document('mails/{mailId}')
 	.onCreate((snap, context) => {
@@ -41,10 +44,12 @@ exports.sendEmail = functions.firestore
 				console.log(error);
 				return;
 			}
-			console.log('Mail Sent!');
+			console.log('Sent Mail To Business!');
 		});
 	});
 
+// Function that triggers when ContactForm data is added in database.
+// Sends a email with all data to the user which filled up the form.
 exports.sendEmailToCustomer = functions.firestore
 	.document('mails/{mailId}')
 	.onCreate((snap, context) => {
@@ -79,6 +84,6 @@ exports.sendEmailToCustomer = functions.firestore
 				console.log(error);
 				return;
 			}
-			console.log('Mail to customer Sent!');
+			console.log('Sent Mail To Customer!');
 		});
 	});
