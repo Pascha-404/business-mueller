@@ -51,13 +51,15 @@ h3,
 	line-height: 2.046rem;
 }
 
-h4, .h4{
+h4,
+.h4 {
 	font-family: $main-font;
 	font-weight: 400;
 	font-size: pxToRem(23px);
 }
 
-h5, .h5{
+h5,
+.h5 {
 	font-family: $main-font;
 	font-weight: 400;
 	font-size: pxToRem(20px);
@@ -86,17 +88,28 @@ button {
 	font-family: $main-font;
 }
 
-
 button.bigBtn {
 	font-size: pxToRem(24px);
 }
 
-input{
+input {
 	font-size: pxToRem(24px);
 }
 
-.couponHighlight{
+.couponHighlight {
 	font-weight: 900;
 	font-size: pxToRem(30px);
+}
 
+.feedback {
+	p {
+		font-size: 30px;
+		line-height: 48px;
+		font-weight: 600;
+	}
+	p.h1 {
+		font-family: $main-font;
+		font-size: 58px;
+		font-weight: 700;
+	}
 }

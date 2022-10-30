@@ -71,6 +71,7 @@ function ContactForm() {
 						id='phoneNumber'
 						value={phoneNumber}
 						onChange={handleChange('phoneNumber')}
+						required
 					/>
 					<label htmlFor='phoneNumber'>Telefonnummer</label>
 				</React.Fragment>

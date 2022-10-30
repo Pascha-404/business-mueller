@@ -1,65 +1,39 @@
 import React from 'react';
-import {
-	imgAbout,
-	textureTwo,
-	iconTile,
-	iconQuestionMark,
-	iconClipboard,
-	iconHouse,
-	iconDiamond,
-	iconLightbulb,
-} from '../../assets';
+import { InView } from 'react-intersection-observer';
+
+import tiles from './tiles';
+import { imgAbout, textureTwo } from '../../assets';
+
+import { useBtnTheme } from '../../contexts/btnTheme.context';
 
 import AboutTile from '../AboutTile';
 import Button from '../Button';
 
 import styles from './AboutSection.module.scss';
 
-// Data array for the tiles in about section.
-const tiles = [
-	{
-		icon: iconTile,
-		iconAlt: 'Vier kleine Fliesen',
-		title: 'Fliesen',
-		text: 'Hochwertige Natursteinverarbeitung im Dickbettverfahren.',
-	},
-	{
-		icon: iconQuestionMark,
-		iconAlt: 'Fragezeichen',
-		title: 'Vorort Beratung',
-		text: 'Wir stellen Ihre Wünsche gemeinsam zusammen.',
-	},
-	{
-		icon: iconClipboard,
-		iconAlt: 'Klemmbrett',
-		title: 'Badgestaltung',
-		text: 'Planung mittels moderner 3D Software.',
-	},
-	{
-		icon: iconHouse,
-		iconAlt: 'Haus Symbol',
-		title: 'Innenausbau',
-		text: 'Ausstattung von Küchen bis zu Treppenhäusern.',
-	},
-	{
-		icon: iconDiamond,
-		iconAlt: 'Diamant',
-		title: 'Millimeterarbeit',
-		text: 'Passgenaue Anfertigung auch für schwierige Stellen',
-	},
-	{
-		icon: iconLightbulb,
-		iconAlt: 'Glühbirne',
-		title: 'Innovativ',
-		text: 'Neueste Technologien, scharfe Mosaike. Wir erfüllen jeden Wunsch.',
-	},
-];
-
 // Component for displaying the aboutSection.
 // Adds AboutTile component based on tiles data array.
 function AboutSection() {
+	const { sectionsInView, setSectionsInView } = useBtnTheme();
+
+	// Function triggers if component is in view
+	// If value is not equal to context value of section, changes it
+	function handleOberserverChange(inView, entry) {
+		if (sectionsInView.aboutVisible !== inView) {
+			setSectionsInView({
+				...sectionsInView,
+				aboutVisible: !sectionsInView.aboutVisible,
+			});
+		}
+	}
+
 	return (
-		<section className={styles.aboutSection} id='aboutSection'>
+		<InView
+			as='section'
+			className={styles.aboutSection}
+			id='aboutSection'
+			rootMargin={'-100% 0px 0px 0px'}
+			onChange={handleOberserverChange}>
 			<div className={styles.firstRow}>
 				<div className={styles.firstRowLeft}>
 					<div className={styles.imgWrapper}>
@@ -102,7 +76,7 @@ function AboutSection() {
 					/>
 				))}
 			</div>
-		</section>
+		</InView>
 	);
 }
 

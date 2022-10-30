@@ -2,6 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -17,6 +18,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const appCheck = initializeAppCheck(app, {
+	provider: new ReCaptchaV3Provider(`${process.env.REACT_APP_RECAPTCHA_USER}`),
+	isTokenAutoRefreshEnabled: true,
+});
 const analytics = getAnalytics(app);
 
 // Initialize Cloud Firestore and get a reference to the service
@@ -31,10 +36,13 @@ const addMailToCollection = async data => {
 			message: data.message,
 			phoneCall: data.phoneCall,
 			phoneNumber: data.phoneNumber,
-        });
-        console.log(docRef)
+		});
+		if (docRef.id) {
+			return 'success'
+		} return 'error'
 	} catch (e) {
 		console.error('Error adding document', e);
+		return 'error'
 	}
 };
 

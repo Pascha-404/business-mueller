@@ -23,7 +23,7 @@ function useContactDispatch() {
 
 function ContactProvider({ children }) {
 	const [state, dispatch] = useReducer(contactReducer, {
-		formIsActive: false,
+		formState: 'form',
 		name: '',
 		email: '',
 		message: '',
@@ -33,11 +33,23 @@ function ContactProvider({ children }) {
 	});
 
 	useEffect(() => {
-		console.log('FIRE!')
-		if (state.submit) {
-			addMailToCollection(state);
-			dispatch({ type: 'RESET_STATE' });
+		async function addToDb() {
+			try {
+				const sendData = await addMailToCollection(state);
+				if (sendData === 'success') {
+					dispatch({ type: 'SHOW_SUCCESS' });
+				} else if (sendData === 'error') {
+					dispatch({ type: 'SHOW_ERROR' });
+				}
+			} catch (e) {
+				dispatch({ type: 'SHOW_ERROR' });
+			}
 		}
+
+		if (state.submit) {
+			addToDb();
+		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [state.submit]);
 
 	return (

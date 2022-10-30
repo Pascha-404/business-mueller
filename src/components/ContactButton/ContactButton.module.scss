@@ -39,4 +39,15 @@
 		width: 100%;
 		border-radius: 10px;
 	}
+	&.lightTheme {
+		background: $bg-light-color;
+		img {
+			filter: invert(20%) sepia(10%) saturate(100%) hue-rotate(125deg) brightness(0%) contrast(50%);
+		}
+		&:hover {
+			::before {
+				color: $text-dark-color;
+			}
+		}
+	}
 }

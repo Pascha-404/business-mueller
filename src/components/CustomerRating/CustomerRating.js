@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { starIcon } from '../../assets';
+import { iconStar } from '../../assets';
 
 import styles from './CustomerRating.module.scss';
 
@@ -11,7 +11,7 @@ function CustomerRating({ titel, rating, review, customerName, customerInfo }) {
 				<h3>{titel}</h3>
 				<div className={styles.ratingWrapper}>
 					{[...Array(rating)].map((e, i) => (
-						<img src={starIcon} key={i} alt="Stern" />
+						<img src={iconStar} key={i} alt='Stern' />
 					))}
 				</div>
 			</div>
