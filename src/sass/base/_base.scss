@@ -2,6 +2,22 @@
 
 html {
 	box-sizing: border-box;
+
+	@include breakpoint('m'){
+		font-size: 12px !important;
+	}
+	@include breakpoint('s'){
+		font-size: 13px !important;
+	}
+	@include breakpoint('l'){
+		font-size: 14px !important;
+	}
+	@include breakpoint('xl'){
+		font-size: 15px !important;
+	}
+	@include breakpoint('xxl'){
+		font-size: 16px !important;
+	}
 }
 
 *,
