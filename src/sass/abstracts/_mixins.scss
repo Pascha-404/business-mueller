@@ -118,3 +118,25 @@
 		}
 	}
 }
+
+/* Mixin for media queries */
+
+@mixin breakpoint($breakpoint, $direction: $media-direction) {
+	// Checks if value is available in breakpoints variables
+	@if map-has-key($breakpoints, $breakpoint) {
+		// Output
+		@media (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
+
+	// If a plane value is passed into breakpoint it checks if a unit was given, if not px is added
+	@else if unitless($breakpoint) {
+		$breakpoint: $breakpoint + 0px;
+
+		// Output
+		@media (#{$direction}-width: $breakpoint) {
+			@content;
+		}
+	}
+}
