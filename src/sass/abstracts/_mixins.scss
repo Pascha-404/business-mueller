@@ -98,14 +98,23 @@
 // underlays a element with another.
 // applys position relative to container.
 // adds child element through class as underlayed element.
-@mixin underlay($underlayClass, $height, $direction: left) {
+@mixin underlay($underlayClass, $direction: left) {
+	width: 85%;
 	position: relative;
 	z-index: 1;
+	img {
+		height: 100%;
+		object-fit: fill;
+		width: 100%;
+	}
+
 	.#{$underlayClass} {
 		position: absolute;
 		z-index: -1;
-		height: pxToRem($height);
+		height: 110%;
 		top: 50%;
+		object-fit: cover;
+
 		@if $direction == left {
 			left: pxToRem(72px);
 			-webkit-transform: translateY(-50%);
