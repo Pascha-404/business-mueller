@@ -3,19 +3,19 @@
 html {
 	box-sizing: border-box;
 
-	@include breakpoint('m'){
+	@include breakpoint('m', 'min'){
 		font-size: 12px !important;
 	}
-	@include breakpoint('s'){
+	@include breakpoint('s', 'min'){
 		font-size: 13px !important;
 	}
-	@include breakpoint('l'){
+	@include breakpoint('l', 'min'){
 		font-size: 14px !important;
 	}
-	@include breakpoint('xl'){
+	@include breakpoint('xl', 'min'){
 		font-size: 15px !important;
 	}
-	@include breakpoint('xxl'){
+	@include breakpoint('xxl', 'min'){
 		font-size: 16px !important;
 	}
 }
@@ -46,8 +46,6 @@ a {
 }
 
 img {
-	max-width: 640px;
-	max-height: 573px;
 	@include roundBorder;
 }
 
