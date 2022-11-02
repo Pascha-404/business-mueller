@@ -5,13 +5,13 @@
 	height: 100vh;
 
 	@include flexbox;
-	@include justify-content(space-around);
 	@include align-items(center);
 }
 
 .heroLeft {
 	width: 40%;
 	height: 100%;
+	margin-right: pxToRem(65px);
 
 	.highlight {
 		color: $text-highlight-color;
@@ -42,14 +42,13 @@
 }
 
 .heroRight {
-	width: 50%;
-	height: 100%;
+	width: 60%;
 	@include flexbox(column);
 	@include justify-content(center);
 
 	.imgWrapper {
-		margin-top: 8rem;
-		@include underlay(underlayedImg, 483px);
+		margin-top: 5rem;
+		@include underlay(underlayedImg);
 	}
 
 	.heroDetails {
