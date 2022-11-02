@@ -14,7 +14,7 @@
 		width: 50%;
 		max-width: 550px;
 		text-align: center;
-		@include underlay(underlayedImg, 765px, right);
+		@include underlay(underlayedImg, right);
 		img {
 			max-width: 480px;
 			max-height: 717px;

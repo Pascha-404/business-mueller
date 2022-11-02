@@ -21,17 +21,13 @@
 		width: 100%;
 		@include flexbox;
 		@include align-items(center);
-		@include justify-content(space-around);
 
 		.firstRowLeft {
-			width: 40%;
+			width: 50%;
+			margin-right: pxToRem(235px);
 			.imgWrapper {
 				margin-top: -2rem;
-				@include underlay(underlayedImg, 619px);
-				.underlayedImg {
-					max-height: 619px;
-					max-width: 370px;
-				}
+				@include underlay(underlayedImg);
 			}
 		}
 		.firstRowRight {
