@@ -38,7 +38,7 @@ $icon-blur-color: rgba(188, 140, 101, 0.3);
 $border-dark-color: rgba(82, 90, 91, 1);
 
 // min or max
-$media-direction: min; // min / max — default is min
+$media-direction: max; // min / max — default is max
 
 /* Breakpoints */
 $breakpoints: (
