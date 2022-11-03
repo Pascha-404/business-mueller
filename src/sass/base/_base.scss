@@ -3,19 +3,19 @@
 html {
 	box-sizing: border-box;
 
-	@include breakpoint('m', 'min'){
+	@include breakpoint('s', 'min') {
+		font-size: 11px !important;
+	}
+	@include breakpoint('m', 'min') {
 		font-size: 12px !important;
 	}
-	@include breakpoint('s', 'min'){
+	@include breakpoint('l', 'min') {
 		font-size: 13px !important;
 	}
-	@include breakpoint('l', 'min'){
+	@include breakpoint('xl', 'min') {
 		font-size: 14px !important;
 	}
-	@include breakpoint('xl', 'min'){
-		font-size: 15px !important;
-	}
-	@include breakpoint('xxl', 'min'){
+	@include breakpoint('xxl', 'min') {
 		font-size: 16px !important;
 	}
 }
@@ -38,6 +38,13 @@ html body {
 
 body section {
 	padding-left: pxToRem(103px);
+
+	@include breakpoint('l') {
+		padding-left: 40px;
+	}
+	@include breakpoint('m') {
+		padding-left: 15px;
+	}
 }
 
 a {
@@ -51,8 +58,8 @@ img {
 
 button {
 	max-width: 250px;
-	
-	&:active{
+
+	&:active {
 		transform: scale(0.8);
 	}
 }
