@@ -5,6 +5,8 @@
 	background-color: $bg-light-color;
 	color: $text-dark-color;
 	padding-bottom: pxToRem(136px);
+	padding-right: pxToRem(90px);
+	@include flexbox(column);
 	@include align-items(center);
 
 	h2 {
@@ -14,8 +16,6 @@
 		}
 	}
 
-	@include flexbox(column);
-
 	.firstRow {
 		height: 50%;
 		width: 100%;
@@ -24,23 +24,28 @@
 
 		.firstRowLeft {
 			width: 50%;
-			margin-right: pxToRem(235px);
+			margin-right: pxToRem(70px);
+
 			.imgWrapper {
 				margin-top: -2rem;
-				@include underlay(underlayedImg);
+				@include underlay(underlayedImg, $portrait: true);
 			}
 		}
+
 		.firstRowRight {
 			width: 50%;
 			@include flexbox(column);
 			@include justify-content(space-between);
+
 			h2 {
 				margin-top: pxToRem(70px);
 			}
+
 			p {
 				margin-top: pxToRem(34px);
 				max-width: pxToRem(630px);
 			}
+
 			button {
 				margin-top: pxToRem(51px);
 			}
