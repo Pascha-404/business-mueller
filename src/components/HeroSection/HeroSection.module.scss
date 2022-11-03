@@ -12,6 +12,8 @@
 	width: 40%;
 	height: 100%;
 	margin-right: pxToRem(65px);
+	@include flexbox(column);
+	@include justify-content(center);
 
 	.highlight {
 		color: $text-highlight-color;
@@ -23,8 +25,6 @@
 
 	// Spacing for left side
 	.btnWrap {
-		margin-top: pxToRem(249px);
-
 		div {
 			margin-right: pxToRem(10px);
 		}
@@ -39,15 +39,21 @@
 		margin-top: pxToRem(37px);
 		margin-bottom: pxToRem(180px);
 	}
+
+	@include breakpoint('m') {
+		button {
+			margin-bottom: pxToRem(90px);
+		}
+	}
 }
 
 .heroRight {
 	width: 60%;
+	height: 100%;
 	@include flexbox(column);
 	@include justify-content(center);
 
 	.imgWrapper {
-		margin-top: 5rem;
 		@include underlay(underlayedImg);
 	}
 
