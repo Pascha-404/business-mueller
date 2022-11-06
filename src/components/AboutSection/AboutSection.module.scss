@@ -9,6 +9,16 @@
 	@include flexbox(column);
 	@include align-items(center);
 
+	@include breakpoint('xl') {
+		height: 100vh;
+	}
+	@include breakpoint('l') {
+		padding-right: pxToRem(40px);
+	}
+	@include breakpoint('m') {
+		padding-right: pxToRem(15px);
+	}
+
 	h2 {
 		color: $text-darkgreen-color;
 		.highlight {
