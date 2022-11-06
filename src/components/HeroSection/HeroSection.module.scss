@@ -72,8 +72,8 @@
 
 			.logoContainer {
 				color: $text-greygreen-color;
-				width: 50px;
-				height: 50px;
+				width: pxToRem(50px);
+				height: pxToRem(50px);
 				border-radius: 50%;
 				background-color: $text-light-color;
 				margin-right: pxToRem(20px);
