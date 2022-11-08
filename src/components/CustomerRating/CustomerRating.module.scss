@@ -10,6 +10,16 @@
 	@include flexbox(column);
 	@include roundBorder;
 
+	@include breakpoint('xl') {
+		height: pxToRem(600px)
+	}
+	@include breakpoint('l') {
+		height: pxToRem(900px)
+	}
+	@include breakpoint('m') {
+		height: pxToRem(900px)
+	}
+
 	.ratingWrapper {
 		margin-top: pxToRem(10px);
 		margin-bottom: pxToRem(30px);
