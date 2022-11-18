@@ -45,6 +45,9 @@ body section {
 	@include breakpoint('m') {
 		padding-left: 15px;
 	}
+	@include breakpoint('s') {
+		padding-left: 25px;
+	}
 }
 
 a {
