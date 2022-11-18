@@ -46,4 +46,11 @@
 	p {
 		text-align: center;
 	}
+
+	@include breakpoint('m') {
+		max-width: 250px;
+	}
+	@include breakpoint('s') {
+		// max-width: 240px;
+	}
 }
