@@ -2,8 +2,6 @@
 
 .navbar {
 	width: 100%;
-	position: absolute;
-	left: 0;
 	@include flexbox;
 	@include justify-content(space-around);
 
@@ -22,5 +20,17 @@
 	a.active {
 		color: $text-highlight-color;
 		font-weight: 700;
+	}
+
+	@include breakpoint('s') {
+		ul {
+			display: none;
+		}
+	}
+	
+	@include breakpoint('xs') {
+		img {
+			max-width: 76px;
+		}
 	}
 }
