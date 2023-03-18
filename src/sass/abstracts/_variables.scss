@@ -42,6 +42,7 @@ $media-direction: max; // min / max — default is max
 
 /* Breakpoints */
 $breakpoints: (
+	'zero': 0px,
 	'xs': 400px,
 	's': 576px,
 	'm': 768px,

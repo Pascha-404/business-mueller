@@ -2,7 +2,13 @@
 
 html {
 	box-sizing: border-box;
-
+	
+	@include breakpoint('zero', 'min') {
+		font-size: 9px !important;
+	}
+	@include breakpoint('xs', 'min') {
+		font-size: 10px !important;
+	}
 	@include breakpoint('s', 'min') {
 		font-size: 11px !important;
 	}
