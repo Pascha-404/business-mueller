@@ -13,6 +13,14 @@ function HeroSection() {
 	return (
 		<section className={styles.heroSection} id='heroSection'>
 			<div className={styles.heroLeft}>
+				<div className={`${styles.imgWrapper} ${styles.imgMobile}`}>
+					<img src={heroImg} alt='Waschtisch mit goldener Armatur' />
+					<img
+						src={textureImg}
+						alt='Weiße Steintextur'
+						className={styles.underlayedImg}
+					/>
+				</div>
 				<div className={styles.btnWrap}>
 					<Button type='shaped' text='Badezimmer' />
 					<Button type='shaped' text='Küche' />
@@ -22,13 +30,15 @@ function HeroSection() {
 					Einfach eine völlig <span className={styles.highlight}>neue Erfahrung</span>
 				</h1>
 				<h2 className={styles.h2}>Fliesen und andere Reparaturarbeiten</h2>
-				<Button text='Mehr über uns' />
-				<h2 className={styles.heroLocation}>
-					Wir sind ein Fliesenfachbetrieb aus Berlin Reinickendorf
-				</h2>
+				<div className={styles.hideMobile}>
+					<Button text='Mehr über uns' />
+					<h2 className={styles.heroLocation}>
+						Wir sind ein Fliesenfachbetrieb aus Berlin Reinickendorf
+					</h2>
+				</div>
 			</div>
 			<div className={styles.heroRight}>
-				<div className={styles.imgWrapper}>
+				<div className={`${styles.imgWrapper} ${styles.hideMobile}`}>
 					<img src={heroImg} alt='Waschtisch mit goldener Armatur' />
 					<img
 						src={textureImg}
