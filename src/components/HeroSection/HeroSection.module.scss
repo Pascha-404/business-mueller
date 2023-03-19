@@ -15,12 +15,13 @@
 	.imgWrapper {
 		@include underlay(underlayedImg);
 	}
-	.hideMobile {
-		display: none;
-	}
 
 	@include breakpoint('s') {
 		min-height: auto;
+		
+		.hideMobile {
+			display: none;
+		}
 	}
 }
 
@@ -65,7 +66,7 @@
 			margin-bottom: pxToRem(90px);
 		}
 	}
-	
+
 	@include breakpoint('s') {
 		margin-top: 5rem;
 		width: 100%;
@@ -120,9 +121,19 @@
 
 	@include breakpoint('s') {
 		width: 100%;
-		.heroDetails{
+		.heroDetails {
 			margin-top: pxToRem(25.5px);
 			margin-bottom: pxToRem(39px);
+		}
+
+		.heroDetails {
+			.detailsItem {
+				.logoContainer {
+					img {
+						width: 16.5px;
+					}
+				}
+			}
 		}
 	}
 }
