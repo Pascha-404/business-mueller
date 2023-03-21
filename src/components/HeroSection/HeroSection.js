@@ -13,7 +13,7 @@ function HeroSection() {
 	return (
 		<section className={styles.heroSection} id='heroSection'>
 			<div className={styles.heroLeft}>
-				<div className={`${styles.imgWrapper} ${styles.imgMobile}`}>
+				<div className={`${styles.imgWrapper} ${styles.showOnSmall}`}>
 					<img src={heroImg} alt='Waschtisch mit goldener Armatur' />
 					<img
 						src={textureImg}
@@ -30,7 +30,7 @@ function HeroSection() {
 					Einfach eine völlig <span className={styles.highlight}>neue Erfahrung</span>
 				</h1>
 				<h2 className={styles.h2}>Fliesen und andere Reparaturarbeiten</h2>
-				<div className={styles.hideMobile}>
+				<div className={styles.hideOnSmall}>
 					<Button text='Mehr über uns' />
 					<h2 className={styles.heroLocation}>
 						Wir sind ein Fliesenfachbetrieb aus Berlin Reinickendorf
@@ -38,7 +38,7 @@ function HeroSection() {
 				</div>
 			</div>
 			<div className={styles.heroRight}>
-				<div className={`${styles.imgWrapper} ${styles.hideMobile}`}>
+				<div className={`${styles.imgWrapper} ${styles.hideOnSmall}`}>
 					<img src={heroImg} alt='Waschtisch mit goldener Armatur' />
 					<img
 						src={textureImg}
