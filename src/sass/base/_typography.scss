@@ -18,7 +18,7 @@ h2,
 .h2 {
 	font-family: $main-font;
 	font-weight: 400;
-	font-size: pxToRem(38px);
+	font-size: max(pxToRem(38px), 35px);
 	line-height: 3.5rem;
 }
 
@@ -69,7 +69,7 @@ p,
 .p {
 	font-family: $main-font;
 	font-weight: 400;
-	font-size: pxToRem(20px);
+	font-size: max(pxToRem(20px), 16px);
 	line-height: 1.843rem;
 }
 
