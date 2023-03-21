@@ -2,7 +2,7 @@
 
 html {
 	box-sizing: border-box;
-	
+
 	@include breakpoint('zero', 'min') {
 		font-size: 9.4px !important;
 	}
@@ -70,5 +70,17 @@ button {
 
 	&:active {
 		transform: scale(0.8);
+	}
+}
+
+.hideOnSmall {
+	@include breakpoint('s') {
+		display: none;
+	}
+}
+
+.showOnSmall {
+	@include breakpoint('s') {
+		display: block;
 	}
 }
