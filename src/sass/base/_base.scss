@@ -80,6 +80,7 @@ button {
 }
 
 .showOnSmall {
+	display: none;
 	@include breakpoint('s') {
 		display: block;
 	}
