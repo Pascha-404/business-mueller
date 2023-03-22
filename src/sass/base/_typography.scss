@@ -1,5 +1,6 @@
 @use './fonts' as *;
 @use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
 
 body {
 	font-family: $main-font;
@@ -49,6 +50,10 @@ h3,
 	font-weight: 700;
 	font-size: pxToRem(24px);
 	line-height: 2.046rem;
+
+	@include breakpoint('xs') {
+		font-size: 25.5px;
+	}
 }
 
 h4,
@@ -70,11 +75,15 @@ p,
 	font-family: $main-font;
 	font-weight: 400;
 	font-size: max(pxToRem(20px), 16px);
-	line-height: 1.843rem;
+	line-height: max(1.843rem, 24px);
 }
 
 p.pTiles {
 	font-size: pxToRem(18px);
+	
+	@include breakpoint('xs') {
+		font-size: 19px;
+	}
 }
 
 // Links in Navbar
