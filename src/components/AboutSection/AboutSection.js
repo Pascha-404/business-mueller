@@ -36,7 +36,7 @@ function AboutSection() {
 			onChange={handleOberserverChange}>
 			<div className={styles.firstRow}>
 				<div className={styles.firstRowLeft}>
-					<div className={styles.imgWrapper}>
+					<div className={`${styles.imgWrapper} ${styles.hideOnSmall}`}>
 						<img src={imgAbout} alt='Waschtisch und Fliesen in Marmor' />
 						<img
 							src={textureTwo}
