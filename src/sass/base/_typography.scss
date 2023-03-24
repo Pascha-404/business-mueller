@@ -90,6 +90,12 @@ p.pTiles {
 	}
 }
 
+.heroDetailsP{
+	@include breakpoint('xs') {
+		font-size: 11px;
+	}
+}
+
 // Links in Navbar
 nav ul li {
 	font-family: $main-font;
