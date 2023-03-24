@@ -21,6 +21,10 @@ h2,
 	font-weight: 400;
 	font-size: max(pxToRem(38px), 35px);
 	line-height: 3.5rem;
+
+	@include breakpoint('xs') {
+		line-height: 42px;
+	}
 }
 
 // smaller font for h2 class in heroSection
@@ -80,7 +84,7 @@ p,
 
 p.pTiles {
 	font-size: pxToRem(18px);
-	
+
 	@include breakpoint('xs') {
 		font-size: 19px;
 	}
