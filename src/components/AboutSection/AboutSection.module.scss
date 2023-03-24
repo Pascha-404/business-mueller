@@ -88,6 +88,7 @@
 	@include breakpoint('s') {
 		.firstRow {
 			@include flexbox(column);
+			@include align-items(flex-start);
 
 			.firstRowLeft {
 				.imgWrapper {
@@ -107,7 +108,9 @@
 
 	@include breakpoint('xs') {
 		.firstRow {
-			@include flexbox(column);
+			.firstRowRight{
+				max-width: 325px;
+			}
 		}
 
 		.secondRow {
