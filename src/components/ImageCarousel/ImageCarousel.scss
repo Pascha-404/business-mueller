@@ -32,6 +32,12 @@
 				@include breakpoint('m') {
 					transform: scale(0.9);
 				}
+				@include breakpoint('s') {
+					max-height: 420px;
+				}
+				@include breakpoint('xs') {
+					max-height: 360px;
+				}
 			}
 		}
 

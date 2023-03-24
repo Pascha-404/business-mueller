@@ -15,7 +15,7 @@ function ImageCarousel({ images }) {
 		<Swiper
 			modules={[Navigation, A11y, Pagination]}
 			spaceBetween={windowWidth < 870 ? -50 : windowWidth < 1200 ? -150 : -20}
-			slidesPerView={windowWidth < 1200 ? 2 : 3}
+			slidesPerView={windowWidth > 1200 ? 3 : windowWidth > 725 ? 2 : 1}
 			navigation
 			loop
 			pagination={{ clickable: true }}
