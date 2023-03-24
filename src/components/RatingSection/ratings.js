@@ -33,4 +33,14 @@ const ratings = [
 	},
 ];
 
+// "Der Fliesenleger hat für uns ein neues Waschbecken installiert und die Arbeit wurde schnell und professionell erledigt. Wir waren von seiner Freundlichkeit und Professionalität beeindruckt und empfehlen ihn jedem, der nach einem zuverlässigen Handwerker sucht." - Tom B.
+
+// "Wir haben den Fliesenleger für die Verlegung von Mosaikfliesen im Badezimmer engagiert und das Ergebnis ist einfach fantastisch. Er hat schnell und präzise gearbeitet und dabei auf Sauberkeit geachtet. Sehr empfehlenswert!" - Sarah L.
+
+// "Der Fliesenleger hat für uns den Boden im Flur verlegt und das Ergebnis ist einfach wunderschön. Er hat sehr genau gearbeitet und dabei immer auf Sauberkeit geachtet. Wir empfehlen ihn jedem, der nach einem kompetenten Handwerker für die Verlegung von Fliesen sucht." - Frank M.
+
+// "Wir waren begeistert von der Arbeit des Fliesenlegers. Er hat schnell und präzise gearbeitet und das Ergebnis ist einfach atemberaubend. Wir empfehlen ihn jedem, der nach einem zuverlässigen und kompetenten Handwerker für die Verlegung von Fliesen sucht." - Anna S.
+
+// "Wir haben den Fliesenleger für die Verlegung von großformatigen Fliesen im Bad engagiert und das Ergebnis ist einfach umwerfend. Er hat schnell und professionell gearbeitet und dabei immer auf Sauberkeit geachtet. Sehr empfehlenswert!" - Max K.
+
 export default ratings;
