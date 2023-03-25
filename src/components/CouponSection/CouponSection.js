@@ -29,12 +29,15 @@ function CouponSection() {
 			rootMargin={'-100% 0px 0px 0px'}
 			onChange={handleOberserverChange}>
 			<div className={styles.bgImage} />
+
 			<h2 className='h1'>Wir freuen uns darauf Sie kennenzulernen!</h2>
+
 			<p>
 				Neukunden bekommen <span className={'couponHighlight'}>5% Rabatt</span> auf alle
 				Leistungen
 			</p>
-			<a href='#contactSection'>
+
+			<a href='#contactSection' className={styles.hideOnSmall}>
 				<Button text={'Angebot einholen'} />
 			</a>
 		</InView>
