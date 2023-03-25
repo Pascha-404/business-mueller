@@ -13,6 +13,10 @@ h1,
 	font-weight: 400;
 	font-size: pxToRem(60px);
 	line-height: 3.7425rem;
+
+	@include breakpoint('s') {
+		line-height: 40px;
+	}
 }
 
 h2,
