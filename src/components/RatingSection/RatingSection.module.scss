@@ -20,4 +20,17 @@
 		row-gap: pxToRem(47px);
 		column-gap: pxToRem(36px);
 	}
+
+	@include breakpoint ('s'){
+		.ratingsWrap{
+			width: 100%;
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@include breakpoint ('xs'){
+		h2{
+			max-width: 280px;
+		}
+	}
 }
