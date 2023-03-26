@@ -64,6 +64,13 @@ h3,
 	}
 }
 
+.customerRating h3{
+	@include breakpoint('s') {
+		font-size: 15px;
+		font-weight: 600;
+	}
+}
+
 h4,
 .h4 {
 	font-family: $main-font;
@@ -97,6 +104,18 @@ p.pTiles {
 .heroDetailsP{
 	@include breakpoint('xs') {
 		font-size: 11px;
+	}
+}
+
+.customerRating .review {
+	@include breakpoint('s') {
+		font-size: 10px;
+	}
+}
+.customerRating .customerDetails p{
+	@include breakpoint('s') {
+		font-size: 10px;
+		line-height: 12px;
 	}
 }
 
