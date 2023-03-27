@@ -15,25 +15,10 @@
 	.contactLeft {
 		width: 50%;
 
-		@include breakpoint('s') {
-			display: none;
-		}
-
-		@include breakpoint('xl') {
-			@include flexbox;
-			@include align-items(center);
-			@include justify-content(center);
-		}
 		.imgWrapper {
 			max-width: 550px;
 			text-align: center;
 			@include underlay(underlayedImg, right);
-
-			@include breakpoint('m') {
-				.underlayedImg {
-					right: -10%;
-				}
-			}
 
 			img {
 				width: 100%;
@@ -91,6 +76,57 @@
 			}
 			&.error {
 				color: $text-orange-color;
+			}
+		}
+	}
+
+	@include breakpoint('xl') {
+		.contactLeft {
+			@include flexbox;
+			@include align-items(center);
+			@include justify-content(center);
+		}
+	}
+
+	@include breakpoint('m') {
+		.contactLeft {
+			margin-bottom: 50px;
+			
+			.imgWrapper {
+				.underlayedImg {
+					right: -10%;
+				}
+			}
+		}
+		.contactRight {
+			.contactFormWrapper {
+				h2,
+				p {
+					max-width: 480px;
+				}
+			}
+		}
+	}
+
+	@include breakpoint('s') {
+		height: auto;
+		@include flexbox(column-reverse);
+		@include align-items(flex-start);
+
+		.contactLeft {
+			width: 100%;
+			margin-top: 60px;
+
+			.imgWrapper {
+				.underlayedImg {
+					right: -15px;
+				}
+			}
+		}
+		.contactRight {
+			width: 100%;
+			.contactFormWrapper {
+				@include align-items(flex-start);
 			}
 		}
 	}
