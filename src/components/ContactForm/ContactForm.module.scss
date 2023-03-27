@@ -13,8 +13,13 @@
 		max-width: 562px;
 		border-radius: 10px;
 		border: none;
+		padding: 0 10px;
 	}
 
+	textarea {
+		padding: 10px;
+	}
+	
 	input {
 		height: 50px;
 	}
@@ -41,5 +46,11 @@
 		width: 100%;
 		text-align: center;
 		margin-top: 20px;
+	}
+
+	@include breakpoint('m') {
+		.btnWrapper {
+			text-align: start;
+		}
 	}
 }
