@@ -18,6 +18,14 @@
 	border: 1px solid $text-greygreen-color;
 	
 	@include roundBorder;
+
+	@include breakpoint('m'){
+		padding: 8px 11px;
+	}
+
+	@include breakpoint('s'){
+		padding: 8px 19px;
+	}
 }
 
 .light {

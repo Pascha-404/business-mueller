@@ -58,6 +58,12 @@
 	}
 
 	@include breakpoint('m') {
+		.btnWrap {
+			div {
+				margin-right: 3px;
+			}
+		}
+
 		button {
 			margin-bottom: pxToRem(90px);
 		}
@@ -67,12 +73,26 @@
 		margin-top: 5rem;
 		width: 100%;
 
+		.btnWrap {
+			div {
+				margin-right: 10px;
+			}
+		}
+
 		button {
 			margin-bottom: pxToRem(40px);
 		}
 
 		.showOnSmall {
 			margin-bottom: pxToRem(57px);
+		}
+	}
+
+	@include breakpoint('xs') {
+		.btnWrap {
+			div {
+				margin-right: 8px;
+			}
 		}
 	}
 }
