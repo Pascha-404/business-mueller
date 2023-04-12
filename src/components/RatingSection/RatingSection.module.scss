@@ -24,7 +24,7 @@
 	@include breakpoint ('s'){
 		.ratingsWrap{
 			width: 100%;
-			grid-template-columns: 1fr;
+			display: block;
 		}
 	}
 
