@@ -41,12 +41,12 @@ function DataCarousel({ data, type = 'img' }) {
 			modules={[Navigation, A11y, Pagination]}
 			spaceBetween={windowWidth < 400 ? 0 : 20}
 			slidesPerView={windowWidth > 400 ? 2 : 1}
-			navigation
+			navigation={type === 'img' && true}
 			loop
 			pagination={{ clickable: true }}
 			centeredSlides
 			speed={300}
-			className='DataCarousel'>
+			className={`DataCarousel ${type === 'rating' && 'rating'}`}>
 			{generateDataDisplay()}
 		</Swiper>
 	);
