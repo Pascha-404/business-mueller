@@ -3,6 +3,8 @@
 .heroSection {
 	width: 100vw;
 	min-height: 91vh;
+	padding-bottom: 8rem;
+	padding-top: 6rem;
 
 	@include flexbox;
 	@include align-items(center);
