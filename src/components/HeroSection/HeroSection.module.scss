@@ -9,17 +9,17 @@
 	@include flexbox;
 	@include align-items(center);
 
-	@include breakpoint('s') {
-		@include flexbox(column);
-		@include align-items(flex-start);
-	}
-
 	.imgWrapper {
 		@include underlay(underlayedImg);
 	}
 
 	@include breakpoint('s') {
 		min-height: auto;
+		@include flexbox(column);
+		@include align-items(flex-start);
+
+		padding-top: 0;
+		padding-bottom: 3rem;
 	}
 }
 
@@ -149,6 +149,16 @@
 					img {
 						width: 16.5px;
 					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint('s', min) {
+		.heroDetails {
+			.detailsItem {
+				.logoContainer {
+					min-width: pxToRem(50px);
 				}
 			}
 		}
