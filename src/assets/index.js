@@ -1,4 +1,4 @@
-import iconCompass from './icon-compass.svg';
+import iconCompass from './icon-compass.png';
 import iconPhone from './icon-phone.png';
 import iconTile from './icon-tile.png';
 import iconQuestionMark from './icon-questionMark.png';
