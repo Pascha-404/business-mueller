@@ -39,8 +39,8 @@ function DataCarousel({ data, type = 'img' }) {
 	return (
 		<Swiper
 			modules={[Navigation, A11y, Pagination]}
-			spaceBetween={windowWidth < 400 ? 0 : 20}
-			slidesPerView={windowWidth > 400 ? 2 : 1}
+			spaceBetween={windowWidth > 525 ? 60 : 0}
+			slidesPerView={windowWidth > 525 ? 2 : 1}
 			navigation={type === 'img' && true}
 			loop
 			pagination={{ clickable: true }}
