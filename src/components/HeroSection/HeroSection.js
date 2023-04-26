@@ -2,10 +2,7 @@ import React from 'react';
 
 import Button from '../Button';
 
-import heroImg from '../../assets/img-hero.png';
-import textureImg from '../../assets/texture-1.png';
-import compassLogo from '../../assets/icon-compass.svg';
-import phoneLogo from '../../assets/icon-phone.png';
+import { iconCompass, iconPhone, textureOne, imgHero } from '../../assets';
 
 import styles from './HeroSection.module.scss';
 
@@ -14,9 +11,9 @@ function HeroSection() {
 		<section className={styles.heroSection} id='heroSection'>
 			<div className={styles.heroLeft}>
 				<div className={`${styles.imgWrapper} ${styles.showOnSmall}`}>
-					<img src={heroImg} alt='Waschtisch mit goldener Armatur' />
+					<img src={imgHero} alt='Waschtisch mit goldener Armatur' />
 					<img
-						src={textureImg}
+						src={textureOne}
 						alt='Weiße Steintextur'
 						className={styles.underlayedImg}
 					/>
@@ -44,10 +41,10 @@ function HeroSection() {
 
 			<div className={styles.heroRight}>
 				<div className={`${styles.imgWrapper} ${styles.hideOnSmall}`}>
-					<img src={heroImg} alt='Waschtisch mit goldener Armatur' />
+					<img src={imgHero} alt='Waschtisch mit goldener Armatur' />
 
 					<img
-						src={textureImg}
+						src={textureOne}
 						alt='Weiße Steintextur'
 						className={styles.underlayedImg}
 					/>
@@ -56,14 +53,14 @@ function HeroSection() {
 				<div className={styles.heroDetails}>
 					<div className={styles.detailsItem}>
 						<div className={styles.logoContainer}>
-							<img src={compassLogo} alt='Compass' />
+							<img src={iconCompass} alt='Compass' />
 						</div>
 						<p className={styles.heroDetailsP}>Egal woher Sie aus Berlin oder Brandenburg kommen</p>
 					</div>
 
 					<div className={styles.detailsItem}>
 						<div className={styles.logoContainer}>
-							<img src={phoneLogo} alt='Phone' />
+							<img src={iconPhone} alt='Phone' />
 						</div>
 
 						<p className={styles.heroDetailsP}>
