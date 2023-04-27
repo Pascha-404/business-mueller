@@ -18,28 +18,28 @@ function Navbar() {
 				</li>
 				<li>
 					<NavLink
-						to='/'
+						to='/about'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}>
 						Warum Uns
 					</NavLink>
 				</li>
 				<li>
 					<NavLink
-						to='/'
+						to='/inspirationen'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}>
 						Inspirationen
 					</NavLink>
 				</li>
 				<li>
 					<NavLink
-						to='/'
+						to='/bewertungen'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}>
 						Bewertungen
 					</NavLink>
 				</li>
 				<li>
 					<NavLink
-						to='/'
+						to='/kontakt'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}>
 						Kontakt
 					</NavLink>
