@@ -55,7 +55,6 @@
 		}
 
 		.feedback {
-			width: 50%;
 			text-align: center;
 			@include flexbox(column);
 			@include align-items(center);
