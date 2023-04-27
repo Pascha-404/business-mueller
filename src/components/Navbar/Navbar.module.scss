@@ -5,6 +5,10 @@
 	@include flexbox;
 	@include justify-content(space-around);
 
+	img {
+		max-width: 163px;
+	}
+
 	ul {
 		width: 60%;
 		@include flexbox;
@@ -22,12 +26,12 @@
 		font-weight: 700;
 	}
 
-	@include breakpoint('s') {
+	@include breakpoint('m') {
 		ul {
 			display: none;
 		}
 	}
-	
+
 	@include breakpoint('xs') {
 		img {
 			max-width: 76px;
