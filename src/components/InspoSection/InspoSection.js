@@ -12,8 +12,7 @@ function InspoSection() {
 				Unsere <span className={styles.highlight}>Inspirationen</span> für Sie
 			</h2>
 			<p>
-				Wir sind bereit für jedes Projekt, und wenn Sie wissen nicht, was zu bauen, wir
-				...
+				Sie brauchen noch die nötige Insipiration? Hier ein paar Ideen, wir sind bereit für jedes Projekt.
 			</p>
 			<DataCarousel data={images} />
 		</section>

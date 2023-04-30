@@ -54,7 +54,7 @@ function AboutSection() {
 						auch Küchen, Pools und weiteren Räumlichkeiten.
 					</p>
 					<p>
-						Um Ihre induviduellen Gestaltungswünsche wird sich in unseren Unternehmen
+						Um Ihre individuellen Gestaltungswünsche wird sich in unserem Unternehmen
 						gerne gekümmert.
 					</p>
 					<p>
