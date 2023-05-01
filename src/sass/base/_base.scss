@@ -2,7 +2,8 @@
 
 html {
 	box-sizing: border-box;
-
+	scroll-behavior: smooth;
+	
 	@include breakpoint('zero', 'min') {
 		font-size: 9.4px !important;
 	}
