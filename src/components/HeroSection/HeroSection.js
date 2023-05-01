@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Button from '../Button';
 
@@ -32,7 +33,10 @@ function HeroSection() {
 				<h2 className={styles.h2}>Fliesen und andere Reparaturarbeiten</h2>
 
 				<div className={styles.hideOnSmall}>
-					<Button text='Mehr über uns' />
+					<NavLink to='/about'>
+						<Button text='Mehr über uns' />
+					</NavLink>
+
 					<h2 className={styles.heroLocation}>
 						Wir sind ein Fliesenfachbetrieb aus Berlin Reinickendorf
 					</h2>
@@ -55,7 +59,9 @@ function HeroSection() {
 						<div className={styles.logoContainer}>
 							<img src={iconCompass} alt='Compass' />
 						</div>
-						<p className={styles.heroDetailsP}>Egal woher Sie aus Berlin oder Brandenburg kommen</p>
+						<p className={styles.heroDetailsP}>
+							Egal woher Sie aus Berlin oder Brandenburg kommen
+						</p>
 					</div>
 
 					<div className={styles.detailsItem}>

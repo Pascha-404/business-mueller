@@ -6,6 +6,7 @@ import { useBtnTheme } from '../../contexts/btnTheme.context';
 import Button from '../Button';
 
 import styles from './CouponSection.module.scss';
+import { NavLink } from 'react-router-dom';
 
 function CouponSection() {
 	const { sectionsInView, setSectionsInView } = useBtnTheme();
@@ -37,9 +38,9 @@ function CouponSection() {
 				Leistungen
 			</p>
 
-			<a href='#contactSection' className={styles.hideOnSmall}>
+			<NavLink to='/kontakt' className={styles.hideOnSmall}>
 				<Button text={'Angebot einholen'} />
-			</a>
+			</NavLink>
 		</InView>
 	);
 }
