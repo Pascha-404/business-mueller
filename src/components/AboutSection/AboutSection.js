@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { InView } from 'react-intersection-observer';
 
 import tiles from './tiles';
@@ -50,19 +51,23 @@ function AboutSection() {
 						Planlos geht der <span className={styles.highlight}>Plan los!</span>
 					</h2>
 					<p>
-						Wir spezalisieren uns auf Trockenbau und Fliesen nicht nur in Ihrem Bad als
-						auch Küchen, Pools und weiteren Räumlichkeiten.
+						Wir haben uns auf Trockenbau und Fliesen spezialisiert und bieten unsere
+						Dienstleistungen nicht nur für Badezimmer, sondern auch für Küchen, Pools und
+						andere Räumlichkeiten an.
 					</p>
 					<p>
-						Um Ihre individuellen Gestaltungswünsche wird sich in unserem Unternehmen
-						gerne gekümmert.
+						Bei uns im Unternehmen kümmern wir uns gerne um Ihre individuellen
+						Gestaltungswünsche.
 					</p>
 					<p>
-						Unser hilfbereites und freundliches Team steht Ihnen gernen für Fachberatungen
-						und Rüchsprachen zur Verfügung. Schreiben oder Rufen Sie uns an. Wir freuen
-						uns auf Ihre Projektideen.
+						Unser hilfsbereites und freundliches Team steht Ihnen gerne für Fachberatungen
+						und Rückfragen zur Verfügung. Schreiben Sie uns eine E-Mail oder rufen Sie uns
+						an. Wir freuen uns darauf, Ihre Projektideen zu besprechen.
 					</p>
-					<Button text='Unsere Inspirationen' />
+
+					<NavLink to='/inspirationen'>
+						<Button text='Unsere Inspirationen' />
+					</NavLink>
 				</div>
 			</div>
 			<div className={styles.secondRow}>
