@@ -30,15 +30,7 @@
 	&:active {
 		transform: scale(0.8);
 	}
-	&:hover {
-		::before {
-			content: 'Schreiben Sie uns!';
-			margin-right: 18px;
-			color: $text-light-color;
-		}
-		width: 100%;
-		border-radius: 10px;
-	}
+	
 	&.lightTheme {
 		background: $bg-light-color;
 		img {
@@ -50,5 +42,18 @@
 				color: $text-dark-color;
 			}
 		}
+	}
+
+	@include breakpoint(900, min){
+		&:hover {
+			width: 100%;
+			border-radius: 10px;
+			
+		::before {
+			content: 'Schreiben Sie uns!';
+			margin-right: 18px;
+			color: $text-light-color;
+		}
+	}
 	}
 }
