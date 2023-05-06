@@ -35,4 +35,4 @@ The website should now be deployed and accessible at your Firebase Hosting URL.
 
 ## Credits
 
-This website was developed by [Your Name Here] for Fliesenfachbetrieb Müller. If you have any questions or concerns, please contact us at [contact@yourwebsite.com].
+This website was developed by Patrick Pavliuchik for Fliesenfachbetrieb Müller. If you have any questions or concerns, please contact me at https://www.linkedin.com/in/patrick-pavliuchik-b481b9200/ .
