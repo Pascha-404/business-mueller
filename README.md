@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Fliesenfachbetrieb Müller Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This website was built for Fliesenfachbetrieb Müller, a small company from Berlin that specializes in interior design, tiling, sanitary, and drywall construction. The website was built using HTML, CSS, and JavaScript, with the React framework and SASS for styling. To enhance the user experience, the website uses the intersection observer, router, and swiper packages.
 
-## Available Scripts
+## Contact Form
 
-In the project directory, you can run:
+To handle the contact form on the website, we used Firebase Firestore as the backend. We also used Firebase Functions to send a copy of the data to the business owner and the customer. The contact form is protected through reCAPTCHA to prevent spam submissions.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the website locally, you'll need to have Node.js and npm installed on your machine. Clone the repository and run the following command to install the required dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+npm install
+```
 
-### `npm test`
+Then, run the following command to start the development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm start
+```
 
-### `npm run build`
+The website should now be running at [http://localhost:3000](http://localhost:3000).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The website is currently deployed on [Firebase Hosting](https://firebase.google.com/products/hosting). To deploy the website, you'll need to have a Firebase account and have the Firebase CLI installed on your machine. Run the following command to deploy the website:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run build
+firebase deploy
+```
 
-### `npm run eject`
+The website should now be deployed and accessible at your Firebase Hosting URL.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Credits
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This website was developed by [Your Name Here] for Fliesenfachbetrieb Müller. If you have any questions or concerns, please contact us at [contact@yourwebsite.com].
