@@ -2,16 +2,37 @@
 
 .heroSection {
 	width: 100vw;
-	height: 100vh;
+	min-height: 91vh;
+	padding-bottom: 8rem;
+	padding-top: 6rem;
 
 	@include flexbox;
-	@include justify-content(space-around);
 	@include align-items(center);
+
+	.imgWrapper {
+		@include underlay(underlayedImg);
+	}
+
+	@include breakpoint('s') {
+		min-height: auto;
+		@include flexbox(column);
+		@include align-items(flex-start);
+
+		padding-top: 0;
+		padding-bottom: 3rem;
+	}
 }
 
 .heroLeft {
 	width: 40%;
 	height: 100%;
+	margin-right: pxToRem(65px);
+	@include flexbox(column);
+	@include justify-content(center);
+
+	.imgMobile {
+		display: none;
+	}
 
 	.highlight {
 		color: $text-highlight-color;
@@ -23,8 +44,6 @@
 
 	// Spacing for left side
 	.btnWrap {
-		margin-top: pxToRem(249px);
-
 		div {
 			margin-right: pxToRem(10px);
 		}
@@ -39,18 +58,52 @@
 		margin-top: pxToRem(37px);
 		margin-bottom: pxToRem(180px);
 	}
+
+	@include breakpoint('m') {
+		.btnWrap {
+			div {
+				margin-right: 3px;
+			}
+		}
+
+		button {
+			margin-bottom: pxToRem(90px);
+		}
+	}
+
+	@include breakpoint('s') {
+		margin-top: 5rem;
+		width: 100%;
+
+		.btnWrap {
+			div {
+				margin-right: 10px;
+			}
+		}
+
+		button {
+			margin-bottom: pxToRem(40px);
+		}
+
+		.showOnSmall {
+			margin-bottom: pxToRem(57px);
+		}
+	}
+
+	@include breakpoint('xs') {
+		.btnWrap {
+			div {
+				margin-right: 8px;
+			}
+		}
+	}
 }
 
 .heroRight {
-	width: 50%;
+	width: 60%;
 	height: 100%;
 	@include flexbox(column);
 	@include justify-content(center);
-
-	.imgWrapper {
-		margin-top: 8rem;
-		@include underlay(underlayedImg, 483px);
-	}
 
 	.heroDetails {
 		margin-top: pxToRem(152px);
@@ -67,8 +120,8 @@
 
 			.logoContainer {
 				color: $text-greygreen-color;
-				width: 50px;
-				height: 50px;
+				width: pxToRem(50px);
+				height: pxToRem(50px);
 				border-radius: 50%;
 				background-color: $text-light-color;
 				margin-right: pxToRem(20px);
@@ -78,6 +131,34 @@
 
 				img {
 					width: 21px;
+				}
+			}
+		}
+	}
+
+	@include breakpoint('s') {
+		width: 100%;
+		.heroDetails {
+			margin-top: pxToRem(25.5px);
+			margin-bottom: pxToRem(39px);
+		}
+
+		.heroDetails {
+			.detailsItem {
+				.logoContainer {
+					img {
+						width: 16.5px;
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint('s', min) {
+		.heroDetails {
+			.detailsItem {
+				.logoContainer {
+					min-width: pxToRem(50px);
 				}
 			}
 		}

@@ -6,6 +6,7 @@ import { useBtnTheme } from '../../contexts/btnTheme.context';
 import Button from '../Button';
 
 import styles from './CouponSection.module.scss';
+import { NavLink } from 'react-router-dom';
 
 function CouponSection() {
 	const { sectionsInView, setSectionsInView } = useBtnTheme();
@@ -29,14 +30,17 @@ function CouponSection() {
 			rootMargin={'-100% 0px 0px 0px'}
 			onChange={handleOberserverChange}>
 			<div className={styles.bgImage} />
+
 			<h2 className='h1'>Wir freuen uns darauf Sie kennenzulernen!</h2>
+
 			<p>
 				Neukunden bekommen <span className={'couponHighlight'}>5% Rabatt</span> auf alle
 				Leistungen
 			</p>
-			<a href='#contactSection'>
+
+			<NavLink to='/kontakt' className={styles.hideOnSmall}>
 				<Button text={'Angebot einholen'} />
-			</a>
+			</NavLink>
 		</InView>
 	);
 }

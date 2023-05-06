@@ -2,6 +2,29 @@
 
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
+	
+	@include breakpoint('zero', 'min') {
+		font-size: 9.4px !important;
+	}
+	@include breakpoint('xs', 'min') {
+		font-size: 10px !important;
+	}
+	@include breakpoint('s', 'min') {
+		font-size: 11px !important;
+	}
+	@include breakpoint('m', 'min') {
+		font-size: 12px !important;
+	}
+	@include breakpoint('l', 'min') {
+		font-size: 13px !important;
+	}
+	@include breakpoint('xl', 'min') {
+		font-size: 14px !important;
+	}
+	@include breakpoint('xxl', 'min') {
+		font-size: 16px !important;
+	}
 }
 
 *,
@@ -22,6 +45,16 @@ html body {
 
 body section {
 	padding-left: pxToRem(103px);
+
+	@include breakpoint('l') {
+		padding-left: 40px;
+	}
+	@include breakpoint('m') {
+		padding-left: 15px;
+	}
+	@include breakpoint('s') {
+		padding-left: 25px;
+	}
 }
 
 a {
@@ -30,15 +63,26 @@ a {
 }
 
 img {
-	max-width: 640px;
-	max-height: 573px;
 	@include roundBorder;
 }
 
 button {
 	max-width: 250px;
-	
-	&:active{
+
+	&:active {
 		transform: scale(0.8);
+	}
+}
+
+.hideOnSmall {
+	@include breakpoint('s') {
+		display: none;
+	}
+}
+
+.showOnSmall {
+	display: none;
+	@include breakpoint('s') {
+		display: block;
 	}
 }

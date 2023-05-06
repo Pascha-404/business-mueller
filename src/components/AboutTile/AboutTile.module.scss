@@ -46,4 +46,28 @@
 	p {
 		text-align: center;
 	}
+
+	@include breakpoint('m') {
+		max-width: 250px;
+	}
+
+	@include breakpoint('xs') {
+		max-width: 319px;
+		width: 319px;
+		height: 330px;
+
+		.imgWrap {
+			width: 100px;
+			height: 100px;
+
+			img {
+				max-width: 48px;
+				max-height: 48px;
+			}
+		}
+		
+		p.pTiles {
+			max-width: 220px;
+		}
+	}
 }

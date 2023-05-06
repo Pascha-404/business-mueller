@@ -33,46 +33,48 @@ function ContactSection() {
 			id='contactSection'
 			rootMargin={'-100% 0px 0px 0px'}
 			onChange={handleOberserverChange}>
-			<div className={styles.imgWrapper}>
-				<img src={textureTwo} alt='Weiße Steintextur' className={styles.underlayedImg} />
-				<img src={imgContact} alt='Weißes Badezimmer mit schwarz-goldenen Akzenten' />
+			<div className={styles.contactLeft}>
+				<div className={styles.imgWrapper}>
+					<img src={textureTwo} alt='Weiße Steintextur' className={styles.underlayedImg} />
+					<img src={imgContact} alt='Weißes Badezimmer mit schwarz-goldenen Akzenten' />
+				</div>
 			</div>
 
-			{formState === 'form' && (
-				<div className={styles.contactFormWrapper}>
-					<h2>
-						Schreiben Sie uns um zusammen Ihr
-						<span className={styles.highlight}> neues Projekt</span> zu planen
-					</h2>
-					<p>
-						Bitte hinterlassen Sie uns ihre bevorzugten Kontaktdaten - Email oder Telefon,
-						damit wir uns mit Ihnen in Verbindung setzen und Ihr Projekt besprechen
-						können.
-					</p>
-					<ContactForm />
-				</div>
-			)}
-
-			{formState === 'success' && (
-				<div className={styles.feedback}>
-					<img src={iconSuccess} alt='Haken Symbol' />
-					<p className={styles.h1}>Fertig!</p>
-					<p>
-						Ihre Nachricht wurde erfolgreich abgeschickt. Sie erhalten eine Kopie an die
-						angegebene Email Adresse. Dankeschön, wir melden uns schnellst möglich bei
-						Ihnen.
-					</p>
-				</div>
-			)}
-
-			{formState === 'error' && (
-				<div className={`${styles.feedback} ${styles.error}`}>
-					<img src={iconError} alt='Kreuz Symbol' />
-					<p className={styles.h1}>Sorry!</p>
-					<p>Irgendwas ist schief gelaufen. Senden Sie das Formular bitte noch einmal:</p>
-					<Button text='Zurück' bigBtn theme='dark' backToForm />
-				</div>
-			)}
+			<div className={styles.contactRight}>
+				{formState === 'form' && (
+					<div className={styles.contactFormWrapper}>
+						<h2>
+							Schreiben Sie uns um zusammen Ihr
+							<span className={styles.highlight}> neues Projekt</span> zu planen
+						</h2>
+						<p>
+							Bitte hinterlassen Sie uns ihre bevorzugten Kontaktdaten - Email oder Telefon,
+							damit wir uns mit Ihnen in Verbindung setzen und Ihr Projekt besprechen
+							können.
+						</p>
+						<ContactForm />
+					</div>
+				)}
+				{formState === 'success' && (
+					<div className={styles.feedback}>
+						<img src={iconSuccess} alt='Haken Symbol' />
+						<p className={styles.h1}>Fertig!</p>
+						<p>
+							Ihre Nachricht wurde erfolgreich abgeschickt. Sie erhalten eine Kopie an die
+							angegebene Email Adresse. Dankeschön, wir melden uns schnellst möglich bei
+							Ihnen.
+						</p>
+					</div>
+				)}
+				{formState === 'error' && (
+					<div className={`${styles.feedback} ${styles.error}`}>
+						<img src={iconError} alt='Kreuz Symbol' />
+						<p className={styles.h1}>Sorry!</p>
+						<p>Irgendwas ist schief gelaufen. Senden Sie das Formular bitte noch einmal:</p>
+						<Button text='Zurück' bigBtn theme='dark' backToForm />
+					</div>
+				)}
+			</div>
 		</InView>
 	);
 }

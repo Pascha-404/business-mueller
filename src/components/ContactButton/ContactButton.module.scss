@@ -1,8 +1,8 @@
 @use '../../sass/main.scss' as *;
 
 .contactButton {
-	width: 50px;
-	height: 50px;
+	width: pxToRem(50px);
+	height: pxToRem(50px);
 	padding: 10px 12px;
 	position: fixed;
 	right: 2rem;
@@ -13,6 +13,7 @@
 	z-index: 10;
 	cursor: pointer;
 	border-radius: 50%;
+	transition: width 300ms ease, border-radius 300ms ease;
 
 	a {
 		width: 100%;
@@ -30,24 +31,30 @@
 	&:active {
 		transform: scale(0.8);
 	}
-	&:hover {
-		::before {
-			content: 'Schreiben Sie uns!';
-			margin-right: 18px;
-			color: $text-light-color;
-		}
-		width: 100%;
-		border-radius: 10px;
-	}
+	
 	&.lightTheme {
 		background: $bg-light-color;
 		img {
-			filter: invert(20%) sepia(10%) saturate(100%) hue-rotate(125deg) brightness(0%) contrast(50%);
+			filter: invert(20%) sepia(10%) saturate(100%) hue-rotate(125deg) brightness(0%)
+				contrast(50%);
 		}
 		&:hover {
 			::before {
 				color: $text-dark-color;
 			}
 		}
+	}
+
+	@include breakpoint(900, min){
+		&:hover {
+			width: 100%;
+			border-radius: 10px;
+			transition: width 300ms ease, border-radius 300ms ease;
+		::before {
+			content: 'Schreiben Sie uns!';
+			margin-right: 18px;
+			color: $text-light-color;
+		}
+	}
 	}
 }

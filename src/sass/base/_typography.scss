@@ -1,5 +1,6 @@
 @use './fonts' as *;
 @use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
 
 body {
 	font-family: $main-font;
@@ -12,14 +13,22 @@ h1,
 	font-weight: 400;
 	font-size: pxToRem(60px);
 	line-height: 3.7425rem;
+
+	@include breakpoint('s') {
+		line-height: 40px;
+	}
 }
 
 h2,
 .h2 {
 	font-family: $main-font;
 	font-weight: 400;
-	font-size: pxToRem(38px);
+	font-size: max(pxToRem(38px), 35px);
 	line-height: 3.5rem;
+
+	@include breakpoint('xs') {
+		line-height: 42px;
+	}
 }
 
 // smaller font for h2 class in heroSection
@@ -49,6 +58,17 @@ h3,
 	font-weight: 700;
 	font-size: pxToRem(24px);
 	line-height: 2.046rem;
+
+	@include breakpoint('xs') {
+		font-size: 25.5px;
+	}
+}
+
+.customerRating h3{
+	@include breakpoint('s') {
+		font-size: 15px;
+		font-weight: 600;
+	}
 }
 
 h4,
@@ -69,12 +89,34 @@ p,
 .p {
 	font-family: $main-font;
 	font-weight: 400;
-	font-size: pxToRem(20px);
-	line-height: 1.843rem;
+	font-size: max(pxToRem(20px), 16px);
+	line-height: max(1.843rem, 24px);
 }
 
 p.pTiles {
 	font-size: pxToRem(18px);
+
+	@include breakpoint('xs') {
+		font-size: 19px;
+	}
+}
+
+.heroDetailsP{
+	@include breakpoint('xs') {
+		font-size: 11px;
+	}
+}
+
+.customerRating .review {
+	@include breakpoint('s') {
+		font-size: 10px;
+	}
+}
+.customerRating .customerDetails p{
+	@include breakpoint('s') {
+		font-size: 10px;
+		line-height: 12px;
+	}
 }
 
 // Links in Navbar

@@ -14,6 +14,7 @@
 		margin-top: pxToRem(10px);
 		margin-bottom: pxToRem(30px);
 		img {
+			transform: scale(1) !important;
 			max-width: 22px;
 			max-height: 22px;
 			margin-right: 6px;
@@ -28,6 +29,48 @@
 		margin-top: auto;
 		.customerName {
 			text-transform: capitalize;
+		}
+	}
+
+	@include breakpoint('xl') {
+		height: pxToRem(600px);
+	}
+
+	@include breakpoint('l') {
+		height: pxToRem(900px);
+	}
+
+	@include breakpoint('m') {
+		height: pxToRem(900px);
+		
+		.review {
+			line-height: 24px;
+		}
+	}
+
+	@include breakpoint('s') {
+		max-height: 243px;
+		max-width: 267px;
+		@include align-items(flex-start);
+
+		h3,
+		.ratingWrapper,
+		.review,
+		.customerDetails {
+			text-align: start;
+		}
+
+		.ratingWrapper {
+			margin-bottom: 13px;
+
+			img {
+				max-width: 14px;
+				max-height: 14px;
+			}
+		}
+
+		.review {
+			line-height: 16px;
 		}
 	}
 }

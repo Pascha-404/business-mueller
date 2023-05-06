@@ -9,6 +9,11 @@ function Routing() {
 		<Routes>
 			<Route path='/' element={<App />}>
 				<Route index element={<Home />} />
+				<Route path='about' element={<Home scrollTo={'aboutSection'} />} />
+				<Route path='inspirationen' element={<Home scrollTo={'inspoSection'}/>} />
+				<Route path='neukunde' element={<Home scrollTo={'couponSection'} />} />
+				<Route path='bewertungen' element={<Home scrollTo={'ratingSection'} />} />
+				<Route path='kontakt' element={<Home scrollTo={'contactSection'} />} />
 			</Route>
 		</Routes>
 	);

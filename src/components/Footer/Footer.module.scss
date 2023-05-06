@@ -30,6 +30,7 @@
 		}
 		.mail {
 			border-bottom: 1px solid white;
+			white-space: nowrap;
 		}
 	}
 
@@ -38,5 +39,42 @@
 		align-self: flex-end;
 		@include flexbox(row);
 		@include justify-content(space-between);
+	}
+
+	@include breakpoint('xl') {
+		padding-left: pxToRem(100px);
+		padding-right: pxToRem(120px);
+	}
+
+	@include breakpoint('l') {
+		.links {
+			width: 25%;
+		}
+	}
+
+	@include breakpoint('m') {
+		height: auto;
+
+		.links {
+			width: 30%;
+		}
+	}
+
+	@include breakpoint('s') {
+		padding-left: 25px;
+		@include flexbox(column);
+		.contactDetails{width: 100%;}
+		.links {
+			width: 40%;
+		}
+	}
+
+	@include breakpoint('xs') {
+		padding-left: 15px;
+
+		.contactDetails{.address{margin-right: 35px;}}
+		.links {
+			width: 50%;
+		}
 	}
 }

@@ -19,6 +19,10 @@
 		opacity: 20%;
 		z-index: 0;
 	}
+
+	h2 {
+		color: $text-darkgreen-color;
+	}
 	h2,
 	p,
 	button,
@@ -28,5 +32,17 @@
 	p {
 		margin-top: pxToRem(25px);
 		margin-bottom: pxToRem(40px);
+	}
+}
+
+@include breakpoint('s') {
+	.couponSection {
+		height: auto;
+		padding-top: 35px;
+		padding-bottom: 25px;
+		h2,
+		p {
+			max-width: 310px;
+		}
 	}
 }

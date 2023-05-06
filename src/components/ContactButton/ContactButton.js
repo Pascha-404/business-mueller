@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './ContactButton.module.scss';
 
 import { iconContact } from '../../assets';
@@ -9,9 +10,9 @@ function ContactButton({ isLight }) {
 		<div
 			className={`${styles.contactButton} ${isLight ? styles.lightTheme : ''}`}
 			id='contactBtn'>
-			<a href='#contactSection'>
+			<NavLink to='kontakt'>
 				<img src={iconContact} alt='Contact Icon' />
-			</a>
+			</NavLink>
 		</div>
 	);
 }

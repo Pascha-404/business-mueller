@@ -1,0 +1,113 @@
+@use '../../sass/main.scss' as *;
+
+.DataCarousel {
+	height: pxToRem(750px);
+	margin-left: pxToRem(-60px);
+
+	.swiper-wrapper {
+		text-align: center;
+
+		.swiper-slide {
+			@include flexbox;
+			@include align-items(center);
+			cursor: grab;
+
+			&:active {
+				cursor: grabbing;
+			}
+
+			img {
+				margin: 0 auto;
+				max-height: 516px;
+				transform: scale(1);
+				transition: transform 300ms ease-out;
+			}
+		}
+
+		.swiper-slide.swiper-slide-active {
+			z-index: 1;
+			img {
+				transform: scale(1.25);
+				transition: transform 300ms ease-in;
+			}
+		}
+	}
+	.swiper-button-prev,
+	.swiper-button-next {
+		color: $text-light-color;
+
+		&:after {
+			font-size: 30px;
+		}
+	}
+
+	.swiper-pagination {
+		bottom: 0;
+
+		.swiper-pagination-bullet {
+			opacity: 0.7;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $text-light-color;
+		}
+	}
+
+	@include breakpoint('xl') {
+		.swiper-wrapper {
+			.swiper-slide.swiper-slide-active {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+	@include breakpoint('l') {
+		margin-left: -30px;
+	}
+
+	@include breakpoint('m') {
+		margin-left: 0;
+
+		.swiper-wrapper {
+			.swiper-slide {
+				img {
+					transform: scale(0.9);
+				}
+			}
+			.swiper-slide.swiper-slide-active {
+				img {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+
+	@include breakpoint('s') {
+		.swiper-wrapper {
+			.swiper-slide {
+				img {
+					max-height: 420px;
+				}
+			}
+		}
+	}
+
+	@include breakpoint('xs') {
+		.swiper-wrapper {
+			.swiper-slide {
+				img {
+					max-height: 360px;
+				}
+			}
+		}
+	}
+}
+
+.DataCarousel.rating {
+	@include breakpoint('xs') {
+		.swiper-pagination {
+			max-width: 310px;
+		}
+	}
+}

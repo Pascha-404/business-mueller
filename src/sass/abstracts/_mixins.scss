@@ -98,14 +98,30 @@
 // underlays a element with another.
 // applys position relative to container.
 // adds child element through class as underlayed element.
-@mixin underlay($underlayClass, $height, $direction: left) {
+@mixin underlay($underlayClass, $direction: left, $portrait: false) {
+	width: 85%;
 	position: relative;
 	z-index: 1;
+	img {
+		height: 100%;
+		object-fit: fill;
+		width: 100%;
+		@if $portrait == true {
+			max-width: 500px;
+		}
+	}
+
 	.#{$underlayClass} {
 		position: absolute;
 		z-index: -1;
-		height: pxToRem($height);
+		height: 110%;
 		top: 50%;
+		object-fit: cover;
+
+		@if $portrait == true {
+			max-width: 550px;
+		}
+
 		@if $direction == left {
 			left: pxToRem(72px);
 			-webkit-transform: translateY(-50%);
@@ -115,6 +131,28 @@
 			-webkit-transform: translateY(-50%) translateX(pxToRem(-72px));
 			-ms-transform: translateY(-50%) translateX(pxToRem(-72px));
 			transform: translateY(-50%) translateX(pxToRem(-72px));
+		}
+	}
+}
+
+/* Mixin for media queries */
+
+@mixin breakpoint($breakpoint, $direction: $media-direction) {
+	// Checks if value is available in breakpoints variables
+	@if map-has-key($breakpoints, $breakpoint) {
+		// Output
+		@media (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
+
+	// If a plane value is passed into breakpoint it checks if a unit was given, if not px is added
+	@else if unitless($breakpoint) {
+		$breakpoint: $breakpoint + 0px;
+
+		// Output
+		@media (#{$direction}-width: $breakpoint) {
+			@content;
 		}
 	}
 }

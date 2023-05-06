@@ -1,7 +1,7 @@
 import React from 'react';
 
 import images from './images';
-import ImageCarousel from '../ImageCarousel';
+import DataCarousel from '../DataCarousel';
 
 import styles from './InspoSection.module.scss';
 
@@ -12,10 +12,9 @@ function InspoSection() {
 				Unsere <span className={styles.highlight}>Inspirationen</span> für Sie
 			</h2>
 			<p>
-				Wir sind bereit für jedes Projekt, und wenn Sie wissen nicht, was zu bauen, wir
-				...
+				Sie brauchen noch die nötige Insipiration? Hier ein paar Ideen. Wir sind bereit für jedes Projekt.
 			</p>
-			<ImageCarousel images={images}/>
+			<DataCarousel data={images} />
 		</section>
 	);
 }

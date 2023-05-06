@@ -2,7 +2,8 @@
 
 .contactSection {
 	width: 100vw;
-	height: 85vh;
+	padding-top: pxToRem(87px);
+	padding-bottom: pxToRem(106px);
 	color: $text-dark-color;
 	background-color: $bg-light-color;
 
@@ -10,61 +11,121 @@
 	@include align-items(center);
 	@include justify-content(center);
 
-	.imgWrapper {
+	.contactLeft {
 		width: 50%;
-		max-width: 550px;
-		text-align: center;
-		@include underlay(underlayedImg, 765px, right);
-		img {
-			max-width: 480px;
-			max-height: 717px;
-		}
-		.underlayedImg {
-			max-height: 765px;
-			max-width: 457px;
+
+		.imgWrapper {
+			max-width: 550px;
+			text-align: center;
+			@include underlay(underlayedImg, right);
+
+			img {
+				width: 100%;
+				max-width: 480px;
+				max-height: 717px;
+			}
+			.underlayedImg {
+				max-height: 765px;
+				max-width: 457px;
+			}
 		}
 	}
 
-	.contactFormWrapper {
+	.contactRight {
 		width: 50%;
-		@include flexbox(column);
-		@include align-items(center);
-		@include justify-content(center);
+		padding-right: pxToRem(30px);
 
-		h2 {
-			margin-bottom: 20px;
-			max-width: pxToRem(572px);
+		.contactFormWrapper {
+			width: 100%;
+			@include flexbox(column);
+			@include align-items(center);
+			@include justify-content(center);
+
+			h2 {
+				margin-bottom: 20px;
+				max-width: pxToRem(572px);
+			}
+			p {
+				margin-bottom: 50px;
+				max-width: pxToRem(590px);
+			}
+			.highlight {
+				color: $text-highlight-color;
+			}
 		}
-		p {
+
+		.feedback {
+			text-align: center;
+			@include flexbox(column);
+			@include align-items(center);
+			@include justify-content(center);
+
+			img {
+				max-width: 50px;
+				max-height: 50px;
+				margin-bottom: pxToRem(25px);
+			}
+			p {
+				max-width: 590px;
+				margin-bottom: pxToRem(100px);
+			}
+			.h1 {
+				margin-bottom: pxToRem(50px);
+			}
+			&.error {
+				color: $text-orange-color;
+			}
+		}
+	}
+
+	@include breakpoint('xl') {
+		.contactLeft {
+			@include flexbox;
+			@include align-items(center);
+			@include justify-content(center);
+		}
+	}
+
+	@include breakpoint('m') {
+		.contactLeft {
 			margin-bottom: 50px;
-			max-width: pxToRem(590px);
+			
+			.imgWrapper {
+				.underlayedImg {
+					right: -10%;
+				}
+			}
 		}
-		.highlight {
-			color: $text-highlight-color;
+		.contactRight {
+			.contactFormWrapper {
+				h2,
+				p {
+					max-width: 480px;
+				}
+			}
 		}
 	}
 
-	.feedback {
-		width: 50%;
-		text-align: center;
-		@include flexbox(column);
-		@include align-items(center);
-		@include justify-content(center);
+	@include breakpoint('s') {
+		height: auto;
+		@include flexbox(column-reverse);
+		@include align-items(flex-start);
 
-		img {
-			max-width: 50px;
-			max-height: 50px;
-			margin-bottom: pxToRem(25px);
+		.contactLeft {
+			width: 100%;
+			margin-top: 60px;
+
+			.imgWrapper {
+				.underlayedImg {
+					right: -15px;
+				}
+			}
 		}
-		p {
-			max-width: 590px;
-			margin-bottom: pxToRem(100px);
-		}
-		.h1 {
-			margin-bottom: pxToRem(50px);
-		}
-		&.error {
-			color: $text-orange-color;
+		.contactRight {
+			width: 100%;
+			.contactFormWrapper {
+				@include align-items(flex-start);
+			}
 		}
 	}
 }

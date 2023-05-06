@@ -63,19 +63,20 @@ function ContactForm() {
 				<label htmlFor='phoneCall'>Wünschen Sie einen Rückruf?</label>
 			</div>
 
-			{phoneCall && (
-				<React.Fragment>
-					<input
-						type='tel'
-						name='phoneNumber'
-						id='phoneNumber'
-						value={phoneNumber}
-						onChange={handleChange('phoneNumber')}
-						required
-					/>
-					<label htmlFor='phoneNumber'>Telefonnummer</label>
-				</React.Fragment>
-			)}
+			<input
+				className={`${styles.phoneNumberElement} ${phoneCall ? styles.active : ''}`}
+				type='tel'
+				name='phoneNumber'
+				id='phoneNumber'
+				value={phoneNumber}
+				onChange={handleChange('phoneNumber')}
+				required
+			/>
+			<label
+				htmlFor='phoneNumber'
+				className={`${styles.phoneNumberElement} ${phoneCall ? styles.active : ''}`}>
+				Telefonnummer
+			</label>
 
 			<div className={styles.btnWrapper}>
 				<Button type='button' text="Los geht's!" submit theme='dark' bigBtn />
