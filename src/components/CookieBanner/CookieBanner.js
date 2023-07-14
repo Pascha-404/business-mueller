@@ -12,6 +12,14 @@ function CookieBanner() {
 		setShowBanner(!hasConsent && !hasNoCookies);
 	}, [cookies]);
 
+	function handleAccept() {
+		window.alert('Accepted!');
+	}
+
+	function handleDecline() {
+		window.alert('Declined!');
+	}
+
 	if (!showBanner) {
 		return null;
 	} else
@@ -21,6 +29,8 @@ function CookieBanner() {
 				buttonText='Einverstanden'
 				declineButtonText='Nur notwendige'
 				enableDeclineButton='true'
+				onAccept={handleAccept}
+				onDecline={handleDecline}
 				style={{ background: '#2B373B' }}
 				buttonStyle={{ color: '#4e503b', fontSize: '13px' }}>
 				<p>
@@ -31,9 +41,9 @@ function CookieBanner() {
 					erfassen.
 				</p>
 				<p>
-					Wenn Sie die Verwendung von Cookies einschränken möchten, können Sie nur technisch notwendige zulassen. Bitte beachten Sie jedoch, dass dies
-					Auswirkungen auf die Funktionalität und das Nutzererlebnis der Website haben
-					kann.
+					Wenn Sie die Verwendung von Cookies einschränken möchten, können Sie nur
+					technisch notwendige zulassen. Bitte beachten Sie jedoch, dass dies Auswirkungen
+					auf die Funktionalität und das Nutzererlebnis der Website haben kann.
 				</p>
 				<p>
 					Weitere Informationen zu den von uns verwendeten Cookies und deren Zweck finden
