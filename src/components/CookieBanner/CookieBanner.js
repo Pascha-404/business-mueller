@@ -13,11 +13,11 @@ function CookieBanner() {
 	}, [cookies]);
 
 	function handleAccept() {
-		window.alert('Accepted!');
+		setCookie('fliesenmueller_cookieConsent', 'accepted', { path: '/' });
 	}
 
 	function handleDecline() {
-		window.alert('Declined!');
+		setCookie('fliesenmueller_cookieConsent', 'declined', { path: '/' });
 	}
 
 	if (!showBanner) {
@@ -28,10 +28,11 @@ function CookieBanner() {
 				location='bottom'
 				buttonText='Einverstanden'
 				declineButtonText='Nur notwendige'
+				cookieName='fliesenmueller_cookieConsent'
 				enableDeclineButton='true'
 				onAccept={handleAccept}
 				onDecline={handleDecline}
-				style={{ background: '#2B373B' }}
+				style={{ background: '#019d90' }}
 				buttonStyle={{ color: '#4e503b', fontSize: '13px' }}>
 				<p>
 					Wir verwenden Cookies, um Ihnen eine optimierte Erfahrung auf unserer Website zu
