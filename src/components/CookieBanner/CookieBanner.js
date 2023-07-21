@@ -32,8 +32,19 @@ function CookieBanner() {
 				enableDeclineButton='true'
 				onAccept={handleAccept}
 				onDecline={handleDecline}
-				style={{ background: '#019d90' }}
-				buttonStyle={{ color: '#4e503b', fontSize: '13px' }}>
+				style={{ background: '#4a6d6a', borderRadius: '10px' }}
+				buttonStyle={{
+					backgroundColor: 'rgb(247 121 19)',
+					color: '#fff',
+					fontSize: '16px',
+					borderRadius: '10px',
+				}}
+				declineButtonStyle={{
+					backgroundColor: 'rgb(182 170 170 / 83%)',
+					fontSize: '16px',
+					borderRadius: '10px',
+					color: '#fff',
+				}}>
 				<p>
 					Wir verwenden Cookies, um Ihnen eine optimierte Erfahrung auf unserer Website zu
 					ermöglichen. Durch die Nutzung unserer Website stimmen Sie der Verwendung von
