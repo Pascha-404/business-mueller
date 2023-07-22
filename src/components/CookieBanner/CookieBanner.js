@@ -2,18 +2,31 @@ import React, { useState, useEffect } from 'react';
 import CookieConsent from 'react-cookie-consent';
 import { useCookies } from 'react-cookie';
 
+import {
+	activateGoogleAnalytics,
+	deactivateGoogleAnalytics,
+	logPageView,
+} from '../../firebase.config';
+
 function CookieBanner() {
-	const [showBanner, setShowBanner] = useState(false);
+	const [showBanner, setShowBanner] = useState(true);
 	const [cookies, setCookie] = useCookies(['fliesenmueller_cookieConsent']);
 
 	useEffect(() => {
 		const hasConsent = cookies.fliesenmueller_cookieConsent === 'accepted';
 		const hasNoCookies = Object.keys(cookies).length === 0;
-		setShowBanner(!hasConsent && !hasNoCookies);
+		setShowBanner(!hasConsent && hasNoCookies);
+
+		if (hasConsent) {
+			activateGoogleAnalytics();
+		} else {
+			deactivateGoogleAnalytics();
+		}
 	}, [cookies]);
 
 	function handleAccept() {
 		setCookie('fliesenmueller_cookieConsent', 'accepted', { path: '/' });
+		logPageView();
 	}
 
 	function handleDecline() {
