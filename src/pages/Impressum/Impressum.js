@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Impressum.module.scss';
 
 function Impressum() {
 	return (
-		<section>
+		<section className={styles.impressum}>
 			<h1>Impressum</h1>
 
 			<h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
@@ -17,11 +18,10 @@ function Impressum() {
 			</p>
 
 			<h2>Kontakt</h2>
-			<p>
-				Telefon: 030 5163 7522
-				<br />
+			<a href='mailto:mail@fliesenleger-mueller.de'>
 				E-Mail: mail@fliesenleger-mueller.de
-			</p>
+			</a>
+			<a href='tel:03051637522'>Telefon: 030 5163 7522</a>
 
 			<h2>Umsatzsteuer-ID</h2>
 			<p>
