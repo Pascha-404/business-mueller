@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import App from './components/App';
-import Home from './components/Home';
+import Home from './pages/Home';
 
 // Routing displays by default Home component
 function Routing() {

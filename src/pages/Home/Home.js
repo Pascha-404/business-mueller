@@ -1,11 +1,11 @@
 import React, { Fragment, useEffect } from 'react';
-import HeroSection from '../HeroSection';
-import AboutSection from '../AboutSection';
-import InspoSection from '../InspoSection';
-import RatingSection from '../RatingSection';
-import ContactButton from '../ContactButton';
-import ContactSection from '../ContactSection';
-import CouponSection from '../CouponSection';
+import HeroSection from '../../components/HeroSection';
+import AboutSection from '../../components/AboutSection';
+import InspoSection from '../../components/InspoSection';
+import RatingSection from '../../components/RatingSection';
+import ContactButton from '../../components/ContactButton';
+import ContactSection from '../../components/ContactSection';
+import CouponSection from '../../components/CouponSection';
 
 import { useBtnTheme } from '../../contexts/btnTheme.context';
 
