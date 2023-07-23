@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import CookieConsent from 'react-cookie-consent';
 import { useCookies } from 'react-cookie';
 
@@ -72,7 +73,7 @@ function CookieBanner() {
 				</p>
 				<p>
 					Weitere Informationen zu den von uns verwendeten Cookies und deren Zweck finden
-					Sie in unserer Datenschutzerklärung.
+					Sie in unserer <Link style={{borderBottom: '2px solid white'}} to='/datenschutz'>Datenschutzerklärung</Link>.
 				</p>
 			</CookieConsent>
 		);
