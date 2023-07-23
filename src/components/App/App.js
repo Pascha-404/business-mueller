@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import { BtnThemeProvider } from '../../contexts/btnTheme.context';
 import { ContactProvider } from '../../contexts/contact.context';
-import Footer from '../Footer/Footer';
+
 
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
+import CookieBanner from '../CookieBanner/CookieBanner';
 
 function App() {
 	return (
@@ -12,6 +14,7 @@ function App() {
 				<Navbar />
 			</header>
 			<main>
+				<CookieBanner />
 				<BtnThemeProvider>
 					<Outlet />
 				</BtnThemeProvider>
