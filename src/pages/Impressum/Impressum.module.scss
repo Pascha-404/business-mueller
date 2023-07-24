@@ -2,10 +2,9 @@
 
 .impressum {
 	width: 100%;
-	// height: 60vh;
 	margin-top: pxToRem(73px);
 	padding-top: pxToRem(70px);
-    padding-bottom: pxToRem(100px);
+	padding-bottom: pxToRem(100px);
 	background-color: $bg-light-color;
 	color: $text-dark-color;
 
@@ -13,9 +12,13 @@
 		border-bottom: 1px solid $text-dark-color;
 	}
 
-	h1,
-	h2,
-	p {
-		margin-bottom: 1rem;
+	h2 {
+		margin-bottom: pxToRem(20px);
+	}
+
+	.dataBlock {
+		margin-bottom: pxToRem(20px);
+        display: flex;
+        flex-direction: column;
 	}
 }
