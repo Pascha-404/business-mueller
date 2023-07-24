@@ -1,0 +1,24 @@
+@use '../../sass/main.scss' as *;
+
+.datenschutz {
+	width: 100%;
+	margin-top: pxToRem(73px);
+	padding-top: pxToRem(70px);
+	padding-bottom: pxToRem(100px);
+	background-color: $bg-light-color;
+	color: $text-dark-color;
+
+	a {
+		border-bottom: 1px solid $text-dark-color;
+	}
+
+	h2 {
+		margin-bottom: pxToRem(20px);
+	}
+
+	.dataBlock {
+		margin-bottom: pxToRem(20px);
+        display: flex;
+        flex-direction: column;
+	}
+}
