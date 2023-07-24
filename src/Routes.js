@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import App from './components/App';
 import Home from './pages/Home';
 import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
 
 // Routing displays by default Home component
 function Routing() {
@@ -16,6 +17,7 @@ function Routing() {
 				<Route path='bewertungen' element={<Home scrollTo={'ratingSection'} />} />
 				<Route path='kontakt' element={<Home scrollTo={'contactSection'} />} />
 				<Route path='impressum' element={<Impressum />} />
+				<Route path='datenschutz' element={<Datenschutz/>} />
 			</Route>
 		</Routes>
 	);
