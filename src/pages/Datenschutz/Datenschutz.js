@@ -237,27 +237,27 @@ function Datenschutz() {
 					Direktwerbung (Art. 21 DSGVO)
 				</h3>{' '}
 				<p>
-					WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO
-					ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GR&Uuml;NDEN, DIE SICH AUS IHRER
-					BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN
-					DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH F&Uuml;R EIN AUF DIESE BESTIMMUNGEN
-					GEST&Uuml;TZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE
-					VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKL&Auml;RUNG. WENN SIE
-					WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT
-					MEHR VERARBEITEN, ES SEI DENN, WIR K&Ouml;NNEN ZWINGENDE SCHUTZW&Uuml;RDIGE
-					GR&Uuml;NDE F&Uuml;R DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE
-					UND FREIHEITEN &Uuml;BERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG,
-					AUS&Uuml;BUNG ODER VERTEIDIGUNG VON RECHTSANSPR&Uuml;CHEN (WIDERSPRUCH NACH ART.
-					21 ABS. 1 DSGVO).
+					Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO
+					erfolgt, haben Sie jederzeit das Recht, aus Gr&uuml;nden, die sich aus Ihrer
+					besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen
+					Daten Widerspruch einzulegen; dies gilt auch f&uuml;r ein auf diese Bestimmungen
+					gest&uuml;tztes Profiling. Die jeweilige Rechtsgrundlage, auf denen eine
+					Verarbeitung beruht, entnehmen Sie dieser Datenschutzerkl&auml;rung. Wenn Sie
+					Widerspruch einlegen, werden wir Ihre betroffenen personenbezogenen Daten nicht
+					mehr verarbeiten, es sei denn, wir k&ouml;nnen zwingende schutzw&uuml;rdige
+					Gr&uuml;nde f&uuml;r die Verarbeitung nachweisen, die Ihre Interessen, Rechte
+					und Freiheiten &uuml;berwiegen oder die Verarbeitung dient der Geltendmachung,
+					Aus&uuml;bung oder Verteidigung von Rechtsanspr&uuml;chen (Widerspruch nach Art.
+					21 Abs. 1 DSGVO).
 				</p>{' '}
 				<p>
-					WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN,
-					SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE
-					BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN;
-					DIES GILT AUCH F&Uuml;R DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN
-					VERBINDUNG STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN
-					ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH
-					NACH ART. 21 ABS. 2 DSGVO).
+					Werden Ihre personenbezogenen Daten verarbeitet, um Direktwerbung zu betreiben,
+					so haben Sie das Recht, jederzeit Widerspruch gegen die Verarbeitung sie
+					betreffender personenbezogener Daten zum Zwecke derartiger Werbung einzulegen;
+					dies gilt auch f&uuml;r das Profiling, soweit es mit solcher Direktwerbung in
+					Verbindung steht. Wenn Sie widersprechen, werden Ihre personenbezogenen Daten
+					anschließend nicht mehr zum Zwecke der Direktwerbung verwendet (Widerspruch nach
+					Art. 21 Abs. 2 DSGVO).
 				</p>
 			</div>
 			<div className={styles.dataBlock}>
@@ -590,10 +590,63 @@ function Datenschutz() {
 					</a>
 					.
 				</p>
+			</div>
+			<div className={styles.dataBlock}>
+				<h3>Google Analytics</h3>
 				<p>
-					Quelle: <a href='https://www.e-recht24.de'>https://www.e-recht24.de</a>
+					Diese Website nutzt den Dienst „Google Analytics“, welcher von der Google Inc.
+					(1600 Amphitheatre Parkway Mountain View, CA 94043, USA) angeboten wird, zur
+					Analyse der Websitebenutzung durch Nutzer. Der Dienst verwendet „Cookies“ –
+					Textdateien, welche auf Ihrem Endgerät gespeichert werden. Die durch die Cookies
+					gesammelten Informationen werden im Regelfall an einen Google-Server in den USA
+					gesandt und dort gespeichert.
+				</p>
+				<p>
+					Auf dieser Website greift die IP-Anonymisierung. Die IP-Adresse der Nutzer wird
+					innerhalb der Mitgliedsstaaten der EU und des Europäischen Wirtschaftsraum
+					gekürzt. Durch diese Kürzung entfällt der Personenbezug Ihrer IP-Adresse. Im
+					Rahmen der Vereinbarung zur Auftragsdatenvereinbarung, welche die
+					Websitebetreiber mit der Google Inc. geschlossen haben, erstellt diese mithilfe
+					der gesammelten Informationen eine Auswertung der Websitenutzung und der
+					Websiteaktivität und erbringt mit der Internetnutzung verbundene
+					Dienstleistungen.
+				</p>
+				<p>
+					Sie haben die Möglichkeit, die Speicherung des Cookies auf Ihrem Gerät zu
+					verhindern, indem Sie in Ihrem Browser entsprechende Einstellungen vornehmen. Es
+					ist nicht gewährleistet, dass Sie auf alle Funktionen dieser Website ohne
+					Einschränkungen zugreifen können, wenn Ihr Browser keine Cookies zulässt.
+				</p>
+				<p>
+					Weiterhin können Sie durch ein Browser-Plugin verhindern, dass die durch Cookies
+					gesammelten Informationen (inklusive Ihrer IP-Adresse) an die Google Inc.
+					gesendet und von der Google Inc. genutzt werden. Folgender Link führt Sie zu dem
+					entsprechenden Plugin:{' '}
+					<a
+						target='_blank'
+						rel='noopener noreferrer'
+						href='https://tools.google.com/dlpage/gaoptout?hl=de'>
+						https://tools.google.com/dlpage/gaoptout?hl=de
+					</a>{' '}
+					Hier finden Sie weitere Informationen zur Datennutzung durch die Google Inc.:
+					<a
+						target='_blank'
+						rel='noopener noreferrer'
+						href='https://support.google.com/analytics/answer/6004245?hl=de'>
+						https://support.google.com/analytics/answer/6004245?hl=de
+					</a>
 				</p>
 			</div>
+			<p>
+				Quellen:{' '}
+				<a target='_blank' rel='noopener noreferrer' href='https://www.e-recht24.de'>
+					https://www.e-recht24.de
+				</a>{' '}
+				und{' '}
+				<a target='_blank' rel='noopener noreferrer' href='https://www.datenschutz.org'>
+					https://www.datenschutz.org
+				</a>
+			</p>
 		</section>
 	);
 }
