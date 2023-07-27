@@ -64,7 +64,7 @@ h3,
 	}
 }
 
-.customerRating h3{
+.customerRating h3 {
 	@include breakpoint('s') {
 		font-size: 15px;
 		font-weight: 600;
@@ -101,7 +101,12 @@ p.pTiles {
 	}
 }
 
-.heroDetailsP{
+ul {
+	font-size: max(pxToRem(20px), 16px);
+	line-height: max(1.843rem, 24px);
+}
+
+.heroDetailsP {
 	@include breakpoint('xs') {
 		font-size: 11px;
 	}
@@ -112,7 +117,7 @@ p.pTiles {
 		font-size: 10px;
 	}
 }
-.customerRating .customerDetails p{
+.customerRating .customerDetails p {
 	@include breakpoint('s') {
 		font-size: 10px;
 		line-height: 12px;

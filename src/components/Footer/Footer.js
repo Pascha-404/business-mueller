@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styles from './Footer.module.scss';
+import { Link } from 'react-router-dom';
 
 function Footer() {
 	return (
@@ -27,10 +28,10 @@ function Footer() {
 			</div>
 			<div className={styles.links}>
 				<div>
-					<a href='#footer'>Datenschutz</a>
+					<Link to='/datenschutz'>Datenschutz</Link>
 				</div>
 				<div>
-					<a href='#footer'>Impressum</a>
+					<Link to='/impressum'>Impressum</Link>
 				</div>
 			</div>
 		</footer>
