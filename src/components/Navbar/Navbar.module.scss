@@ -15,15 +15,39 @@
 		@include align-items(center);
 		@include justify-content(space-between);
 	}
+
 	a {
+		position: relative;
 		color: $text-navbar-color;
+		transition: color 600ms ease;
 		&:visited {
 			color: $text-navbar-color;
 		}
 	}
-	a.active {
+
+	a.activeLink {
 		color: $text-highlight-color;
 		font-weight: 700;
+	}
+
+	.unactiveLink::before {
+		position: absolute;
+		content: attr(data-content);
+		top: 1px;
+		left: 0px;
+		overflow: hidden;
+		color: $text-highlight-color;
+		transition: width 300ms ease;
+		width: 0;
+		white-space: nowrap;
+	}
+
+	.unactiveLink:hover::before {
+		width: 100%;
+	}
+
+	.unactiveLink:hover {
+		color: $text-highlight-color;
 	}
 
 	@include breakpoint('m') {
