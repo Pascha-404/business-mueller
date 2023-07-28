@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { InView } from 'react-intersection-observer';
 
 import Button from '../Button';
 
@@ -8,8 +9,19 @@ import { iconCompass, iconPhone, textureOne, imgHero } from '../../assets';
 import styles from './HeroSection.module.scss';
 
 function HeroSection() {
+	const navigate = useNavigate();
+	
 	return (
-		<section className={styles.heroSection} id='heroSection'>
+		<InView
+			as='section'
+			className={styles.heroSection}
+			id='heroSection'
+			rootMargin={'-100% 0px 0px 0px'}
+			onChange={() => {
+				if (window.scrollY <= 15) {
+					navigate('/', { replace: true });
+				}
+			}}>
 			<div className={styles.heroLeft}>
 				<div className={`${styles.imgWrapper} ${styles.showOnSmall}`}>
 					<img src={imgHero} alt='Waschtisch mit goldener Armatur' />
@@ -78,7 +90,7 @@ function HeroSection() {
 					</div>
 				</div>
 			</div>
-		</section>
+		</InView>
 	);
 }
 
