@@ -1,6 +1,7 @@
 @use '../../sass/main.scss' as *;
 
 .footer {
+	position: relative;
 	width: 100vw;
 	height: 30vh;
 	padding-top: pxToRem(60px);
@@ -41,6 +42,16 @@
 		@include justify-content(space-between);
 	}
 
+	.scrollTopBtnWrap {
+		margin-top: pxToRem(40px);
+		opacity: 0;
+		transition: opacity 300ms ease;
+	}
+
+	.scrollTopBtnWrap.active {
+		opacity: 0.8;
+	}
+
 	@include breakpoint('xl') {
 		padding-left: pxToRem(100px);
 		padding-right: pxToRem(120px);
@@ -63,7 +74,9 @@
 	@include breakpoint('s') {
 		padding-left: 25px;
 		@include flexbox(column);
-		.contactDetails{width: 100%;}
+		.contactDetails {
+			width: 100%;
+		}
 		.links {
 			width: 40%;
 		}
@@ -72,7 +85,11 @@
 	@include breakpoint('xs') {
 		padding-left: 15px;
 
-		.contactDetails{.address{margin-right: 35px;}}
+		.contactDetails {
+			.address {
+				margin-right: 35px;
+			}
+		}
 		.links {
 			width: 50%;
 		}
