@@ -93,12 +93,25 @@
 	border-radius: 10px;
 }
 
+/* Mixins for animations */
+
+@mixin animate($animation, $duration, $method, $times) {
+	-webkit-animation: $animation $duration $method, $times;
+	animation: $animation $duration $method, $times;
+}
+
+@mixin keyframes($name) {
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
 /* Mixins for placement */
 
 // underlays a element with another.
 // applys position relative to container.
 // adds child element through class as underlayed element.
-@mixin underlay($underlayClass, $direction: left, $portrait: false) {
+@mixin underlay($underlayClass, $direction: left, $portrait: false, $animation: true) {
 	width: 85%;
 	position: relative;
 	z-index: 1;
