@@ -135,8 +135,21 @@ button {
 	font-family: $main-font;
 }
 
+button.button{
+	font-size: 18px;
+	font-weight: 700;
+}
+
 button.bigBtn {
 	font-size: pxToRem(24px);
+}
+
+footer .scrollTopBtnWrap button{
+	font-size: pxToRem(17px);
+}
+
+.buttonShaped{
+	font-size: 14px;
 }
 
 input {
