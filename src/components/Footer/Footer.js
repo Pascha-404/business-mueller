@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
+import Button from '../Button';
+import { InView } from 'react-intersection-observer';
 
 function Footer() {
+	const [showTopBtn, setShowTopBtn] = useState(false);
+	const handleScrollTop = () => {
+		window.scrollTo({ top: 0 });
+	};
+
+	function handleChange(inView) {
+		setShowTopBtn(inView);
+	}
+
 	return (
-		<footer className={styles.footer} id='footer'>
+		<InView
+			as='footer'
+			className={styles.footer}
+			id='footer'
+			threshold={0.9}
+			onChange={handleChange}>
 			<div className={styles.contactDetails}>
 				<div className={styles.address}>
 					<h4>Müller Fliesenfachbetrieb</h4>
@@ -24,6 +40,11 @@ function Footer() {
 					<h5 className={styles.mail}>
 						<a href='mailto:mail@fliesenleger-mueller.de'>mail@fliesenleger-mueller.de</a>
 					</h5>
+					<div
+						className={`${styles.scrollTopBtnWrap} ${showTopBtn ? styles.active : ''}`}
+						onClick={handleScrollTop}>
+						<Button text='Zum Seitenanfang' />
+					</div>
 				</div>
 			</div>
 			<div className={styles.links}>
@@ -34,7 +55,7 @@ function Footer() {
 					<Link to='/impressum'>Impressum</Link>
 				</div>
 			</div>
-		</footer>
+		</InView>
 	);
 }
 
