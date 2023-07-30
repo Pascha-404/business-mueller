@@ -14,7 +14,9 @@ function Navbar() {
 				<li>
 					<NavLink
 						to='/'
-						className={({ isActive }) => (isActive ? styles.activeLink : styles.unactiveLink)}
+						className={({ isActive }) =>
+							isActive ? styles.activeLink : styles.unactiveLink
+						}
 						data-content='Home'>
 						Home
 					</NavLink>
@@ -22,7 +24,9 @@ function Navbar() {
 				<li>
 					<NavLink
 						to='/about'
-						className={({ isActive }) => (isActive ? styles.activeLink : styles.unactiveLink)}
+						className={({ isActive }) =>
+							isActive ? styles.activeLink : styles.unactiveLink
+						}
 						data-content='Warum Uns'>
 						Warum Uns
 					</NavLink>
@@ -30,7 +34,9 @@ function Navbar() {
 				<li>
 					<NavLink
 						to='/inspirationen'
-						className={({ isActive }) => (isActive ? styles.activeLink : styles.unactiveLink)}
+						className={({ isActive }) =>
+							isActive ? styles.activeLink : styles.unactiveLink
+						}
 						data-content='Inspirationen'>
 						Inspirationen
 					</NavLink>
@@ -38,7 +44,9 @@ function Navbar() {
 				<li>
 					<NavLink
 						to='/bewertungen'
-						className={({ isActive }) => (isActive ? styles.activeLink : styles.unactiveLink)}
+						className={({ isActive }) =>
+							isActive ? styles.activeLink : styles.unactiveLink
+						}
 						data-content='Bewertungen'>
 						Bewertungen
 					</NavLink>
@@ -46,7 +54,9 @@ function Navbar() {
 				<li>
 					<NavLink
 						to='/kontakt'
-						className={({ isActive }) => (isActive ? styles.activeLink : styles.unactiveLink)}
+						className={({ isActive }) =>
+							isActive ? styles.activeLink : styles.unactiveLink
+						}
 						data-content='Kontakt'>
 						Kontakt
 					</NavLink>
