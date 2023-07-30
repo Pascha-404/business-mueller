@@ -3,8 +3,6 @@
 .button {
 	display: inline-block;
 	padding: 8px 34px;
-	font-size: 18px;
-	font-weight: 700;
 	border: none;
 	cursor: pointer;
 	transition: transform 200ms ease;
@@ -18,11 +16,11 @@
 		transform: scale(0.9);
 	}
 }
+
 .buttonShaped {
 	display: inline-block;
 	min-height: 33px;
 	padding: 8px 19px;
-	font-size: 14px;
 	color: $text-darkBtn-color;
 	border: 1px solid $text-greygreen-color;
 
