@@ -4,8 +4,11 @@ import styles from './ContactButton.module.scss';
 
 import { iconContact } from '../../assets';
 
+import { useBtnTheme } from '../../contexts/btnTheme.context';
+
 // Simple component that displays a fixed button to get to contact section
-function ContactButton({ isLight }) {
+function ContactButton() {
+	const { isLight } = useBtnTheme();
 	return (
 		<div
 			className={`${styles.contactButton} ${isLight ? styles.lightTheme : ''}`}
