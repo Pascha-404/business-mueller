@@ -6,36 +6,32 @@ import RatingSection from '../../components/RatingSection';
 import ContactButton from '../../components/ContactButton';
 import ContactSection from '../../components/ContactSection';
 import CouponSection from '../../components/CouponSection';
-
-import { useBtnTheme } from '../../contexts/btnTheme.context';
+import PageTransition from '../../components/PageTransition';
 
 // Gathers all Sections to display Homeview in <main> element
-function Home({scrollTo}) {
-	const { isLight } = useBtnTheme();
-	
+function Home({ scrollTo }) {
 	useEffect(() => {
-		let targetSection
+		let targetSection;
 		if (scrollTo) {
-			targetSection = document.querySelector(`#${scrollTo}`)
+			targetSection = document.querySelector(`#${scrollTo}`);
 			targetSection.scrollIntoView();
-	  }
-	
-	  return () => {
-		targetSection = null
-	  }
-	}, [scrollTo])
-	
+		}
+
+		return () => {
+			targetSection = null;
+		};
+	}, [scrollTo]);
 
 	return (
-		<Fragment>
-			<ContactButton isLight={isLight} />
+		<PageTransition>
+			<ContactButton />
 			<HeroSection />
 			<AboutSection />
 			<InspoSection />
 			<CouponSection />
 			<RatingSection />
 			<ContactSection />
-		</Fragment>
+		</PageTransition>
 	);
 }
 
