@@ -1,17 +1,40 @@
+.page {
+	opacity: 0;
+}
+
 .enter {
 	opacity: 0;
 }
 
 .enterActive {
-	opacity: 1;
-	transition: opacity 2000ms ease;
+	opacity: 0;
+	transition: opacity 300ms ease;
 }
 
+.enterDone {
+	opacity: 1;
+}
+
+.appear {
+	opacity: 0;
+}
+
+.appearActive {
+	opacity: 1;
+	transition: opacity 300ms ease;
+}
+
+.appearDone {
+	opacity: 1;
+}
 .exit {
 	opacity: 1;
 }
-
 .exitActive {
 	opacity: 0;
-	transition: opacity 2000ms ease;
+	transition: opacity 300ms ease;
+}
+
+.exitDone {
+	opacity: 0;
 }

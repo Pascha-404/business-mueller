@@ -1,26 +1,36 @@
 import React, { useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { v4 as uuid } from 'uuid';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 
 import styles from './PageTransition.module.scss';
 
 function PageTransition({ children }) {
-    const nodeRef = useRef(null);
-    console.log('log')
+	const homeRef = useRef(null);
+	const impressumRef = useRef(null);
+	const privacyRef = useRef(null);
+	const { pathname } = useLocation();
+	const nodeRef =
+		pathname === '/datenschutz'
+			? privacyRef
+			: pathname === '/impressum'
+			? impressumRef
+                : homeRef;
+    
+    
+    
 	return (
-		<TransitionGroup>
-            <CSSTransition
+		<SwitchTransition mode='out-in'>
+			<CSSTransition
 				nodeRef={nodeRef}
-				key={uuid()}
-                timeout={500}
-                in={false}
-                unmountOnExit
-                mountOnEnter
+				key={pathname}
+				timeout={{ appear: 1000, enter: 300, exit: 300 }}
+                appear
 				classNames={{ ...styles }}>
-				<div ref={nodeRef}>{children}</div>
+				<div ref={nodeRef} className={styles.page}>
+					{children}
+				</div>
 			</CSSTransition>
-		</TransitionGroup>
+		</SwitchTransition>
 	);
 }
 
