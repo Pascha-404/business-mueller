@@ -5,6 +5,7 @@ import { ContactProvider } from '../../contexts/contact.context';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import CookieBanner from '../CookieBanner/CookieBanner';
+import PageTransition from '../PageTransition';
 
 function App() {
 	return (
@@ -15,7 +16,9 @@ function App() {
 			<main>
 				<CookieBanner />
 				<BtnThemeProvider>
-					<Outlet />
+					<PageTransition>
+						<Outlet />
+					</PageTransition>
 				</BtnThemeProvider>
 			</main>
 			<Footer />

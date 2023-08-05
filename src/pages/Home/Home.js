@@ -6,7 +6,6 @@ import RatingSection from '../../components/RatingSection';
 import ContactButton from '../../components/ContactButton';
 import ContactSection from '../../components/ContactSection';
 import CouponSection from '../../components/CouponSection';
-import PageTransition from '../../components/PageTransition';
 
 // Gathers all Sections to display Homeview in <main> element
 function Home({ scrollTo }) {
@@ -23,7 +22,7 @@ function Home({ scrollTo }) {
 	}, [scrollTo]);
 
 	return (
-		<PageTransition>
+		<Fragment>
 			<ContactButton />
 			<HeroSection />
 			<AboutSection />
@@ -31,7 +30,7 @@ function Home({ scrollTo }) {
 			<CouponSection />
 			<RatingSection />
 			<ContactSection />
-		</PageTransition>
+		</Fragment>
 	);
 }
 
