@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { MemoryRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
-import Routing from './Routes';
+import { router } from './Routes';
 
 import './sass/main.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<MemoryRouter>
-			<Routing />
-		</MemoryRouter>
+		<RouterProvider router={router} />
 	</React.StrictMode>
 );
 
