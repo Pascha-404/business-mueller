@@ -14,7 +14,7 @@ function ContactButton() {
 			className={`${styles.contactButton} ${isLight ? styles.lightTheme : ''}`}
 			id='contactBtn'>
 			<Link to='/' state={{ section: 'contactSection' }}>
-				<img src={iconContact} alt='Contact Icon' />
+				<span className={styles.text}>Schreiben Sie uns!</span><img src={iconContact} alt='Email Logo' />
 			</Link>
 		</div>
 	);
