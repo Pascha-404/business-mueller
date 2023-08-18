@@ -13,7 +13,7 @@ function ContactButton() {
 		<div
 			className={`${styles.contactButton} ${isLight ? styles.lightTheme : ''}`}
 			id='contactBtn'>
-			<Link to='/kontakt'>
+			<Link to='/' state={{ section: 'contactSection' }}>
 				<img src={iconContact} alt='Contact Icon' />
 			</Link>
 		</div>
