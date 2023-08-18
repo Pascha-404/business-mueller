@@ -1,6 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { InView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 import Button from '../Button';
 
@@ -9,19 +8,8 @@ import { iconCompass, iconPhone, textureOne, imgHero } from '../../assets';
 import styles from './HeroSection.module.scss';
 
 function HeroSection() {
-	const navigate = useNavigate();
-	
 	return (
-		<InView
-			as='section'
-			className={styles.heroSection}
-			id='heroSection'
-			rootMargin={'-100% 0px 0px 0px'}
-			onChange={() => {
-				if (window.scrollY <= 15) {
-					navigate('/', { replace: true });
-				}
-			}}>
+		<section className={styles.heroSection} id='heroSection'>
 			<div className={styles.heroLeft}>
 				<div className={`${styles.imgWrapper} ${styles.showOnSmall}`}>
 					<img src={imgHero} alt='Waschtisch mit goldener Armatur' />
@@ -45,9 +33,9 @@ function HeroSection() {
 				<h2 className={styles.h2}>Fliesen und andere Reparaturarbeiten</h2>
 
 				<div className={styles.hideOnSmall}>
-					<NavLink to='/about'>
+					<Link to='/' state={{ section: 'aboutSection' }}>
 						<Button text='Mehr über uns' />
-					</NavLink>
+					</Link>
 
 					<h2 className={styles.heroLocation}>
 						Wir sind ein Fliesenfachbetrieb aus Berlin Reinickendorf
@@ -90,7 +78,7 @@ function HeroSection() {
 					</div>
 				</div>
 			</div>
-		</InView>
+		</section>
 	);
 }
 
