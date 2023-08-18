@@ -25,12 +25,12 @@
 		}
 	}
 
-	a.activeLink {
+	a.isHome {
 		color: $text-highlight-color;
 		font-weight: 700;
 	}
 
-	.unactiveLink::before {
+	.hoverAnimation::before {
 		position: absolute;
 		content: attr(data-content);
 		top: 1px;
@@ -42,11 +42,11 @@
 		white-space: nowrap;
 	}
 
-	.unactiveLink:hover::before {
+	.hoverAnimation:hover::before {
 		width: 100%;
 	}
 
-	.unactiveLink:hover {
+	.hoverAnimation:hover {
 		color: $text-highlight-color;
 	}
 
