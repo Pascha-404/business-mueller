@@ -1,65 +1,67 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import Logo from '../../assets/logo-mueller.png';
 import styles from './Navbar.module.scss';
 
 function Navbar() {
+	const location = useLocation();
+	const isHome = location.pathname === '/';
+
 	return (
 		<nav className={styles.navbar}>
-			<NavLink to='/'>
+			<Link to='/'>
 				<img src={Logo} alt='Fliesenfachbetrieb Müller Logo' />
-			</NavLink>
+			</Link>
+
 			<ul>
 				<li>
-					<NavLink
+					<Link
 						to='/'
-						className={({ isActive }) =>
-							isActive ? styles.activeLink : styles.unactiveLink
-						}
+						className={isHome === true ? styles.isHome : styles.hoverAnimation}
 						data-content='Home'>
 						Home
-					</NavLink>
+					</Link>
 				</li>
+
 				<li>
-					<NavLink
-						to='/about'
-						className={({ isActive }) =>
-							isActive ? styles.activeLink : styles.unactiveLink
-						}
-						data-content='Warum Uns'>
+					<Link
+						to='/'
+						state={{ section: 'aboutSection' }}
+						data-content='Warum Uns'
+						className={styles.hoverAnimation}>
 						Warum Uns
-					</NavLink>
+					</Link>
 				</li>
+
 				<li>
-					<NavLink
-						to='/inspirationen'
-						className={({ isActive }) =>
-							isActive ? styles.activeLink : styles.unactiveLink
-						}
-						data-content='Inspirationen'>
+					<Link
+						to='/'
+						state={{ section: 'inspoSection' }}
+						data-content='Inspirationen'
+						className={styles.hoverAnimation}>
 						Inspirationen
-					</NavLink>
+					</Link>
 				</li>
+
 				<li>
-					<NavLink
-						to='/bewertungen'
-						className={({ isActive }) =>
-							isActive ? styles.activeLink : styles.unactiveLink
-						}
-						data-content='Bewertungen'>
+					<Link
+						to='/'
+						state={{ section: 'ratingSection' }}
+						data-content='Bewertungen'
+						className={styles.hoverAnimation}>
 						Bewertungen
-					</NavLink>
+					</Link>
 				</li>
+
 				<li>
-					<NavLink
-						to='/kontakt'
-						className={({ isActive }) =>
-							isActive ? styles.activeLink : styles.unactiveLink
-						}
-						data-content='Kontakt'>
+					<Link
+						to='/'
+						state={{ section: 'contactSection' }}
+						data-content='Kontakt'
+						className={styles.hoverAnimation}>
 						Kontakt
-					</NavLink>
+					</Link>
 				</li>
 			</ul>
 		</nav>
