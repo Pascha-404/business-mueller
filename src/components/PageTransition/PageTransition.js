@@ -1,36 +1,29 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import { routes } from '../../Routes';
 
 import styles from './PageTransition.module.scss';
 
 function PageTransition({ children }) {
-	const homeRef = useRef(null);
-	const impressumRef = useRef(null);
-	const privacyRef = useRef(null);
-	const { pathname } = useLocation();
-	const nodeRef =
-		pathname === '/datenschutz'
-			? privacyRef
-			: pathname === '/impressum'
-			? impressumRef
-                : homeRef;
-    
-    
-    
+	const location = useLocation();
+	const { nodeRef } = routes.find(route => route.path === location.pathname) ?? {};
+
 	return (
-		<SwitchTransition mode='out-in'>
-			<CSSTransition
-				nodeRef={nodeRef}
-				key={pathname}
-				timeout={{ appear: 1000, enter: 300, exit: 300 }}
-                appear
-				classNames={{ ...styles }}>
-				<div ref={nodeRef} className={styles.page}>
-					{children}
-				</div>
-			</CSSTransition>
-		</SwitchTransition>
+		<div className={styles.container}>
+			<SwitchTransition mode='out-in'>
+				<CSSTransition
+					key={location.pathname}
+					nodeRef={nodeRef}
+					timeout={{ appear: 2000, enter: 300, exit: 300 }}
+					appear
+					in
+					unmountOnExit
+					classNames={{ ...styles }}>
+					{state => <div ref={nodeRef}>{children}</div>}
+				</CSSTransition>
+			</SwitchTransition>
+		</div>
 	);
 }
 
