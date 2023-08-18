@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { useOutlet } from 'react-router-dom';
 import { BtnThemeProvider } from '../../contexts/btnTheme.context';
 import { ContactProvider } from '../../contexts/contact.context';
 
@@ -8,6 +8,8 @@ import CookieBanner from '../CookieBanner/CookieBanner';
 import PageTransition from '../PageTransition';
 
 function App() {
+	const currentOutlet = useOutlet();
+
 	return (
 		<ContactProvider>
 			<header>
@@ -16,9 +18,7 @@ function App() {
 			<main>
 				<CookieBanner />
 				<BtnThemeProvider>
-					<PageTransition>
-						<Outlet />
-					</PageTransition>
+					<PageTransition>{currentOutlet}</PageTransition>
 				</BtnThemeProvider>
 			</main>
 			<Footer />
