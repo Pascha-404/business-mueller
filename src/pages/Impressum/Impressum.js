@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import styles from './Impressum.module.scss';
 
 function Impressum() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
+
 	return (
 		<section className={styles.impressum}>
 			<h1>Impressum</h1>

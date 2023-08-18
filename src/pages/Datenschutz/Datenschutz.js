@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import styles from './Datenschutz.module.scss';
 
 function Datenschutz() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
+
 	return (
 		<section className={styles.datenschutz}>
 			<h1>Datenschutz&shy;erkl&auml;rung</h1>
