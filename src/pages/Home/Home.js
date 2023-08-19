@@ -1,13 +1,15 @@
 import React, { Fragment, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import HeroSection from '../../components/HeroSection';
-import AboutSection from '../../components/AboutSection';
-import InspoSection from '../../components/InspoSection';
-import RatingSection from '../../components/RatingSection';
-import ContactButton from '../../components/ContactButton';
-import ContactSection from '../../components/ContactSection';
-import CouponSection from '../../components/CouponSection';
+import {
+	HeroSection,
+	AboutSection,
+	InspoSection,
+	RatingSection,
+	ContactButton,
+	ContactSection,
+	CouponSection,
+} from '../../components';
 
 // Gathers all Sections to display Homeview in <main> element
 function Home() {
