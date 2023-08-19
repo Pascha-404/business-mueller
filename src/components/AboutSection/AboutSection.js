@@ -64,8 +64,7 @@ function AboutSection() {
 						und Rückfragen zur Verfügung. Schreiben Sie uns eine E-Mail oder rufen Sie uns
 						an. Wir freuen uns darauf, Ihre Projektideen zu besprechen.
 					</p>
-
-					<Link to='/' state={{section: 'inspoSection'}}>
+					<Link to='/' state={{ section: 'inspoSection' }}>
 						<Button text='Unsere Inspirationen' />
 					</Link>
 				</div>
