@@ -9,11 +9,19 @@ import {
 	ContactButton,
 	ContactSection,
 	CouponSection,
+	SectionTransition,
 } from '../../components';
 
 // Gathers all Sections to display Homeview in <main> element
 function Home() {
 	const location = useLocation();
+	const transitioningSections = [
+		AboutSection,
+		InspoSection,
+		CouponSection,
+		RatingSection,
+		ContactSection,
+	];
 
 	// If location.state has a value, scrolls to provided section
 	useEffect(() => {
@@ -32,11 +40,13 @@ function Home() {
 		<Fragment>
 			<ContactButton />
 			<HeroSection />
-			<AboutSection />
-			<InspoSection />
-			<CouponSection />
-			<RatingSection />
-			<ContactSection />
+			{transitioningSections.map((Section, idx) => {
+				return (
+					<SectionTransition key={idx}>
+						<Section />
+					</SectionTransition>
+				);
+			})}
 		</Fragment>
 	);
 }
