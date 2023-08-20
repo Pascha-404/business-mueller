@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { InView } from 'react-intersection-observer';
 
 import tiles from './tiles';
@@ -64,10 +64,9 @@ function AboutSection() {
 						und Rückfragen zur Verfügung. Schreiben Sie uns eine E-Mail oder rufen Sie uns
 						an. Wir freuen uns darauf, Ihre Projektideen zu besprechen.
 					</p>
-
-					<NavLink to='/inspirationen'>
+					<Link to='/' state={{ section: 'inspoSection' }}>
 						<Button text='Unsere Inspirationen' />
-					</NavLink>
+					</Link>
 				</div>
 			</div>
 			<div className={styles.secondRow}>

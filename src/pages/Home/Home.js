@@ -1,40 +1,52 @@
 import React, { Fragment, useEffect } from 'react';
-import HeroSection from '../../components/HeroSection';
-import AboutSection from '../../components/AboutSection';
-import InspoSection from '../../components/InspoSection';
-import RatingSection from '../../components/RatingSection';
-import ContactButton from '../../components/ContactButton';
-import ContactSection from '../../components/ContactSection';
-import CouponSection from '../../components/CouponSection';
+import { useLocation } from 'react-router-dom';
 
-import { useBtnTheme } from '../../contexts/btnTheme.context';
+import {
+	HeroSection,
+	AboutSection,
+	InspoSection,
+	RatingSection,
+	ContactButton,
+	ContactSection,
+	CouponSection,
+	SectionTransition,
+} from '../../components';
 
 // Gathers all Sections to display Homeview in <main> element
-function Home({scrollTo}) {
-	const { isLight } = useBtnTheme();
-	
+function Home() {
+	const location = useLocation();
+	const transitioningSections = [
+		AboutSection,
+		InspoSection,
+		CouponSection,
+		RatingSection,
+		ContactSection,
+	];
+
+	// If location.state has a value, scrolls to provided section
 	useEffect(() => {
-		let targetSection
-		if (scrollTo) {
-			targetSection = document.querySelector(`#${scrollTo}`)
+		let targetSection;
+		if (location.state !== null) {
+			targetSection = document.querySelector(`#${location.state.section}`);
 			targetSection.scrollIntoView();
-	  }
-	
-	  return () => {
-		targetSection = null
-	  }
-	}, [scrollTo])
-	
+		}
+
+		return () => {
+			targetSection = null;
+		};
+	}, [location]);
 
 	return (
 		<Fragment>
-			<ContactButton isLight={isLight} />
+			<ContactButton />
 			<HeroSection />
-			<AboutSection />
-			<InspoSection />
-			<CouponSection />
-			<RatingSection />
-			<ContactSection />
+			{transitioningSections.map((Section, idx) => {
+				return (
+					<SectionTransition key={idx}>
+						<Section />
+					</SectionTransition>
+				);
+			})}
 		</Fragment>
 	);
 }

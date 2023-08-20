@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Button from '../Button';
 
@@ -33,9 +33,9 @@ function HeroSection() {
 				<h2 className={styles.h2}>Fliesen und andere Reparaturarbeiten</h2>
 
 				<div className={styles.hideOnSmall}>
-					<NavLink to='/about'>
+					<Link to='/' state={{ section: 'aboutSection' }}>
 						<Button text='Mehr über uns' />
-					</NavLink>
+					</Link>
 
 					<h2 className={styles.heroLocation}>
 						Wir sind ein Fliesenfachbetrieb aus Berlin Reinickendorf
