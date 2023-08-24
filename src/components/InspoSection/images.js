@@ -1,4 +1,4 @@
-import { imgAbout, inspoOne, inspoThree, cloudinaryUrls } from "../../assets";
+import { cloudinaryUrls } from '../../assets';
 
 const images = [
 	{

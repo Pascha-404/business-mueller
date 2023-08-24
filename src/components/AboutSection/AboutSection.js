@@ -38,8 +38,13 @@ function AboutSection() {
 			<div className={styles.firstRow}>
 				<div className={styles.firstRowLeft}>
 					<div className={`${styles.imgWrapper} ${styles.hideOnSmall}`}>
-						<img src={cloudinaryUrls.imgAbout} alt='Waschtisch und Fliesen in Marmor' />
 						<img
+							loading='lazy'
+							src={cloudinaryUrls.imgAbout}
+							alt='Waschtisch und Fliesen in Marmor'
+						/>
+						<img
+							loading='lazy'
 							src={cloudinaryUrls.textureTwo}
 							alt='Weiße Steintextur'
 							className={styles.underlayedImg}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { iconStar, cloudinaryUrls } from '../../assets';
+import { cloudinaryUrls } from '../../assets';
 
 import styles from './CustomerRating.module.scss';
 
@@ -11,7 +11,7 @@ function CustomerRating({ titel, rating, review, customerName, customerInfo }) {
 				<h3>{titel}</h3>
 				<div className={styles.ratingWrapper}>
 					{[...Array(rating)].map((e, i) => (
-						<img src={cloudinaryUrls.iconStar} key={i} alt='Stern' />
+						<img loading='lazy' src={cloudinaryUrls.iconStar} key={i} alt='Stern' />
 					))}
 				</div>
 			</div>

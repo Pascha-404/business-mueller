@@ -29,7 +29,12 @@ function CouponSection() {
 			id='couponSection'
 			rootMargin={'-100% 0px 0px 0px'}
 			onChange={handleOberserverChange}>
-			<img src={cloudinaryUrls.bgService} className={styles.bgImage} alt='Edles Bad in hellen Tönen' />
+			<img
+				loading='lazy'
+				src={cloudinaryUrls.bgService}
+				className={styles.bgImage}
+				alt='Edles Bad in hellen Tönen'
+			/>
 
 			<h2 className='h1'>Wir freuen uns darauf Sie kennenzulernen!</h2>
 

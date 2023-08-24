@@ -7,7 +7,7 @@ function AboutTile({ icon, iconAlt, title, text }) {
 		<div className={styles.aboutTile}>
 			<div className={styles.imgWrap}>
 				<div className={styles.imgBlur} />
-				<img src={icon} alt={iconAlt} />
+				<img loading='lazy' src={icon} alt={iconAlt} />
 			</div>
 			<h3 className={styles.title}>{title}</h3>
 			<p className={styles.pTiles}>{text}</p>
