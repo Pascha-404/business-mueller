@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import Logo from '../../assets/logo-mueller.png';
+import { cloudinaryUrls } from '../../assets';
 import styles from './Navbar.module.scss';
 
 function Navbar() {
@@ -11,7 +11,7 @@ function Navbar() {
 	return (
 		<nav className={styles.navbar}>
 			<Link to='/'>
-				<img src={Logo} alt='Fliesenfachbetrieb Müller Logo' />
+				<img src={cloudinaryUrls.logoMueller} alt='Fliesenfachbetrieb Müller Logo' />
 			</Link>
 
 			<ul>
