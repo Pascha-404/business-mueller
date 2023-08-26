@@ -15,7 +15,7 @@ function ContactButton() {
 			id='contactBtn'>
 			<Link to='/' state={{ section: 'contactSection' }}>
 				<span className={styles.text}>Schreiben Sie uns!</span>
-				<img src={cloudinaryUrls.iconContact} alt='Email Logo' />
+				<img src={cloudinaryUrls.iconContact.url} alt='Email Logo' />
 			</Link>
 		</div>
 	);

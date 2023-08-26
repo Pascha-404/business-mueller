@@ -11,7 +11,7 @@ function Navbar() {
 	return (
 		<nav className={styles.navbar}>
 			<Link to='/'>
-				<img src={cloudinaryUrls.logoMueller} alt='Fliesenfachbetrieb Müller Logo' />
+				<img src={cloudinaryUrls.logoMueller.url} alt='Fliesenfachbetrieb Müller Logo' />
 			</Link>
 
 			<ul>

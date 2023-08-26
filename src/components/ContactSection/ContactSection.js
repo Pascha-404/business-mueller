@@ -36,13 +36,13 @@ function ContactSection() {
 				<div className={styles.imgWrapper}>
 					<img
 						loading='lazy'
-						src={cloudinaryUrls.textureTwo}
+						src={cloudinaryUrls.textureTwo.url}
 						alt='Weiße Steintextur'
 						className={styles.underlayedImg}
 					/>
 					<img
 						loading='lazy'
-						src={cloudinaryUrls.imgContact}
+						src={cloudinaryUrls.imgContact.url}
 						alt='Weißes Badezimmer mit schwarz-goldenen Akzenten'
 					/>
 				</div>
@@ -65,7 +65,7 @@ function ContactSection() {
 				)}
 				{formState === 'success' && (
 					<div className={styles.feedback}>
-						<img loading='lazy' src={cloudinaryUrls.iconSuccess} alt='Haken Symbol' />
+						<img loading='lazy' src={cloudinaryUrls.iconSuccess.url} alt='Haken Symbol' />
 						<p className={styles.h1}>Fertig!</p>
 						<p>
 							Ihre Nachricht wurde erfolgreich abgeschickt. Sie erhalten eine Kopie an die
@@ -76,7 +76,7 @@ function ContactSection() {
 				)}
 				{formState === 'error' && (
 					<div className={`${styles.feedback} ${styles.error}`}>
-						<img loading='lazy' src={cloudinaryUrls.iconError} alt='Kreuz Symbol' />
+						<img loading='lazy' src={cloudinaryUrls.iconError.url} alt='Kreuz Symbol' />
 						<p className={styles.h1}>Sorry!</p>
 						<p>
 							Irgendwas ist schief gelaufen. Senden Sie das Formular bitte noch einmal:

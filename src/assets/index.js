@@ -21,49 +21,70 @@ import iconSuccess from './icon-success.png';
 import iconError from './icon-error.png';
 
 const cloudinaryUrls = {
-	textureOne:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/texture-1_pllejd.png',
+	textureOne: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/texture-1_pllejd',
+	},
 
-	textureTwo:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/texture-2_zxw8cn.png',
-	iconCompass:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-compass_mvffrs.png',
-	iconPhone:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-phone_yfkp0n.png',
-	iconTile:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-tile_s1flm7.png',
-	iconQuestionMark:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-questionMark_jvzvhd.png',
-	iconClipboard:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-clipboard_beh1gi.png',
-	iconHouse:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-house_eowlfw.png',
-	iconDiamond:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-diamond_ysfe3s.png',
-	iconLightbulb:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-lightbulb_h5vf9w.png',
-	imgAbout:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/img-about_gv57e4.png',
-	imgHero:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/img-hero_zcqkmg.png',
-	inspoOne:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/inspo-1_zksxdq.png',
-	inspoThree:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/inspo-3_jnise3.png',
-	logoMueller:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/logo-mueller_n0qxhe.png',
-	bgService:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/service-bg_br4mr9.png',
-	iconContact:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-email_q68lxt.png',
-	imgContact:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/img-contact_rtrsjs.png',
-	iconStar:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-star_ebuglt.png',
-	iconSuccess:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-success_yzmutu.png',
-	iconError:
-		'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-error_mpjw6s.png',
+	textureTwo: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/texture-2_zxw8cn',
+	},
+	iconCompass: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-compass_mvffrs',
+	},
+	iconPhone: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-phone_yfkp0n',
+	},
+	iconTile: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-tile_s1flm7',
+	},
+	iconQuestionMark: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-questionMark_jvzvhd',
+	},
+	iconClipboard: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-clipboard_beh1gi',
+	},
+	iconHouse: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-house_eowlfw',
+	},
+	iconDiamond: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-diamond_ysfe3s',
+	},
+	iconLightbulb: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-lightbulb_h5vf9w',
+	},
+	imgAbout: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/img-about_gv57e4',
+	},
+	imgHero: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/img-hero_zcqkmg',
+	},
+	inspoOne: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/inspo-1_zksxdq',
+	},
+	inspoThree: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/inspo-3_jnise3',
+	},
+	logoMueller: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/logo-mueller_n0qxhe',
+	},
+	bgService: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/service-bg_br4mr9',
+	},
+	iconContact: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-email_q68lxt',
+	},
+	imgContact: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/img-contact_rtrsjs',
+	},
+	iconStar: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-star_ebuglt',
+	},
+	iconSuccess: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-success_yzmutu',
+	},
+	iconError: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-error_mpjw6s',
+	},
 };
 
 export {
@@ -88,5 +109,5 @@ export {
 	iconStar,
 	iconSuccess,
 	iconError,
-	cloudinaryUrls
+	cloudinaryUrls,
 };

@@ -31,7 +31,7 @@ function CouponSection() {
 			onChange={handleOberserverChange}>
 			<img
 				loading='lazy'
-				src={cloudinaryUrls.bgService}
+				src={cloudinaryUrls.bgService.url}
 				className={styles.bgImage}
 				alt='Edles Bad in hellen Tönen'
 			/>

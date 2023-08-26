@@ -40,12 +40,12 @@ function AboutSection() {
 					<div className={`${styles.imgWrapper} ${styles.hideOnSmall}`}>
 						<img
 							loading='lazy'
-							src={cloudinaryUrls.imgAbout}
+							src={cloudinaryUrls.imgAbout.url}
 							alt='Waschtisch und Fliesen in Marmor'
 						/>
 						<img
 							loading='lazy'
-							src={cloudinaryUrls.textureTwo}
+							src={cloudinaryUrls.textureTwo.url}
 							alt='Weiße Steintextur'
 							className={styles.underlayedImg}
 						/>
