@@ -32,7 +32,8 @@
 
 		img {
 			width: pxToRem(30.33px);
-			height: pxToRem(26.59px);
+			height: 100%;
+			object-fit: contain;
 		}
 	}
 
