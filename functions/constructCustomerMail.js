@@ -7,13 +7,13 @@ function escapeHtml(unsafe) {
 		.replace(/'/g, '&#039;');
 }
 
-function constructCustomerMail({ name, email, message, phoneNumber = false }) {
+function constructCustomerMail({ name, email, message, phoneCall, phoneNumber }) {
 	const escapedName = escapeHtml(name);
 	const escapedEmail = escapeHtml(email);
 	const escapedMessage = escapeHtml(message);
 	const escapedPhoneNumber = phoneNumber && escapeHtml(phoneNumber);
 
-	const callBack = escapedPhoneNumber
+	const callBack = phoneCall
 		? `<h3 style="margin: 10px">Telefonnummer:</h3>
 		        <p style="margin: 10px">
 					${escapedPhoneNumber}
@@ -170,7 +170,7 @@ function constructCustomerMail({ name, email, message, phoneNumber = false }) {
 		text="#919191"
 		alink="#cccccc"
 		vlink="#cccccc"
-		style="margin: 0; padding: 0; background-color: #3f3f3f; color: #919191"
+		style="margin: 0; padding: 0; background-color: #3f3f3f; color: #000"
 	>
 		<!--<![endif]-->
 		<center>
@@ -279,7 +279,7 @@ function constructCustomerMail({ name, email, message, phoneNumber = false }) {
 																			height: auto;
 																		"
 																		src="https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/v1693331577/fliesenleger-mueller/logo-mueller-dark_ai7ema"
-																	/>/><!--[if (lte ie 8)]></div><![endif]-->
+																	/><!--[if (lte ie 8)]></div><![endif]-->
 																</td>
 															</tr>
 														</tbody>
@@ -438,7 +438,7 @@ function constructCustomerMail({ name, email, message, phoneNumber = false }) {
 																								height: auto;
 																							"
 																							src="https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/v1693251004/fliesenleger-mueller/image-mail_utfuzg"
-																						/>/><!--[if (lte ie 8)]></div><![endif]-->
+																						/><!--[if (lte ie 8)]></div><![endif]-->
 																					</td>
 																				</tr>
 																			</tbody>
@@ -1123,4 +1123,4 @@ function constructCustomerMail({ name, email, message, phoneNumber = false }) {
 	return emailHTML;
 }
 
-export default constructCustomerMail;
+module.exports = constructCustomerMail;
