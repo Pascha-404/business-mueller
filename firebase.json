@@ -1,1 +1,31 @@
-{}
+{
+	"functions": [
+		{
+			"source": "functions",
+			"codebase": "default",
+			"ignore": ["node_modules", ".git", "firebase-debug.log", "firebase-debug.*.log"],
+			"predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"]
+		}
+	],
+	"emulators": {
+		"functions": {
+			"port": 5001,
+			"host": "0.0.0.0"
+		},
+		"firestore": {
+      "host": "0.0.0.0",
+			"port": 8080
+		},
+		"ui": {
+			"enabled": true,
+			"host": "0.0.0.0",
+			"port": 4000
+		},
+		"logging": {
+			"host": "0.0.0.0"
+		},
+		"hub": {
+			"host": "0.0.0.0"
+		}
+	}
+}
