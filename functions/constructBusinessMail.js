@@ -266,7 +266,7 @@ function constructBusinessMail({ name, email, message, phoneCall, phoneNumber })
 																			height: auto;
 																		"
 																		src="https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/v1693331577/fliesenleger-mueller/logo-mueller-dark_ai7ema"
-																		alt="Firmenlogo" />/><!--[if (lte ie 8)]></div><![endif]-->
+																		alt="Firmenlogo" /><!--[if (lte ie 8)]></div><![endif]-->
 																</td>
 															</tr>
 														</tbody>
@@ -375,7 +375,7 @@ function constructBusinessMail({ name, email, message, phoneCall, phoneNumber })
 																			height: auto;
 																		"
 																		src="https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/v1693251004/fliesenleger-mueller/image-mail_utfuzg"
-																		alt="Stern Mosaike mit gelber Umrandung" />/><!--[if (lte ie 8)]></div><![endif]-->
+																		alt="Stern Mosaike mit gelber Umrandung" /><!--[if (lte ie 8)]></div><![endif]-->
 																</td>
 															</tr>
 														</tbody>
