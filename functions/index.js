@@ -21,45 +21,47 @@ const transporter = nodemailer.createTransport({
 // Sends a email with all data to the business e-mail account.
 exports.sendEmail = functions.firestore
 	.document('mails/{mailId}')
-	.onCreate((snap, context) => {
-		const { name, email, message, phoneCall, phoneNumber } = snap.data();
+	.onCreate(async (snap, context) => {
+		try {
+			const { name, email, message, phoneCall, phoneNumber } = snap.data();
 
-		const mailOptions = {
-			from: process.env.MAIL_USER,
-			to: process.env.MAIL_RECIEVER,
-			replyTo: email,
-			subject: `Anfrage von ${name}`,
-			html: constructBusinessMail({ name, email, message, phoneCall, phoneNumber }),
-		};
+			const mailOptions = {
+				from: process.env.MAIL_USER,
+				to: process.env.MAIL_RECIEVER,
+				replyTo: email,
+				subject: `Anfrage von ${name}`,
+				html: constructBusinessMail({ name, email, message, phoneCall, phoneNumber }),
+			};
 
-		return transporter.sendMail(mailOptions, (error, data) => {
-			if (error) {
-				console.log(error);
-				return;
-			}
-			console.log('Sent Mail To Business!');
-		});
+			await transporter.sendMail(mailOptions);
+			console.log('Kundenanfrage gesendet: ', name, email)
+			return null;
+		} catch (error) {
+			console.log('Error from sending business mail: ', error);
+			return null;
+		}
 	});
 
 // Function that triggers when ContactForm data is added in database.
 // Sends a email with all data to the user which filled up the form.
 exports.sendEmailToCustomer = functions.firestore
 	.document('mails/{mailId}')
-	.onCreate((snap, context) => {
-		const { name, email, message, phoneCall, phoneNumber } = snap.data();
+	.onCreate(async (snap, context) => {
+		try {
+			const { name, email, message, phoneCall, phoneNumber } = snap.data();
 
-		const mailOptions = {
-			from: process.env.MAIL_USER,
-			to: email,
-			subject: `Ihre Anfrage ist eingegangen`,
-			html: constructCustomerMail({ name, email, message, phoneCall, phoneNumber }),
-		};
+			const mailOptions = {
+				from: process.env.MAIL_USER,
+				to: email,
+				subject: `Ihre Anfrage ist eingegangen`,
+				html: constructCustomerMail({ name, email, message, phoneCall, phoneNumber }),
+			};
 
-		return transporter.sendMail(mailOptions, (error, data) => {
-			if (error) {
-				console.log(error);
-				return;
-			}
-			console.log('Sent Mail To Customer!');
-		});
+			await transporter.sendMail(mailOptions);
+			console.log('Kopie von Kontakformular gesendet an: ', email)
+			return null;
+		} catch (error) {
+			console.log('Error from sending customer mail: ', error);
+			return null;
+		}
 	});
