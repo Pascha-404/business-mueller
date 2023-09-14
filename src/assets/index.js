@@ -65,7 +65,7 @@ const cloudinaryUrls = {
 		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/inspo-3_jnise3',
 	},
 	logoMueller: {
-		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/logo-mueller_n0qxhe',
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/logo-mueller_cyuxlf',
 	},
 	bgService: {
 		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/service-bg_br4mr9',
