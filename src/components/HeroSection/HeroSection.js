@@ -30,7 +30,7 @@ function HeroSection() {
 					Einfach eine völlig <span className={styles.highlight}>neue Erfahrung</span>
 				</h1>
 
-				<h2 className={styles.h2}>Fliesen und andere Reparaturarbeiten</h2>
+				<h2 className={styles.h2}>Sanierungen im Komplettstil</h2>
 
 				<div className={styles.hideOnSmall}>
 					<Link to='/' state={{ section: 'aboutSection' }}>
@@ -38,7 +38,7 @@ function HeroSection() {
 					</Link>
 
 					<h2 className={styles.heroLocation}>
-						Wir sind ein Fliesenfachbetrieb aus Berlin Reinickendorf
+						Wir sind ein Handwerksbetrieb aus Berlin Reinickendorf
 					</h2>
 				</div>
 			</div>
@@ -71,8 +71,8 @@ function HeroSection() {
 
 						<p className={styles.heroDetailsP}>
 							Rufen Sie uns an:{' '}
-							<a href='tel:+493051637522' className={styles.phoneNumber}>
-								030 5163 7522
+							<a href='tel:+491776286037' className={styles.phoneNumber}>
+								0177 628 60 37
 							</a>
 						</p>
 					</div>
