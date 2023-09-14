@@ -56,9 +56,8 @@ function AboutSection() {
 						Planlos geht der <span className={styles.highlight}>Plan los!</span>
 					</h2>
 					<p>
-						Wir haben uns auf Trockenbau und Fliesen spezialisiert und bieten unsere
-						Dienstleistungen nicht nur für Badezimmer, sondern auch für Küchen, Pools und
-						andere Räumlichkeiten an.
+						Wir haben uns auf Altbausanierungen und Fliesen spezialisiert und bieten unsere
+						Dienstleistungen nicht nur für Badezimmer, sondern auch für komplette Dächer und Häuser an.
 					</p>
 					<p>
 						Bei uns im Unternehmen kümmern wir uns gerne um Ihre individuellen
