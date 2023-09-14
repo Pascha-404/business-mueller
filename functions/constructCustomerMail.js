@@ -278,7 +278,7 @@ function constructCustomerMail({ name, email, message, phoneCall, phoneNumber })
 																			max-width: 100px;
 																			height: auto;
 																		"
-																		src="https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/v1693331577/fliesenleger-mueller/logo-mueller-dark_ai7ema"
+																		src="https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/v1693331577/fliesenleger-mueller/logo-mueller-dark_vn3rds"
 																		alt="Firmenlogo"
 																	/><!--[if (lte ie 8)]></div><![endif]-->
 																</td>
