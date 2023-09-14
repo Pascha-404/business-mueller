@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Button from '../Button';
 
-import { iconCompass, iconPhone, textureOne, imgHero } from '../../assets';
+import { cloudinaryUrls } from '../../assets';
 
 import styles from './HeroSection.module.scss';
 
@@ -12,9 +12,9 @@ function HeroSection() {
 		<section className={styles.heroSection} id='heroSection'>
 			<div className={styles.heroLeft}>
 				<div className={`${styles.imgWrapper} ${styles.showOnSmall}`}>
-					<img src={imgHero} alt='Waschtisch mit goldener Armatur' />
+					<img src={cloudinaryUrls.imgHero.url} alt='Waschtisch mit goldener Armatur' />
 					<img
-						src={textureOne}
+						src={cloudinaryUrls.textureOne.url}
 						alt='Weiße Steintextur'
 						className={styles.underlayedImg}
 					/>
@@ -45,10 +45,10 @@ function HeroSection() {
 
 			<div className={styles.heroRight}>
 				<div className={`${styles.imgWrapper} ${styles.hideOnSmall}`}>
-					<img src={imgHero} alt='Waschtisch mit goldener Armatur' />
+					<img src={cloudinaryUrls.imgHero.url} alt='Waschtisch mit goldener Armatur' />
 
 					<img
-						src={textureOne}
+						src={cloudinaryUrls.textureOne.url}
 						alt='Weiße Steintextur'
 						className={styles.underlayedImg}
 					/>
@@ -57,7 +57,7 @@ function HeroSection() {
 				<div className={styles.heroDetails}>
 					<div className={styles.detailsItem}>
 						<div className={styles.logoContainer}>
-							<img src={iconCompass} alt='Compass' />
+							<img src={cloudinaryUrls.iconCompass.url} alt='Kompass' />
 						</div>
 						<p className={styles.heroDetailsP}>
 							Egal woher Sie aus Berlin oder Brandenburg kommen
@@ -66,7 +66,7 @@ function HeroSection() {
 
 					<div className={styles.detailsItem}>
 						<div className={styles.logoContainer}>
-							<img src={iconPhone} alt='Phone' />
+							<img src={cloudinaryUrls.iconPhone.url} alt='Telefon' />
 						</div>
 
 						<p className={styles.heroDetailsP}>

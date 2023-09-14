@@ -14,8 +14,10 @@
 		left: 0;
 		bottom: 0;
 		height: 100%;
-		width: 100vw;
-		background: bottom/cover no-repeat url('../../assets/service-bg.png');
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		object-fit: cover;
 		opacity: 20%;
 		z-index: 0;
 	}

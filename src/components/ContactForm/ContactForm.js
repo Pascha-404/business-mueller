@@ -25,6 +25,7 @@ function ContactForm() {
 	return (
 		<form onSubmit={handleSubmit} className={styles.contactForm}>
 			<input
+				autoComplete='name'
 				type='text'
 				id='name'
 				value={name}
@@ -34,6 +35,7 @@ function ContactForm() {
 			<label htmlFor='name'>Vorname und Name</label>
 
 			<input
+				autoComplete='email'
 				type='email'
 				id='email'
 				value={email}
@@ -68,6 +70,7 @@ function ContactForm() {
 				type='tel'
 				name='phoneNumber'
 				id='phoneNumber'
+				autoComplete='tel'
 				value={phoneNumber}
 				onChange={handleChange('phoneNumber')}
 				required

@@ -17,7 +17,7 @@ function DataCarousel({ data, type = 'img' }) {
 		if (type === 'img') {
 			return data.map(image => (
 				<SwiperSlide key={`imgSlide-${image.id}`}>
-					<img src={image.src} alt={image.alt} />
+					<img loading='lazy' src={image.src} alt={image.alt} />
 				</SwiperSlide>
 			));
 		} else if (type === 'rating') {

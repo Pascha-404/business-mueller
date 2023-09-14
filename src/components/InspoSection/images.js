@@ -1,29 +1,29 @@
-import { imgAbout, inspoOne, inspoThree } from "../../assets";
+import { cloudinaryUrls } from '../../assets';
 
 const images = [
 	{
 		id: 1,
-		src: inspoOne,
+		src: cloudinaryUrls.inspoOne.url,
 		alt: 'Waschtisch mit Holzakzenten',
 	},
 	{
 		id: 2,
-		src: imgAbout,
+		src: cloudinaryUrls.imgAbout.url,
 		alt: 'Waschtisch und Fliesen in Marmor',
 	},
 	{
 		id: 3,
-		src: inspoThree,
+		src: cloudinaryUrls.inspoThree.url,
 		alt: 'Bad mit Fliesen in Holzoptik',
 	},
 	{
 		id: 4,
-		src: inspoThree,
+		src: cloudinaryUrls.inspoThree.url,
 		alt: 'Bad mit Fliesen in Holzoptik',
 	},
 	{
 		id: 5,
-		src: inspoThree,
+		src: cloudinaryUrls.inspoThree.url,
 		alt: 'Bad mit Fliesen in Holzoptik',
 	},
 ];

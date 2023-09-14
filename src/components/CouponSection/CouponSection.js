@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { InView } from 'react-intersection-observer';
 
 import { useBtnTheme } from '../../contexts/btnTheme.context';
-
+import { cloudinaryUrls } from '../../assets';
 import Button from '../Button';
 
 import styles from './CouponSection.module.scss';
-import { Link } from 'react-router-dom';
 
 function CouponSection() {
 	const { sectionsInView, setSectionsInView } = useBtnTheme();
@@ -29,7 +29,12 @@ function CouponSection() {
 			id='couponSection'
 			rootMargin={'-100% 0px 0px 0px'}
 			onChange={handleOberserverChange}>
-			<div className={styles.bgImage} />
+			<img
+				loading='lazy'
+				src={cloudinaryUrls.bgService.url}
+				className={styles.bgImage}
+				alt='Edles Bad in hellen Tönen'
+			/>
 
 			<h2 className='h1'>Wir freuen uns darauf Sie kennenzulernen!</h2>
 

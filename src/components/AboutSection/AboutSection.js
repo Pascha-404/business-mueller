@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { InView } from 'react-intersection-observer';
 
 import tiles from './tiles';
-import { imgAbout, textureTwo } from '../../assets';
+import { cloudinaryUrls } from '../../assets';
 
 import { useBtnTheme } from '../../contexts/btnTheme.context';
 
@@ -38,9 +38,14 @@ function AboutSection() {
 			<div className={styles.firstRow}>
 				<div className={styles.firstRowLeft}>
 					<div className={`${styles.imgWrapper} ${styles.hideOnSmall}`}>
-						<img src={imgAbout} alt='Waschtisch und Fliesen in Marmor' />
 						<img
-							src={textureTwo}
+							loading='lazy'
+							src={cloudinaryUrls.imgAbout.url}
+							alt='Waschtisch und Fliesen in Marmor'
+						/>
+						<img
+							loading='lazy'
+							src={cloudinaryUrls.textureTwo.url}
 							alt='Weiße Steintextur'
 							className={styles.underlayedImg}
 						/>
