@@ -4,6 +4,8 @@ const reducer = (state, action) => {
 			return { ...state, formState: 'form', submit: false };
 		case 'TOGGLE_PHONECALL':
 			return { ...state, phoneCall: !state.phoneCall };
+		case 'TOGGLE_DATAPOLICY':
+			return { ...state, acceptedDataPolicy: !state.acceptedDataPolicy };
 		case 'TOGGLE_SUBMIT':
 			return { ...state, submit: !state.submit };
 		case 'HANDLE_CHANGE':
