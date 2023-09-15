@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useContact, useContactDispatch } from '../../contexts/contact.context';
 
 import Button from '../Button';
@@ -6,7 +7,8 @@ import Button from '../Button';
 import styles from './ContactForm.module.scss';
 
 function ContactForm() {
-	const { name, email, message, phoneCall, phoneNumber } = useContact();
+	const { name, email, message, phoneCall, phoneNumber, acceptedDataPolicy } =
+		useContact();
 	const contactDispatch = useContactDispatch();
 
 	const handleChange = key => e => {
@@ -15,6 +17,10 @@ function ContactForm() {
 
 	const togglePhonecall = e => {
 		contactDispatch({ type: 'TOGGLE_PHONECALL' });
+	};
+
+	const toggleDataPolicy = e => {
+		contactDispatch({ type: 'TOGGLE_DATAPOLICY' });
 	};
 
 	const handleSubmit = e => {
@@ -65,6 +71,23 @@ function ContactForm() {
 				<label htmlFor='phoneCall'>Wünschen Sie einen Rückruf?</label>
 			</div>
 
+			<div className={styles.checkboxWrapper}>
+				<input
+					type='checkbox'
+					name='dataPolicy'
+					id='dataPolicy'
+					checked={acceptedDataPolicy}
+					onChange={toggleDataPolicy}
+				/>
+
+				<label htmlFor='dataPolicy'>
+					Ich akzeptiere die{' '}
+					<Link style={{ borderBottom: '1px solid #343f3ed9' }} to='/datenschutz'>
+						Datenschutzerklärung
+					</Link>
+				</label>
+			</div>
+
 			<input
 				className={`${styles.phoneNumberElement} ${phoneCall ? styles.active : ''}`}
 				type='tel'
@@ -81,8 +104,16 @@ function ContactForm() {
 				Telefonnummer
 			</label>
 
-			<div className={styles.btnWrapper}>
-				<Button type='button' text="Los geht's!" submit theme='dark' bigBtn />
+			<div
+				className={`${styles.btnWrapper} ${acceptedDataPolicy ? '' : styles.disabled}`}>
+				<Button
+					type='button'
+					text="Los geht's!"
+					submit
+					theme='dark'
+					bigBtn
+					disabled={!acceptedDataPolicy}
+				/>
 			</div>
 		</form>
 	);
