@@ -54,6 +54,7 @@ const addMailToCollection = async data => {
 			message: data.message,
 			phoneCall: data.phoneCall,
 			phoneNumber: data.phoneNumber,
+			acceptedDataPolicy: data.acceptedDataPolicy,
 			timestamp: Date.now(),
 		});
 		if (docRef.id) {
