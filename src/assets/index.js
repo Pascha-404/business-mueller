@@ -64,6 +64,36 @@ const cloudinaryUrls = {
 	inspoThree: {
 		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/inspo-3_jnise3',
 	},
+	inspoBalcony1: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/DSC_0112_beikfn',
+	},
+	inspoToilet1: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/IMG_3740_rhwpou',
+	},
+	inspoCeiling1: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/DSC_0802_dohtd3',
+	},
+	inspoBalcony2: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/DSC_0130_ruqcaq',
+	},
+	inspoCeiling2: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/DSC_0804_c0ombv',
+	},
+	inspoCeiling3: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/DSC_0801_llnwp3',
+	},
+	inspoBalcony3: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/DSC_0113_lnftsh',
+	},
+	inspoShower: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/20170615_114418_uclsml',
+	},
+	inspoToilet2: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/IMG_3734_zf2fnk',
+	},
+	inspoWall: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/DSC_0011_upoolr',
+	},
 	logoMueller: {
 		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/logo-mueller_cyuxlf',
 	},
