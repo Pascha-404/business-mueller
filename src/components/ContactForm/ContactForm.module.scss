@@ -46,6 +46,17 @@
 		width: 100%;
 		text-align: center;
 		margin-top: 20px;
+		transition: opacity 500ms ease;
+	}
+
+	.btnWrapper.disabled button {
+		opacity: 0.5;
+		cursor: not-allowed;
+		transition: opacity 500ms ease;
+
+		&:hover {
+			transform: scale(1);
+		}
 	}
 
 	.phoneNumberElement {
