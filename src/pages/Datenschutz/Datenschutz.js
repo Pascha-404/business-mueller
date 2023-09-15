@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import styles from './Datenschutz.module.scss';
 
 function Datenschutz() {
+
+	// Scrolls once to top of the page when component is rendered
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	});

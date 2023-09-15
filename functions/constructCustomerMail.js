@@ -1,3 +1,4 @@
+// Function to clean input data from possible script injection
 function escapeHtml(unsafe) {
 	return unsafe
 		.replace(/&/g, '&amp;')
@@ -7,6 +8,7 @@ function escapeHtml(unsafe) {
 		.replace(/'/g, '&#039;');
 }
 
+// Function that returns a html construct with the provided prop data
 function constructCustomerMail({ name, email, message, phoneCall, phoneNumber }) {
 	const escapedName = escapeHtml(name);
 	const escapedEmail = escapeHtml(email);
