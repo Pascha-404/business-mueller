@@ -29,6 +29,7 @@ function ContactProvider({ children }) {
 		message: '',
 		phoneCall: false,
 		phoneNumber: '',
+		acceptedDataPolicy: false,
 		submit: false,
 	});
 
