@@ -24,21 +24,21 @@ function Footer() {
 			onChange={handleChange}>
 			<div className={styles.contactDetails}>
 				<div className={styles.address}>
-					<h4>Müller Fliesenfachbetrieb</h4>
+					<h4>Müller Baufachbetrieb</h4>
 					<div>
 						<h5>Jörg Müller</h5>
-						<h5>Alt-Wittenau 67a</h5>
-						<h5>13437 Berlin</h5>
+						<h5>Schillingstraße 1</h5>
+						<h5>13403 Berlin</h5>
 						<h5>Deutschland</h5>
 					</div>
 				</div>
 				<div>
 					<h4>Kontakt</h4>
 					<h5>
-						<a href='tel:+493051637522'>030 5163 7522</a>
+						<a href='tel:+491776286037'>0177 628 60 37</a>
 					</h5>
 					<h5 className={styles.mail}>
-						<a href='mailto:mail@fliesenleger-mueller.de'>mail@fliesenleger-mueller.de</a>
+						<a href='mailto:J.Mueller@fliesenleger-mueller.de'>J.Mueller@fliesenleger-mueller.de</a>
 					</h5>
 					<div
 						className={`${styles.scrollTopBtnWrap} ${showTopBtn ? styles.active : ''}`}

@@ -15,22 +15,22 @@ function Impressum() {
 				<p>
 					J&ouml;rg M&uuml;ller
 					<br />
-					Fliesenleger M&uuml;ller
+					Baufachbetrieb M&uuml;ller
 					<br />
-					Alt-Wittenau 67a
+					Schillingstraße 1
 					<br />
-					13437 Berlin
+					13403 Berlin
 				</p>
 			</div>
 			<div className={styles.dataBlock}>
 				<h2>Kontakt</h2>
 				<p>
-					<a href='mailto:mail@fliesenleger-mueller.de'>
-						E-Mail: mail@fliesenleger-mueller.de
+					<a href='mailto:J.Mueller@fliesenleger-mueller.de'>
+						E-Mail: J.Mueller@fliesenleger-mueller.de
 					</a>
 				</p>
 				<p>
-					<a href='tel:03051637522'>Telefon: 030 5163 7522</a>
+					<a href='tel:+491776286037'>Telefon: 0177 628 60 37</a>
 				</p>
 			</div>
 			<div className={styles.dataBlock}>
@@ -39,7 +39,7 @@ function Impressum() {
 					Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a
 					Umsatzsteuergesetz:
 					<br />
-					asdadf
+					Folgt in Kürze
 				</p>
 			</div>
 			<div className={styles.dataBlock}>

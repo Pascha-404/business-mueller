@@ -1,3 +1,4 @@
+// Function to clean input data from possible script injection
 function escapeHtml(unsafe) {
 	return unsafe
 		.replace(/&/g, '&amp;')
@@ -7,6 +8,7 @@ function escapeHtml(unsafe) {
 		.replace(/'/g, '&#039;');
 }
 
+// Function that returns a html construct with the provided prop data
 function constructCustomerMail({ name, email, message, phoneCall, phoneNumber }) {
 	const escapedName = escapeHtml(name);
 	const escapedEmail = escapeHtml(email);
@@ -278,7 +280,7 @@ function constructCustomerMail({ name, email, message, phoneCall, phoneNumber })
 																			max-width: 100px;
 																			height: auto;
 																		"
-																		src="https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/v1693331577/fliesenleger-mueller/logo-mueller-dark_ai7ema"
+																		src="https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/v1693331577/fliesenleger-mueller/logo-mueller-dark_vn3rds"
 																		alt="Firmenlogo"
 																	/><!--[if (lte ie 8)]></div><![endif]-->
 																</td>

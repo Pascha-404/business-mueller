@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import styles from './Datenschutz.module.scss';
 
 function Datenschutz() {
+
+	// Scrolls once to top of the page when component is rendered
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	});
@@ -137,14 +139,14 @@ function Datenschutz() {
 				<p>
 					J&ouml;rg M&uuml;ller
 					<br />
-					Alt-Wittenau 67a
+					Schillingstraße 1
 					<br />
-					13437 Berlin
+					13403 Berlin
 				</p>
 				<p>
-					Telefon: 0177 6286037
+					Telefon: 0177 628 60 37
 					<br />
-					E-Mail: mail@fliesenleger-mueller.de
+					E-Mail: J.Mueller@fliesenleger-mueller.de
 				</p>
 				<p>
 					Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die

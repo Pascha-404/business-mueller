@@ -18,19 +18,19 @@ const tiles = [
 		icon: cloudinaryUrls.iconClipboard.url,
 		iconAlt: 'Klemmbrett',
 		title: 'Badgestaltung',
-		text: 'Planung mittels moderner 3D Software.',
+		text: 'Planung sowie Umsetzung.',
 	},
 	{
 		icon: cloudinaryUrls.iconHouse.url,
 		iconAlt: 'Haus Symbol',
 		title: 'Innenausbau',
-		text: 'Ausstattung von Küchen bis zu Treppenhäusern.',
+		text: 'Sowie Elektro und Dachstühle',
 	},
 	{
 		icon: cloudinaryUrls.iconDiamond.url,
 		iconAlt: 'Diamant',
-		title: 'Millimeterarbeit',
-		text: 'Passgenaue Anfertigung auch für schwierige Stellen',
+		title: 'Heizung-Sanitär',
+		text: 'Passgenaue Anfertigung auch für schwierige Stellen.',
 	},
 	{
 		icon: cloudinaryUrls.iconLightbulb.url,
