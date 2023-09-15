@@ -13,6 +13,7 @@ function Button({
 	theme = 'light',
 	bigBtn = false,
 	backToForm = false,
+	disabled = false,
 }) {
 	// Constants define the passed style classes for theme and size of real button elements.
 	const btnTheme =
@@ -42,7 +43,7 @@ function Button({
 		);
 	} else if (type === 'button' && submit === true) {
 		return (
-			<button className={`${styles.button} ${btnTheme} ${bigButton}`} type='submit'>
+			<button className={`${styles.button} ${btnTheme} ${bigButton}`} type='submit' disabled={disabled}>
 				{text}
 			</button>
 		);
