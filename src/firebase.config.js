@@ -22,6 +22,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+// eslint-disable-next-line no-unused-vars
 const appCheck = initializeAppCheck(app, {
 	provider: new ReCaptchaV3Provider(`${process.env.REACT_APP_RECAPTCHA_USER}`),
 	isTokenAutoRefreshEnabled: true,
