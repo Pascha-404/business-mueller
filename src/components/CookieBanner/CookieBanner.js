@@ -26,12 +26,20 @@ function CookieBanner() {
 	}, [cookies]);
 
 	function handleAccept() {
-		setCookie('fliesenmueller_cookieConsent', 'accepted', { path: '/' });
+		setCookie('fliesenmueller_cookieConsent', 'accepted', {
+			path: '/',
+			secure: true,
+			sameSite: 'strict',
+		});
 		logPageView();
 	}
 
 	function handleDecline() {
-		setCookie('fliesenmueller_cookieConsent', 'declined', { path: '/' });
+		setCookie('fliesenmueller_cookieConsent', 'declined', {
+			path: '/',
+			secure: true,
+			sameSite: 'strict',
+		});
 	}
 
 	if (!showBanner) {
@@ -73,7 +81,11 @@ function CookieBanner() {
 				</p>
 				<p>
 					Weitere Informationen zu den von uns verwendeten Cookies und deren Zweck finden
-					Sie in unserer <Link style={{borderBottom: '2px solid white'}} to='/datenschutz'>Datenschutzerklärung</Link>.
+					Sie in unserer{' '}
+					<Link style={{ borderBottom: '2px solid white' }} to='/datenschutz'>
+						Datenschutzerklärung
+					</Link>
+					.
 				</p>
 			</CookieConsent>
 		);
