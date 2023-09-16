@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { cloudinaryUrls } from '../../assets';
 
-import styles from './404.module.scss';
+import styles from './NotFound.module.scss';
 
-function Impressum() {
+function NotFound() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	});
@@ -15,4 +15,4 @@ function Impressum() {
 	);
 }
 
-export default Impressum;
+export default NotFound;
