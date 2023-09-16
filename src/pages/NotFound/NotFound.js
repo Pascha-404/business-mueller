@@ -9,8 +9,13 @@ function NotFound() {
 	});
 
 	return (
-		<section className={styles.impressum}>
-			<img src={cloudinaryUrls.img404.url} alt="Fehlerbild mit Nachricht 404: nicht gefunden" />
+		<section className={styles.notFound}>
+			<div className={styles.imgWrapper}>
+				<img
+					src={cloudinaryUrls.img404.url}
+					alt='Fehlerbild mit Nachricht 404: nicht gefunden'
+				/>
+			</div>
 		</section>
 	);
 }

@@ -1,0 +1,17 @@
+@use '../../sass/main.scss' as *;
+
+.notFound {
+	width: 100%;
+	.imgWrapper {
+		width: 100%;
+		padding-right: 20px;
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(center);
+		img {
+			margin-top: 3rem;
+			width: 100%;
+			max-width: 1000px;
+		}
+	}
+}
