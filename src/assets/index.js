@@ -93,6 +93,9 @@ const cloudinaryUrls = {
 	iconError: {
 		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/icon-error_mpjw6s',
 	},
+	img404: {
+		url: 'https://res.cloudinary.com/drpmdiapv/image/upload/f_auto/w_auto/dpr_auto/q_auto/fliesenleger-mueller/404_qavwbr',
+	},
 };
 
 export { cloudinaryUrls };
