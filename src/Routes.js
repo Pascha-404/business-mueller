@@ -5,6 +5,7 @@ import App from './components/App';
 import Home from './pages/Home';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
+import NotFound from './pages/NotFound';
 
 // Array of route objects for the different pages of the application
 const routes = [
@@ -14,6 +15,12 @@ const routes = [
 		path: '/datenschutz',
 
 		element: <Datenschutz />,
+		nodeRef: createRef(),
+	},
+	{
+		path: '/*',
+
+		element: <NotFound />,
 		nodeRef: createRef(),
 	},
 ];
